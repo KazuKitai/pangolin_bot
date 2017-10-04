@@ -22,12 +22,9 @@ bot.on('ready', function (evt) {
 bot.on('message', function (user, userID, channelID, message, evt) {
     // Prevent bot to answer itself
     if (user === 'Pangolin-bot') {
-        console.log(user);
         //nothing !
     } else {
-        console.log('perdu');
         // It will listen for messages that will start with `§`
-        /*
         if (message.substring(0, 1) == '§') {
             var args = message.substring(1).split(' ');
             var cmd = args[0];
@@ -91,6 +88,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     message: 'Attention, cas de rage potentiel, prenez garde aux gnappeurs !'
                 });
             }
-        } */
+        }
     }
 });
