@@ -6,6 +6,7 @@
   "author": "Le Pangolin de la Verite",
   "dependencies": {
     "discord.io": "^2.5.3",
+    "express": "^4.16.1",
     "newrelic": "^2.2.2",
     "winston": "^2.4.0"
   }
