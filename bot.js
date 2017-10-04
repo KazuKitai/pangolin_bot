@@ -99,5 +99,23 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 });
             }
         }
+
+        if (message) {
+            if ( Math.floor(Math.random() * (100000 + 1)) > 95000) {
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'All your base are belong to us.'
+                });
+            }
+        }
+
+        if (message.toLowerCase().includes('loli') {
+            if ( Math.floor(Math.random() * (1000 + 1)) > 750) {
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'Ravioli ravioli, plz gaz the lolis.'
+                });
+            }
+        }
     }
 });
