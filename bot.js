@@ -63,26 +63,26 @@ bot.on('message', function (user, userID, channelID, message, evt) {
          }
      }
 
-     if (message.toLowerCase.includes('omae wa mo shindeiru')) {
+     if (message.toLowerCase().includes('omae wa mo shindeiru')) {
          bot.sendMessage({
              to: channelID,
              message: 'NANI ?!'
          });
      }
 
-     if (message.toLowerCase.includes('chine') 
-        || message.toLowerCase.includes('tine') 
-        || message.toLowerCase.includes('chinois') 
-        || message.toLowerCase.includes('chinoise') 
-        || message.toLowerCase.includes('tinois')
-        || message.toLowerCase.includes('tnoise')) {
+     if (message.toLowerCase().includes('chine') 
+        || message.toLowerCase().includes('tine') 
+        || message.toLowerCase().includes('chinois') 
+        || message.toLowerCase().includes('chinoise') 
+        || message.toLowerCase().includes('tinois')
+        || message.toLowerCase().includes('tnoise')) {
          bot.sendMessage({
              to: channelID,
              message: 'Tine ? Tinois ? Ping pong mahjong dugong !'
          });
      }
 
-     if (message.toLowerCase.includes('gnap')) {
+     if (message.toLowerCase().includes('gnap')) {
          if (this.getRandomIntInclusive(0, 1000) > 950) {
             bot.sendMessage({
                 to: channelID,
