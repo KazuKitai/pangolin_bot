@@ -109,7 +109,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             }
         }
 
-        if (message.toLowerCase().includes('loli') {
+        if (message.toLowerCase().includes('loli')) {
             if ( Math.floor(Math.random() * (1000 + 1)) > 750) {
                 bot.sendMessage({
                     to: channelID,
