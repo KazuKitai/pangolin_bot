@@ -91,5 +91,12 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 });
             }
         }
+
+        if (message.toLowerCase() == 'emoji test') {
+            bot.sendMessage({
+                to: channelID,
+                message: 'Attention ! :gnap:'
+            });
+        }
     }
 });
