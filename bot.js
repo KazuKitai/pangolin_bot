@@ -25,7 +25,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
     if (user === 'Pangolin-bot') {
         //nothing !
     } else {
-        if (user == 'RPBot') {
+        if (user === 'RPBot') {
             if ( Math.floor(Math.random() * (1000 + 1)) > 500) {
                 bot.sendMessage({
                     to: channelID,
