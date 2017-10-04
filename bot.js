@@ -25,8 +25,8 @@ bot.on('ready', function (evt) {
     logger.info(bot.username + ' - (' + bot.id + ')');
 });
 bot.on('message', function (user, userID, channelID, message, evt) {
-    // Prevent bot to answer another bot
-    if (message.author.bot) return;
+    // Prevent bot to answer itself
+    if (user.username === bot.username) return;
     // It will listen for messages that will start with `§`
     if (message.substring(0, 1) == '§') {
         var args = message.substring(1).split(' ');
