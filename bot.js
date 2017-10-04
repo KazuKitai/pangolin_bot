@@ -25,6 +25,8 @@ bot.on('ready', function (evt) {
     logger.info(bot.username + ' - (' + bot.id + ')');
 });
 bot.on('message', function (user, userID, channelID, message, evt) {
+    // Prevent bot to answer another bot
+    if (message.author.bot) return;
     // It will listen for messages that will start with `§`
     if (message.substring(0, 1) == '§') {
         var args = message.substring(1).split(' ');
@@ -70,12 +72,12 @@ bot.on('message', function (user, userID, channelID, message, evt) {
          });
      }
 
-     if (message.toLowerCase().includes('chine') 
+     if ((message.toLowerCase().includes('chine'))
         || message.toLowerCase().includes('tine') 
         || message.toLowerCase().includes('chinois') 
         || message.toLowerCase().includes('chinoise') 
         || message.toLowerCase().includes('tinois')
-        || message.toLowerCase().includes('tnoise')) {
+        || message.toLowerCase().includes('tinoise')) {
          bot.sendMessage({
              to: channelID,
              message: 'Tine ? Tinois ? Ping pong mahjong dugong !'
