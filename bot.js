@@ -56,7 +56,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 case 'omae':
                     bot.sendMessage({
                         to: channelID,
-                        message: 'NANI ?!?'
+                        message: '<:NANIII:364403601533173783>'
                     });
                 break;
             }
@@ -65,7 +65,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         if (message.toLowerCase().includes('omae wa mo shindeiru')) {
             bot.sendMessage({
                 to: channelID,
-                message: 'NANI ?!'
+                message: '<:NANIII:364403601533173783>!'
             });
         }
 
@@ -83,20 +83,13 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 }
         }
 
-        if (message.toLowerCase().includes('gnap')) {
+        if (message.toLowerCase().includes('gnap') || message.includes('<:gnap:363685809729044480>')) {
             if ( Math.floor(Math.random() * (1000 + 1)) > 950) {
                 bot.sendMessage({
                     to: channelID,
-                    message: 'Attention, cas de rage potentiel, prenez garde aux gnappeurs !'
+                    message: 'Attention, cas de rage potentiel, prenez garde aux gnappeurs ! <:gnap:363685809729044480>'
                 });
             }
-        }
-
-        if (message.toLowerCase() == 'emoji test') {
-            bot.sendMessage({
-                to: channelID,
-                message: 'Attention ! <:gnap:363685809729044480>'
-            });
         }
     }
 });
