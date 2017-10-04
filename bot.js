@@ -1,3 +1,4 @@
+require('newrelic');
 var Discord = require('discord.io');
 var logger = require('winston');
 var auth = require('./auth.json');
@@ -69,7 +70,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 break;
             }
         }
-
+		
         if (message.toLowerCase().includes('omae wa mo shindeiru')) {
             bot.sendMessage({
                 to: channelID,
