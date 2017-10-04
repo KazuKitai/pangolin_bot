@@ -12,6 +12,13 @@ var bot = new Discord.Client({
    token: auth.token,
    autorun: true
 });
+function getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min +1)) + min;
+}
+
+
 bot.on('ready', function (evt) {
     logger.info('Connected');
     logger.info('Logged in as: ');
@@ -25,13 +32,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
        
         args = args.splice(1);
         switch(cmd) {
-            // §ping
-            case 'ping':
-                bot.sendMessage({
-                    to: channelID,
-                    message: 'Pong!'
-                });
-            break;
             // §tableflip
             case 'tableflip':
 				bot.sendMessage({
@@ -60,6 +60,34 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					message: 'NANI ?!?'
 				});
 			break;
+         }
+     }
+
+     if (message.toLowerCase.includes('omae wa mo shindeiru')) {
+         bot.sendMessage({
+             to: channelID,
+             message: 'NANI ?!'
+         });
+     }
+
+     if (message.toLowerCase.includes('chine') 
+        || message.toLowerCase.includes('tine') 
+        || message.toLowerCase.includes('chinois') 
+        || message.toLowerCase.includes('chinoise') 
+        || message.toLowerCase.includes('tinois')
+        || message.toLowerCase.includes('tnoise')) {
+         bot.sendMessage({
+             to: channelID,
+             message: 'Tine ? Tinois ? Ping pong mahjong dugong !'
+         });
+     }
+
+     if (message.toLowerCase.includes('gnap')) {
+         if (this.getRandomIntInclusive(0, 1000) > 950) {
+            bot.sendMessage({
+                to: channelID,
+                message: 'Attention, cas de rage potentiel, prenez garde aux gnappeurs !'
+            });
          }
      }
 });
