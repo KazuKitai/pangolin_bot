@@ -22,7 +22,7 @@ bot.on('ready', function (evt) {
 bot.on('message', function (user, userID, channelID, message, evt) {
     // Prevent bot to answer itself
     if (message) {
-        console.log(message);
+        console.log(user);
         //nothing !
     } else {
         console.log('perdu');
