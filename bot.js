@@ -24,6 +24,14 @@ bot.on('message', function (user, userID, channelID, message, evt) {
     if (user === 'Pangolin-bot') {
         //nothing !
     } else {
+        if (user == 'RPBot') {
+            if ( Math.floor(Math.random() * (1000 + 1)) > 500) {
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'Il me vole mon travail !'
+                });
+            }
+        }
         // It will listen for messages that will start with `§`
         if (message.substring(0, 1) == '§') {
             var args = message.substring(1).split(' ');
@@ -65,7 +73,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         if (message.toLowerCase().includes('omae wa mo shindeiru')) {
             bot.sendMessage({
                 to: channelID,
-                message: '<:NANIII:364403601533173783>!'
+                message: '<:NANIII:364403601533173783>'
             });
         }
 
