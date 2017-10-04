@@ -83,7 +83,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
      }
 
      if (message.toLowerCase().includes('gnap')) {
-         if (this.getRandomIntInclusive(0, 1000) > 950) {
+         if ( Math.floor(Math.random() * (1000 + 1)) > 950) {
             bot.sendMessage({
                 to: channelID,
                 message: 'Attention, cas de rage potentiel, prenez garde aux gnappeurs !'
