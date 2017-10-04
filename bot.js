@@ -26,7 +26,7 @@ bot.on('ready', function (evt) {
 });
 bot.on('message', function (user, userID, channelID, message, evt) {
     // Prevent bot to answer itself
-    if (user.username === bot.username) return;
+    if (message.auth.bot) return;
     // It will listen for messages that will start with `§`
     if (message.substring(0, 1) == '§') {
         var args = message.substring(1).split(' ');
