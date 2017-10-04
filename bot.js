@@ -75,10 +75,12 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             || message.toLowerCase().includes('chinoise') 
             || message.toLowerCase().includes('tinois')
             || message.toLowerCase().includes('tinoise')) {
-            bot.sendMessage({
-                to: channelID,
-                message: 'Tine ? Tinois ? Ping pong mahjong dugong !'
-            });
+                if ( Math.floor(Math.random() * (1000 + 1)) > 950) {
+                    bot.sendMessage({
+                        to: channelID,
+                        message: 'Tine ? Tinois ? Ping pong mahjong dugong !'
+                    });
+                }
         }
 
         if (message.toLowerCase().includes('gnap')) {
