@@ -38,45 +38,12 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     message: 'Il me vole mon travail !'
                 });
             } else {
-				bot.sendMessage({
-                    to: channelID,
-                    message: 'Bordel que j\'aimerai savoir faire ça ... Mais mon dev est nul!'
-                });
-			}
+		bot.sendMessage({
+		    to: channelID,
+		    message: 'Bordel que j\'aimerai savoir faire ça ... Mais mon dev est nul!'
+		});
+	    }
         }
-		if (user === 'Le Zu' 
-			|| user === 'Le Pangolin de la Vérité') {
-			if (message.toLowerCase() === 'attaque !' 
-				|| message.toLowerCase() === 'attaque!') {
-				bot.sendMessage({
-                    to: channelID,
-                    message: '*saute sur tout le monde* <:gnap:363685809729044480>'
-                });
-			}
-			if (message.toLowerCase() === 'hey, le bot ?' 
-				|| message.toLowerCase() === 'hey, le bot?') {
-				bot.sendMessage({
-                    to: channelID,
-                    message: 'Oui maitre ?'
-                });
-			}
-		}
-		if (user === 'Platypus Cordula') {
-			if (message.toLowerCase() === 'attaque !' 
-				|| message.toLowerCase() === 'attaque!') {
-				bot.sendMessage({
-                    to: channelID,
-                    message: '*saute sur tout le monde* <:gnap:363685809729044480>'
-                });
-			}
-			if (message.toLowerCase() === 'hey, le bot ?' 
-				|| message.toLowerCase() === 'hey, le bot?') {
-				bot.sendMessage({
-                    to: channelID,
-                    message: 'Oui maitresse ?'
-                });
-			}
-		}
 		
         // It will listen for messages that will start with `§`
         if (message.substring(0, 1) == '§') {
@@ -85,19 +52,19 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         
             args = args.splice(1);
             switch(cmd) {
-				// §help
-				case 'help':
-					if (user === 'Platypus Cordula') {
-						bot.sendMessage({
-							to: channelID,
-							message: 'Demande au machin rouesque qui vit avec toi.'
-						});
-					} else {
-						bot.sendMessage({
-							to: channelID,
-							message: 'T\'as cru que j\'allais t\'aider ? Lol.'
-						});
-					}
+		// §help
+		case 'help':
+			if (user === 'Platypus Cordula') {
+				bot.sendMessage({
+					to: channelID,
+					message: 'Demande au machin rouesque qui vit avec toi.'
+				});
+			} else {
+				bot.sendMessage({
+					to: channelID,
+					message: 'T\'as cru que j\'allais t\'aider ? Lol.'
+				});
+			}
                 break;
                 // §tableflip
                 case 'tableflip':
@@ -140,9 +107,16 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 	if (message.toLowerCase() === 'hey, le bot ?' 
 		|| message.toLowerCase() === 'hey, le bot?') {
 		if (user === 'Le Zu' 
-			|| user === 'Le Pangolin de la Vérité'
-			|| user === 'Platypus Cordula') {
-				// nothing
+			|| user === 'Le Pangolin de la Vérité') {
+			bot.sendMessage({
+			    to: channelID,
+			    message: 'Oui maitre ?'
+			});
+		} else if (user === 'Platypus Cordula') {
+			bot.sendMessage({
+			    to: channelID,
+			    message: 'Oui maitresse ?'
+			});	
 		} else {
 			bot.sendMessage({
 			    to: channelID,
@@ -156,7 +130,10 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		if (user === 'Le Zu' 
 			|| user === 'Le Pangolin de la Vérité'
 			|| user === 'Platypus Cordula') {
-				// nothing
+			bot.sendMessage({
+			    to: channelID,
+			    message: '*saute sur tout le monde* <:gnap:363685809729044480>'
+			});
 		} else {
 			bot.sendMessage({
 			    to: channelID,
