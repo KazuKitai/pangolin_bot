@@ -37,8 +37,8 @@ gen_data['head_seriousWound'] = [
 ];
 
 gen_data['headPartLight'] = [
-	'plus précisément l\'os du cr&acirc;ne en lui même. {craniumDmgLight}.',
-	'plus précisément l\'os du cr&acirc;ne en lui même. {craniumDmgLight}.',
+	'plus précisément l\'os du crâne en lui même. {craniumDmgLight}.',
+	'plus précisément l\'os du crâne en lui même. {craniumDmgLight}.',
 	'plus précisément à l\'oeil gauche. {eyeDmgLight}.',
 	'plus précisément à l\'oeil gauche. {eyeDmgLight}.',
 	'plus précisément à l\'oreille gauche. {earDmgLight}.',
@@ -59,8 +59,8 @@ gen_data['headPartLight'] = [
 	'plus précisément à l\'oreille droite. {earDmgLight}.'
 ];
 gen_data['headPartMedium'] = [
-	'plus précisément l\'os du cr&acirc;ne en lui même. {craniumDmgMedium}.',
-	'plus précisément l\'os du cr&acirc;ne en lui même. {craniumDmgMedium}.',
+	'plus précisément l\'os du crâne en lui même. {craniumDmgMedium}.',
+	'plus précisément l\'os du crâne en lui même. {craniumDmgMedium}.',
 	'plus précisément à l\'oeil gauche. {eyeDmgMedium}.',
 	'plus précisément à l\'oeil gauche. {eyeDmgMedium}.',
 	'plus précisément à l\'oreille gauche. {earDmgMedium}.',
@@ -81,8 +81,8 @@ gen_data['headPartMedium'] = [
 	'plus précisément à l\'oreille droite. {earDmgMedium}.'
 ];
 gen_data['headPartSerious'] = [
-	'plus précisément l\'os du cr&acirc;ne en lui même. {craniumDmgSerious}.',
-	'plus précisément l\'os du cr&acirc;ne en lui même. {craniumDmgSerious}.',
+	'plus précisément l\'os du crâne en lui même. {craniumDmgSerious}.',
+	'plus précisément l\'os du crâne en lui même. {craniumDmgSerious}.',
 	'plus précisément à l\'oeil gauche. {eyeDmgSerious}.',
 	'plus précisément à l\'oeil gauche. {eyeDmgSerious}.',
 	'plus précisément à l\'oreille gauche. {earDmgSerious}.',
@@ -131,7 +131,7 @@ gen_data['neckDmgLight'] = {
 gen_data['craniumDmgMedium'] = {
 	'0-3': 'Une belle fracture du crane, sans danger si soignée rapidement, mais une convalescence s\'impose',
 	'4-9': 'Perte de connaissance pendant plusieurs minutes',
-	'9-12': 'Perte de connaissance pendant plusieurs minutes. Légère perte de m&eacutes;moire pour quelques jours'
+	'9-12': 'Perte de connaissance pendant plusieurs minutes. Légère perte de mésmoire pour quelques jours'
 };	
 gen_data['eyeDmgMedium'] = {
 	'0-3': 'La paupière est coupée, du sang coule dans l\'oeil empêchant de voir avec celui-ci',
@@ -605,7 +605,7 @@ gen_data['largeIntestineDmgMedium'] = {
 	'6-9': 'Le coup était si violent que l\'organe s\'est décalé de quelques centimètres ... Pas spécialement grave, mais plutôt douloureux, et tout de même à surveiller par la suite'
 };
 gen_data['gutsMusclesDmgMedium'] = {
-	'0-5': 'Les muscles sont entam&eacutes; de façon superficielle à de nombreux endroits, ce n\'est pas grave, mais c\'est plutôt douloureux',
+	'0-5': 'Les muscles sont entamés de façon superficielle à de nombreux endroits, ce n\'est pas grave, mais c\'est plutôt douloureux',
 	'6-9': 'Une majeure partie des abdo est écorchée / brulée, rien de grave, mais qu\'est-ce que ça fait mal'
 };
 gen_data['rightKidneyDmgMedium'] = {
@@ -639,7 +639,7 @@ gen_data['largeIntestineDmgSerious'] = [
 ];
 gen_data['gutsMusclesDmgSerious'] = {
 	'0': 'Les muscles abdominaux sont déchirés / tranchés à plusieurs endroits, c\'est très douloureux de bouger',
-	'1-5': 'Les muscles sont entam&eacutes; sévèrement à de nombreux endroits, ce n\'est pas grave, mais c\'est plutôt douloureux'
+	'1-5': 'Les muscles sont entamés sévèrement à de nombreux endroits, ce n\'est pas grave, mais c\'est plutôt douloureux'
 };
 gen_data['rightKidneyDmgSerious'] = [
 	'Le rein est gravement endommagé ... Sans intervention médicale rapide, le personnage risque de perdre un rein, voir de mourir',
