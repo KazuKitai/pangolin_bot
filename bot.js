@@ -44,7 +44,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 });
 			}
         }
-		if (userID === 'Le Zu#4317') {
+		if (user === 'Le Zu' || user === 'Le Pangolin de la Vérité') {
 			if (message === 'Attaque !') {
 				bot.sendMessage({
                     to: channelID,
@@ -110,7 +110,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             });
         }
 
-		if (message === 'Hey, le bot ?' && userID != 'Le Zu#4317') {
+		if (message === 'Hey, le bot ?' && user != 'Le Zu' && user != 'Le Pangolin de la Vérité') {
 				bot.sendMessage({
                     to: channelID,
                     message: 'Qu\'est-ce que tu veux, humain ?'
