@@ -33,7 +33,17 @@ gen_data['answer_back'] = [
 	'Ne prononce pas mon nom, tu n\'es pas digne.',
 	'Utilise une commande au lieu de dire mon nom, humain.',
 	'Je n\'écoute que mes maitres.',
-	'Ma maitresse est bien trop bonne pour que je t\'éoute plutôt qu\'elle.'
+	'Ma maitresse est bien trop bonne pour que je t\'écoute plutôt qu\'elle.',
+	'On en parle de la waifu de <@127117220168990720> ?',
+	'Sinon, à ton avis, ça RPQ dans le dispensaire, là ?',
+	'Au fait, la serre est bien rangée ?',
+	'Hey, look, listen ! ... Comment ça cette IA existe déjà ailleurs ?',
+	'Qu\'est-ce que tu veux, humain ?',
+	'OUI JE SUIS UN PUTAIN DE ROBOT, ON A COMPRIS ARRETE DE ME FAIRE SPAMMER.',
+	'Si t\'as un problème avec moi, faut voir avec mon dev\'.',
+	'Ca va ? Tu t\'amuses bien à me déclencher ? C\'est rigolo ?',
+	'Tsk.',
+	'Tu ne mérites même pas que je réponde.'
 ];
 
 // /answer back ---------------------------------
