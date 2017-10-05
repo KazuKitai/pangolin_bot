@@ -2125,7 +2125,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 							to: channelID,
 							message: 'Débile de maitre ...'
 						});
-					}else {
+					} else {
 						bot.sendMessage({
 							to: channelID,
 							message: 'T\'as cru que j\'allais t\'aider ? Lol.'
@@ -2144,7 +2144,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 							to: channelID,
 							message: 'Demande à Rengu, j\'ai la flemme.'
 						});
-					}else {
+					} else {
 						bot.sendMessage({
 							to: channelID,
 							message: '*Fout le fe...* -- T\'y as cru ? Genre je vais faire plaisir à un simple humain ? Tsk.'
@@ -2560,12 +2560,12 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             }
         }
 		
-	if (message.toLowerCase() === 'alors') {
-		bot.sendMessage({
-			to: channelID,
-			message: '™'
-		});
-	}
+        if (message.toLowerCase() === 'alors') {
+            bot.sendMessage({
+                to: channelID,
+                message: '™'
+            });
+        }
 		
         if (message.toLowerCase().includes('loli')) {
             if ( Math.floor(Math.random() * (1000 + 1)) > 750) {
@@ -2575,38 +2575,38 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 });
             }
         }
-		
-		if (message.toLowerCase().includes('pangolin-bot') 
-			|| message.toLowerCase().includes('pangolin bot')
-			|| message.includes('@Pangolin-bot#4088')
-			|| message.includes('Pangolin-bot#4088')
-			|| message.includes('#4088')
-			|| message.includes('<@!Pangolin-bot#4088>')
-			|| message.includes('<@365113377929822208>')
-			|| message.includes('365113377929822208')
-			|| message.includes('@365113377929822208')
-			|| message.toLowerCase().includes('pangobot')
-			|| message.toLowerCase().includes('pango bot')) {
-			if (user === 'Le Zu' 
-				|| user === 'Le Pangolin de la Vérité') {
-				bot.sendMessage({
-					to: channelID,
-					message: 'Je suis votre serviteur, maitre.'
-				});
-			} else if (user === 'Platypus Cordula') {
-				bot.sendMessage({
-					to: channelID,
-					message: 'Je vous aime maitresse.'
-				});	
-			} else {
-				bot.sendMessage({
-					to: channelID,
-					message: generate_text('answer_back').toString()
-				});
-			}
-		}
-		
-		if (message) {
+
+        if (message.toLowerCase().includes('pangolin-bot') 
+            || message.toLowerCase().includes('pangolin bot')
+            || message.includes('@Pangolin-bot#4088')
+            || message.includes('Pangolin-bot#4088')
+            || message.includes('#4088')
+            || message.includes('<@!Pangolin-bot#4088>')
+            || message.includes('<@365113377929822208>')
+            || message.includes('365113377929822208')
+            || message.includes('@365113377929822208')
+            || message.toLowerCase().includes('pangobot')
+            || message.toLowerCase().includes('pango bot')) {
+            if (user === 'Le Zu' 
+                || user === 'Le Pangolin de la Vérité') {
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'Je suis votre serviteur, maitre.'
+                });
+            } else if (user === 'Platypus Cordula') {
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'Je vous aime maitresse.'
+                });	
+            } else {
+                bot.sendMessage({
+                    to: channelID,
+                    message: generate_text('answer_back').toString()
+                });
+            }
+        }
+
+        if (message) {
             if ( Math.floor(Math.random() * (1000000 + 1)) === 1) {
                 bot.sendMessage({
                     to: channelID,
