@@ -114,15 +114,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             }
         }
 
-        if (message) {
-            if ( Math.floor(Math.random() * (1000000 + 1)) < 5) {
-                bot.sendMessage({
-                    to: channelID,
-                    message: 'All your base are belong to us.'
-                });
-            }
-        }
-
 		if (message.toLowerCase().includes('send halp')) {
             if ( Math.floor(Math.random() * (1000 + 1)) > 750) {
                 bot.sendMessage({
@@ -150,6 +141,15 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 bot.sendMessage({
                     to: channelID,
                     message: 'Ravioli ravioli, plz gaz the lolis.'
+                });
+            }
+        }
+		
+		if (message) {
+            if ( Math.floor(Math.random() * (1000000 + 1)) === 1) {
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'All your base are belong to us.'
                 });
             }
         }
