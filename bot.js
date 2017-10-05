@@ -46,6 +46,13 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         
             args = args.splice(1);
             switch(cmd) {
+				// §help
+				case 'help':
+					bot.sendMessage({
+                        to: channelID,
+                        message: 'T\'as cru que j\'allais t\'aider ? Lol.'
+                    });
+                break;
                 // §tableflip
                 case 'tableflip':
                     bot.sendMessage({
@@ -108,7 +115,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         }
 
         if (message) {
-            if ( Math.floor(Math.random() * (100000 + 1)) > 95000) {
+            if ( Math.floor(Math.random() * (100000 + 1)) > 99950) {
                 bot.sendMessage({
                     to: channelID,
                     message: 'All your base are belong to us.'
@@ -116,6 +123,28 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             }
         }
 
+		if (message.toLowerCase().includes('send halp')) {
+            if ( Math.floor(Math.random() * (1000 + 1)) > 750) {
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'Y\'a que les faibles pour demander de l\'aide.'
+                });
+            }
+        }
+		
+		if (message.toLowerCase().includes('dayum')) {
+            if ( Math.floor(Math.random() * (1000 + 1)) > 750) {
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'Oh my dayum!'
+                });
+            }
+        }
+		
+		if (message.toLowerCase() === 'alors') {
+			message.react('™');
+		}
+		
         if (message.toLowerCase().includes('loli')) {
             if ( Math.floor(Math.random() * (1000 + 1)) > 750) {
                 bot.sendMessage({
