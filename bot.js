@@ -115,7 +115,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         }
 
         if (message) {
-            if ( Math.floor(Math.random() * (100000 + 1)) > 99950) {
+            if ( Math.floor(Math.random() * (1000000 + 1)) < 5) {
                 bot.sendMessage({
                     to: channelID,
                     message: 'All your base are belong to us.'
