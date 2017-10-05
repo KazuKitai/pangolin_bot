@@ -37,8 +37,27 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     to: channelID,
                     message: 'Il me vole mon travail !'
                 });
-            }
+            } else {
+				bot.sendMessage({
+                    to: channelID,
+                    message: 'Bordel que j\'aimerai savoir faire ça ... Mais mon dev est nul!'
+                });
+			}
         }
+		if (userID === 'Le Zu#4317') {
+			if (message === 'Attaque !') {
+				bot.sendMessage({
+                    to: channelID,
+                    message: '*saute sur tout le monde* <:gnap:363685809729044480>'
+                });
+			}
+			if (message === 'Hey, le bot ?') {
+				bot.sendMessage({
+                    to: channelID,
+                    message: 'Oui maitre ?'
+                });
+			}
+		}
         // It will listen for messages that will start with `§`
         if (message.substring(0, 1) == '§') {
             var args = message.substring(1).split(' ');
@@ -91,6 +110,13 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             });
         }
 
+		if (message === 'Hey, le bot ?' && userID != 'Le Zu#4317') {
+				bot.sendMessage({
+                    to: channelID,
+                    message: 'Qu\'est-ce que tu veux, humain ?'
+                });
+			}
+		
         if ((message.toLowerCase().includes('chine'))
             || message.toLowerCase().includes('tine') 
             || message.toLowerCase().includes('chinois') 
