@@ -937,6 +937,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						Parties du corps : head, left_arm, right_arm, body_bones, body_guts, left_leg, right_leg. \r\n\
 						Gravité de la blessure : light, medium, serious.'
 					});
+				break;
 				// §help
 				case 'help':
 					if (user === 'Platypus Cordula') {
