@@ -2000,6 +2000,12 @@ gen_data['global_psy_f_3'] = {
 
 // loot -----------------------------------------
 
+gen_data['loot'] = [
+    'Un(e) {type_mag_weap} {madeOf_mag_weap}, {weight_mag_weap}.',
+    'Un(e) {type_phy_weap} {madeOf_phy_weap}, {weight_phy_weap}.',
+    'Un(e) {type_armor}.'
+];
+
 // mag weap -------------------------------------
 
 gen_data['mag_weap'] = [
@@ -2363,7 +2369,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                         'Gravité de la blessure : light, medium, serious. \r\n ').concat(
                         '- pnj : §pnj pour un pnj totalement aléatoire. Sinon, §[race]_[sexe]. \r\n ').concat(
                         'Races : miqo_s, miqo_l, raen, xaela, elez_c, elez_s, hyuro, hyurg, lala_d, lala_p, roe_cf, roe_cm. \r\n ').concat(
-                        '- loot : §mag_weap, §phy_weap, §armor. \r\n ').concat(
+                        '- loot : §mag_weap, §phy_weap, §armor. Ou §loot pour du random total. \r\n ').concat(
                         'En cas de problème, contactez Kazu.```')
 					});
 				break;
@@ -2440,6 +2446,12 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						message: '<:NANIII:364403601533173783>'
 					});
 				break;
+                case 'loot':
+                    bot.sendMessage({
+                        to: channelID,
+						message: generate_text('loot').toString()
+                    });
+                break;
                 case 'mag_weap':
 					bot.sendMessage({
 						to: channelID,
