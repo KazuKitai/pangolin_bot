@@ -983,7 +983,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				case 'head_ligth':
 					bot.sendMessage({
                         to: channelID,
-                        message: generate_text('head_lightWound').toString();
+                        message: generate_text('head_lightWound').toString()
                     });
 				break;
             }
