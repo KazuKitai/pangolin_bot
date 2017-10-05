@@ -2100,14 +2100,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				case 'commands':
 					bot.sendMessage({
 						to: channelID,
-						message: 'Liste non exhaustive des commandes : \r\n\
-						- tableflip : c\'est évident, non ? \r\n\
-						- unflip: l\'inverse de la commande précédente ... \r\n\
-						Pour les générateurs : \r\n\
-						- blessure : §[partie du corps]_[gravité de la blessure] \r\n\
-						Par exemple §head_light ou §left_leg_serious. \r\n\
-						Parties du corps : head, left_arm, right_arm, body_bones, body_guts, left_leg, right_leg. \r\n\
-						Gravité de la blessure : light, medium, serious.'
+						message: 'Liste non exhaustive des commandes : \r\n\- tableflip : c\'est évident, non ? \r\n\- unflip: l\'inverse de la commande précédente ... \r\n\Pour les générateurs : \r\n\- blessure : §[partie du corps]_[gravité de la blessure] \r\n\	Par exemple §head_light ou §left_leg_serious. \r\n\Parties du corps : head, left_arm, right_arm, body_bones, body_guts, left_leg, right_leg. \r\n\Gravité de la blessure : light, medium, serious. \r\n- pnj : §pnj pour un pnj totalement aléatoire. Sinon, §[race]_[sexe]. \r\nRaces : miqo_s, miqo_l, raen, xaela, elez_c, elez_s, hyuro, hyurg, lala_d, lala_p, roe_cf, roe_cm. \r\n'
 					});
 				break;
 				// §help
