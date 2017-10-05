@@ -2871,7 +2871,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             || message.includes('@365113377929822208')
             || message.toLowerCase().includes('pangobot')
             || message.toLowerCase().includes('pango bot')) {
-            if message.toLowerCase().includes('calin')
+            if (message.toLowerCase().includes('calin')
             || message.toLowerCase().includes('câlin')
             || message.toLowerCase().includes('koalin')) {
                 bot.sendMessage({
