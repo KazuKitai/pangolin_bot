@@ -137,19 +137,33 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             });
         }
 
-		if (message.toLowerCase() === 'hey, le bot ?' 
-			|| message.toLowerCase() === 'hey, le bot?') {
-			if (user != 'Le Zu' 
-				|| user != 'Le Pangolin de la Vérité'
-				|| user != 'Platypus Cordula') {
-					// nothing
-			} else {
-				bot.sendMessage({
-                    to: channelID,
-                    message: 'Qu\'est-ce que tu veux, humain ?'
-                });
-			}
+	if (message.toLowerCase() === 'hey, le bot ?' 
+		|| message.toLowerCase() === 'hey, le bot?') {
+		if (user === 'Le Zu' 
+			|| user === 'Le Pangolin de la Vérité'
+			|| user === 'Platypus Cordula') {
+				// nothing
+		} else {
+			bot.sendMessage({
+			    to: channelID,
+			    message: 'Qu\'est-ce que tu veux, humain ?'
+			});
 		}
+	}
+	    
+        if (message.toLowerCase() === 'attaque!' 
+		|| message.toLowerCase() === 'attaque !') {
+		if (user === 'Le Zu' 
+			|| user === 'Le Pangolin de la Vérité'
+			|| user === 'Platypus Cordula') {
+				// nothing
+		} else {
+			bot.sendMessage({
+			    to: channelID,
+			    message: 'T\'as cru que la vie c\'était un kiwi ?'
+			});
+		}
+	}
 		
         if ((message.toLowerCase().includes('chine'))
             || message.toLowerCase().includes('tine') 
@@ -192,12 +206,12 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             }
         }
 		
-		if (message.toLowerCase() === 'alors') {
-			bot.sendMessage({
-				to: channelID,
-				message: '™'
-			});
-		}
+	if (message.toLowerCase() === 'alors') {
+		bot.sendMessage({
+			to: channelID,
+			message: '™'
+		});
+	}
 		
         if (message.toLowerCase().includes('loli')) {
             if ( Math.floor(Math.random() * (1000 + 1)) > 750) {
