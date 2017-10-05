@@ -979,10 +979,9 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				// §halp
 				case 'halp':
 					bot.sendMessage({
-							to: channelID,
-							message: 'Il faut utiliser §commands ...'
-						});
-					}
+						to: channelID,
+						message: 'Il faut utiliser §commands ...'
+					});
 				break;
 				// §tableflip
 				case 'tableflip':
