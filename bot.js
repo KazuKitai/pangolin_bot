@@ -860,76 +860,76 @@ gen_data['bottomDmgSerious'] = [
 // PNJs -----------------------------------------
 
 gen_data['MiqoSF'] = [
-    '{firstName_sol_f} {lastName_sol_f}, une Miqo\'te solaire de {age}. Elle est {job} et vit {dwelling}.<br />{phys_miq_f}<br />{psy_sol_f}'
+    '{firstName_sol_f} {lastName_sol_f}, une Miqo\'te solaire de {age}. Elle est {job} et vit {dwelling}.\r\n{phys_miq_f}\r\n{psy_sol_f}'
 ];
 gen_data['MiqoSM'] = [
-    '{firstName_sol_m} {lastName_sol_m}, un Miqo\'te solaire de {age}. Il est {job} et vit {dwelling}.<br />{phys_miq_m}<br />{psy_sol_m}'
+    '{firstName_sol_m} {lastName_sol_m}, un Miqo\'te solaire de {age}. Il est {job} et vit {dwelling}.\r\n{phys_miq_m}\r\n{psy_sol_m}'
 ];
 gen_data['MiqoLF'] = [
-    '{firstName_moon_f} {lastName_moon}, une Miqo\'te lunaire de {age}. Elle est {job} et vit {dwelling}.<br />{phys_miq_f}<br />{psy_moon_f}'
+    '{firstName_moon_f} {lastName_moon}, une Miqo\'te lunaire de {age}. Elle est {job} et vit {dwelling}.\r\n{phys_miq_f}\r\n{psy_moon_f}'
 ];
 gen_data['MiqoLM'] = [
-    '{firstName_moon_m} {lastName_moon}, un Miqo\'te lunaire de {age}. Il est {job} et vit {dwelling}.<br />{phys_miq_m}<br />{psy_moon_m}'
+    '{firstName_moon_m} {lastName_moon}, un Miqo\'te lunaire de {age}. Il est {job} et vit {dwelling}.\r\n{phys_miq_m}\r\n{psy_moon_m}'
 ];
 gen_data['RaenF'] = [
-    '{firstName_raen_f} {lastName_raen}, une Raen de {age}. Elle est {job} et vit {dwelling}.<br />{phys_aora_f}<br />{psy_aora_f}'
+    '{firstName_raen_f} {lastName_raen}, une Raen de {age}. Elle est {job} et vit {dwelling}.\r\n{phys_aora_f}\r\n{psy_aora_f}'
 ];
 gen_data['RaenM'] = [
-    '{firstName_raen_m} {lastName_raen}, un Raen de {age}. Il est {job} et vit {dwelling}.<br />{phys_aora_m}<br />{psy_aora_m}'
+    '{firstName_raen_m} {lastName_raen}, un Raen de {age}. Il est {job} et vit {dwelling}.\r\n{phys_aora_m}\r\n{psy_aora_m}'
 ];
 gen_data['XaelaF'] = [
-    '{firstName_xeala_f} {lastName_xaela}, une Xaela de {age}. Elle est {job} et vit {dwelling}.<br />{phys_aora_f}<br />{psy_aora_f}'
+    '{firstName_xeala_f} {lastName_xaela}, une Xaela de {age}. Elle est {job} et vit {dwelling}.\r\n{phys_aora_f}\r\n{psy_aora_f}'
 ];
 gen_data['XaelaM'] = [
-    '{firstName_xeala_m} {lastName_xaela}, un Xaela de {age}. Il est {job} et vit {dwelling}.<br />{phys_aora_m}<br />{psy_aora_m}'
+    '{firstName_xeala_m} {lastName_xaela}, un Xaela de {age}. Il est {job} et vit {dwelling}.\r\n{phys_aora_m}\r\n{psy_aora_m}'
 ];
 gen_data['RoeCFF'] = [
-    '{firstName_fire_f} {lastName_fire_f}, une Roegadyn du Clan du Feu de {age}. Elle est {job} et vit {dwelling}.<br />{phys_roe_f}<br />{psy_roe_f}'
+    '{firstName_fire_f} {lastName_fire_f}, une Roegadyn du Clan du Feu de {age}. Elle est {job} et vit {dwelling}.\r\n{phys_roe_f}\r\n{psy_roe_f}'
 ];
 gen_data['RoeCFM'] = [
-    '{firstName_fire_m} {lastName_fire_m}, un Roegadyn du Clan du Feu de {age}. Il est {job} et vit {dwelling}.<br />{phys_roe_m}<br />{psy_roe_m}'
+    '{firstName_fire_m} {lastName_fire_m}, un Roegadyn du Clan du Feu de {age}. Il est {job} et vit {dwelling}.\r\n{phys_roe_m}\r\n{psy_roe_m}'
 ];
 gen_data['RoeCMF'] = [
-    '{firstName_sea_f} {lastName_sea_f}, une Roegadyn du Clan de la Mer de {age}. Elle est {job} et vit {dwelling}.<br />{phys_roe_f}<br />{psy_roe_f}'
+    '{firstName_sea_f} {lastName_sea_f}, une Roegadyn du Clan de la Mer de {age}. Elle est {job} et vit {dwelling}.\r\n{phys_roe_f}\r\n{psy_roe_f}'
 ];
 gen_data['RoeCMM'] = [
-    '{firstName_sea_m} {lastName_sea_m}, un Roegadyn du Clan de la Mer de {age}. Il est {job} et vit {dwelling}.<br />{phys_roe_m}<br />{psy_roe_m}'
+    '{firstName_sea_m} {lastName_sea_m}, un Roegadyn du Clan de la Mer de {age}. Il est {job} et vit {dwelling}.\r\n{phys_roe_m}\r\n{psy_roe_m}'
 ];
 gen_data['ElezCF'] = [
-    '{firstName_ele_m} {lastName_ele}, un Elezen Cr&eacute;pusculaire de {age}. Il est {job} et vit {dwelling}.<br />{phys_ele_m}<br />{psy_ele_m}'
+    '{firstName_ele_m} {lastName_ele}, un Elezen Crépusculaire de {age}. Il est {job} et vit {dwelling}.\r\n{phys_ele_m}\r\n{psy_ele_m}'
 ];
 gen_data['ElezCM'] = [
-    '{firstName_ele_f} {lastName_ele}, une Elezenne Cr&eacute;pusculaire de {age}. Elle est {job} et vit {dwelling}.<br />{phys_ele_f}<br />{psy_ele_f}'
+    '{firstName_ele_f} {lastName_ele}, une Elezenne Crépusculaire de {age}. Elle est {job} et vit {dwelling}.\r\n{phys_ele_f}\r\n{psy_ele_f}'
 ];
 gen_data['ElezSF'] = [
-    '{firstName_ele_f} {lastName_ele}, une Elezenne Sylvetre de {age}. Elle est {job} et vit {dwelling}.<br />{phys_ele_f}<br />{psy_ele_f}'
+    '{firstName_ele_f} {lastName_ele}, une Elezenne Sylvetre de {age}. Elle est {job} et vit {dwelling}.\r\n{phys_ele_f}\r\n{psy_ele_f}'
 ];
 gen_data['ElezSM'] = [
-    '{firstName_ele_m} {lastName_ele}, un Elezen Sylvestre de {age}. Il est {job} et vit {dwelling}.<br />{phys_ele_m}<br />{psy_ele_m}'
+    '{firstName_ele_m} {lastName_ele}, un Elezen Sylvestre de {age}. Il est {job} et vit {dwelling}.\r\n{phys_ele_m}\r\n{psy_ele_m}'
 ];
 gen_data['HyurgF'] = [
-    '{firstName_hyurg_f} {lastName_hyurg}, une Hyurgoth de {age}. Elle est {job} et vit {dwelling}.<br />{phys_hyurg_f}<br />{psy_hyurg_f}'
+    '{firstName_hyurg_f} {lastName_hyurg}, une Hyurgoth de {age}. Elle est {job} et vit {dwelling}.\r\n{phys_hyurg_f}\r\n{psy_hyurg_f}'
 ];
 gen_data['HyurgM'] = [
-    '{firstName_hyurg_m} {lastName_hyurg}, un Hyurgoth de {age}. Il est {job} et vit {dwelling}.<br />{phys_hyurg_m}<br />{psy_hyurg_m}'
+    '{firstName_hyurg_m} {lastName_hyurg}, un Hyurgoth de {age}. Il est {job} et vit {dwelling}.\r\n{phys_hyurg_m}\r\n{psy_hyurg_m}'
 ];
 gen_data['HyuroF'] = [
-    '{firstName_hyuro_f} {lastName_hyuro}, une Hyuroise de {age}. Elle est {job} et vit {dwelling}.<br />{phys_hyuro_f}<br />{psy_hyuro_f}'
+    '{firstName_hyuro_f} {lastName_hyuro}, une Hyuroise de {age}. Elle est {job} et vit {dwelling}.\r\n{phys_hyuro_f}\r\n{psy_hyuro_f}'
 ];
 gen_data['HyuroM'] = [
-    '{firstName_hyuro_m} {lastName_hyuro}, un Hyurois de {age}. Il est {job} et vit {dwelling}.<br />{phys_hyuro_m}<br />{psy_hyuro_m}'
+    '{firstName_hyuro_m} {lastName_hyuro}, un Hyurois de {age}. Il est {job} et vit {dwelling}.\r\n{phys_hyuro_m}\r\n{psy_hyuro_m}'
 ];
 gen_data['LalaPF'] = [
-    '{name_lala_pl_f}, une Lalafell du Peuple des Plaines de {age}. Elle est {job} et vit {dwelling}.<br />{phys_lala_f}<br />{psy_lala_f}'
+    '{name_lala_pl_f}, une Lalafell du Peuple des Plaines de {age}. Elle est {job} et vit {dwelling}.\r\n{phys_lala_f}\r\n{psy_lala_f}'
 ];
 gen_data['LalaPM'] = [
-    '{name_lala_pl_m}, un Lalafell du Peuple des Plaines de {age}. Il est {job} et vit {dwelling}.<br />{phys_lala_m}<br />{psy_lala_m}'
+    '{name_lala_pl_m}, un Lalafell du Peuple des Plaines de {age}. Il est {job} et vit {dwelling}.\r\n{phys_lala_m}\r\n{psy_lala_m}'
 ];
 gen_data['LalaDF'] = [
-    '{name_lala_dn_f}, une Lalafell du Peuple des Dunes de {age}. Elle est {job} et vit {dwelling}.<br />{phys_lala_f}<br />{psy_lala_f}'
+    '{name_lala_dn_f}, une Lalafell du Peuple des Dunes de {age}. Elle est {job} et vit {dwelling}.\r\n{phys_lala_f}\r\n{psy_lala_f}'
 ];
 gen_data['LalaDM'] = [
-    '{name_lala_dn_m}, un Lalafell du Peuple des Dunes de {age}. Il est {job} et vit {dwelling}.<br />{phys_lala_m}<br />{psy_lala_m}'
+    '{name_lala_dn_m}, un Lalafell du Peuple des Dunes de {age}. Il est {job} et vit {dwelling}.\r\n{phys_lala_m}\r\n{psy_lala_m}'
 ];
 
 gen_data['pnj'] = [
@@ -937,30 +937,30 @@ gen_data['pnj'] = [
 ];
 
 gen_data['race'] = [
-    '{firstName_moon_m} {lastName_moon}, un Miqo\'te lunaire de {age}. Il est {job} et vit {dwelling}.<br />{phys_miq_m}<br />{psy_moon_m}',
-    '{firstName_moon_f} {lastName_moon}, une Miqo\'te lunaire de {age}. Elle est {job} et vit {dwelling}.<br />{phys_miq_f}<br />{psy_moon_f}',
-    '{firstName_sol_m} {lastName_sol_m}, un Miqo\'te solaire de {age}. Il est {job} et vit {dwelling}.<br />{phys_miq_m}<br />{psy_sol_m}',
-    '{firstName_sol_f} {lastName_sol_f}, une Miqo\'te solaire de {age}. Elle est {job} et vit {dwelling}.<br />{phys_miq_f}<br />{psy_sol_f}',
-    '{firstName_raen_m} {lastName_raen}, un Raen de {age}. Il est {job} et vit {dwelling}.<br />{phys_aora_m}<br />{psy_aora_m}',
-    '{firstName_raen_f} {lastName_raen}, une Raen de {age}. Elle est {job} et vit {dwelling}.<br />{phys_aora_f}<br />{psy_aora_f}',
-    '{firstName_xeala_m} {lastName_xaela}, un Xaela de {age}. Il est {job} et vit {dwelling}.<br />{phys_aora_m}<br />{psy_aora_m}',
-    '{firstName_xeala_f} {lastName_xaela}, une Xaela de {age}. Elle est {job} et vit {dwelling}.<br />{phys_aora_f}<br />{psy_aora_f}',
-    '{firstName_fire_m} {lastName_fire_m}, un Roegadyn du Clan du Feu de {age}. Il est {job} et vit {dwelling}.<br />{phys_roe_m}<br />{psy_roe_m}',
-    '{firstName_fire_f} {lastName_fire_f}, une Roegadyn du Clan du Feu de {age}. Elle est {job} et vit {dwelling}.<br />{phys_roe_f}<br />{psy_roe_f}',
-    '{firstName_sea_m} {lastName_sea_m}, un Roegadyn du Clan de la Mer de {age}. Il est {job} et vit {dwelling}.<br />{phys_roe_m}<br />{psy_roe_m}',
-    '{firstName_sea_f} {lastName_sea_f}, une Roegadyn du Clan de la Mer de {age}. Elle est {job} et vit {dwelling}.<br />{phys_roe_f}<br />{psy_roe_f}',
-    '{firstName_hyurg_m} {lastName_hyurg}, un Hyurgoth de {age}. Il est {job} et vit {dwelling}.<br />{phys_hyurg_m}<br />{psy_hyurg_m}',
-    '{firstName_hyurg_f} {lastName_hyurg}, une Hyurgoth de {age}. Elle est {job} et vit {dwelling}.<br />{phys_hyurg_f}<br />{psy_hyurg_f}',
-    '{firstName_hyuro_m} {lastName_hyuro}, un Hyurois de {age}. Il est {job} et vit {dwelling}.<br />{phys_hyuro_m}<br />{psy_hyuro_m}',
-    '{firstName_hyuro_f} {lastName_hyuro}, une Hyuroise de {age}. Elle est {job} et vit {dwelling}.<br />{phys_hyuro_f}<br />{psy_hyuro_f}',
-    '{firstName_ele_m} {lastName_ele}, un Elezen Sylvestre de {age}. Il est {job} et vit {dwelling}.<br />{phys_ele_m}<br />{psy_ele_m}',
-    '{firstName_ele_f} {lastName_ele}, une Elezenne Sylvetre de {age}. Elle est {job} et vit {dwelling}.<br />{phys_ele_f}<br />{psy_ele_f}',
-    '{firstName_ele_m} {lastName_ele}, un Elezen Cr&eacute;pusculaire de {age}. Il est {job} et vit {dwelling}.<br />{phys_ele_m}<br />{psy_ele_m}',
-    '{firstName_ele_f} {lastName_ele}, une Elezenne Cr&eacute;pusculaire de {age}. Elle est {job} et vit {dwelling}.<br />{phys_ele_f}<br />{psy_ele_f}',
-    '{name_lala_dn_m}, un Lalafell du Peuple des Dunes de {age}. Il est {job} et vit {dwelling}.<br />{phys_lala_m}<br />{psy_lala_m}',
-    '{name_lala_dn_f}, une Lalafell du Peuple des Dunes de {age}. Elle est {job} et vit {dwelling}.<br />{phys_lala_f}<br />{psy_lala_f}',
-    '{name_lala_pl_m}, un Lalafell du Peuple des Plaines de {age}. Il est {job} et vit {dwelling}.<br />{phys_lala_m}<br />{psy_lala_m}',
-    '{name_lala_pl_f}, une Lalafell du Peuple des Plaines de {age}. Elle est {job} et vit {dwelling}.<br />{phys_lala_f}<br />{psy_lala_f}'
+    '{firstName_moon_m} {lastName_moon}, un Miqo\'te lunaire de {age}. Il est {job} et vit {dwelling}.\r\n{phys_miq_m}\r\n{psy_moon_m}',
+    '{firstName_moon_f} {lastName_moon}, une Miqo\'te lunaire de {age}. Elle est {job} et vit {dwelling}.\r\n{phys_miq_f}\r\n{psy_moon_f}',
+    '{firstName_sol_m} {lastName_sol_m}, un Miqo\'te solaire de {age}. Il est {job} et vit {dwelling}.\r\n{phys_miq_m}\r\n{psy_sol_m}',
+    '{firstName_sol_f} {lastName_sol_f}, une Miqo\'te solaire de {age}. Elle est {job} et vit {dwelling}.\r\n{phys_miq_f}\r\n{psy_sol_f}',
+    '{firstName_raen_m} {lastName_raen}, un Raen de {age}. Il est {job} et vit {dwelling}.\r\n{phys_aora_m}\r\n{psy_aora_m}',
+    '{firstName_raen_f} {lastName_raen}, une Raen de {age}. Elle est {job} et vit {dwelling}.\r\n{phys_aora_f}\r\n{psy_aora_f}',
+    '{firstName_xeala_m} {lastName_xaela}, un Xaela de {age}. Il est {job} et vit {dwelling}.\r\n{phys_aora_m}\r\n{psy_aora_m}',
+    '{firstName_xeala_f} {lastName_xaela}, une Xaela de {age}. Elle est {job} et vit {dwelling}.\r\n{phys_aora_f}\r\n{psy_aora_f}',
+    '{firstName_fire_m} {lastName_fire_m}, un Roegadyn du Clan du Feu de {age}. Il est {job} et vit {dwelling}.\r\n{phys_roe_m}\r\n{psy_roe_m}',
+    '{firstName_fire_f} {lastName_fire_f}, une Roegadyn du Clan du Feu de {age}. Elle est {job} et vit {dwelling}.\r\n{phys_roe_f}\r\n{psy_roe_f}',
+    '{firstName_sea_m} {lastName_sea_m}, un Roegadyn du Clan de la Mer de {age}. Il est {job} et vit {dwelling}.\r\n{phys_roe_m}\r\n{psy_roe_m}',
+    '{firstName_sea_f} {lastName_sea_f}, une Roegadyn du Clan de la Mer de {age}. Elle est {job} et vit {dwelling}.\r\n{phys_roe_f}\r\n{psy_roe_f}',
+    '{firstName_hyurg_m} {lastName_hyurg}, un Hyurgoth de {age}. Il est {job} et vit {dwelling}.\r\n{phys_hyurg_m}\r\n{psy_hyurg_m}',
+    '{firstName_hyurg_f} {lastName_hyurg}, une Hyurgoth de {age}. Elle est {job} et vit {dwelling}.\r\n{phys_hyurg_f}\r\n{psy_hyurg_f}',
+    '{firstName_hyuro_m} {lastName_hyuro}, un Hyurois de {age}. Il est {job} et vit {dwelling}.\r\n{phys_hyuro_m}\r\n{psy_hyuro_m}',
+    '{firstName_hyuro_f} {lastName_hyuro}, une Hyuroise de {age}. Elle est {job} et vit {dwelling}.\r\n{phys_hyuro_f}\r\n{psy_hyuro_f}',
+    '{firstName_ele_m} {lastName_ele}, un Elezen Sylvestre de {age}. Il est {job} et vit {dwelling}.\r\n{phys_ele_m}\r\n{psy_ele_m}',
+    '{firstName_ele_f} {lastName_ele}, une Elezenne Sylvetre de {age}. Elle est {job} et vit {dwelling}.\r\n{phys_ele_f}\r\n{psy_ele_f}',
+    '{firstName_ele_m} {lastName_ele}, un Elezen Crépusculaire de {age}. Il est {job} et vit {dwelling}.\r\n{phys_ele_m}\r\n{psy_ele_m}',
+    '{firstName_ele_f} {lastName_ele}, une Elezenne Crépusculaire de {age}. Elle est {job} et vit {dwelling}.\r\n{phys_ele_f}\r\n{psy_ele_f}',
+    '{name_lala_dn_m}, un Lalafell du Peuple des Dunes de {age}. Il est {job} et vit {dwelling}.\r\n{phys_lala_m}\r\n{psy_lala_m}',
+    '{name_lala_dn_f}, une Lalafell du Peuple des Dunes de {age}. Elle est {job} et vit {dwelling}.\r\n{phys_lala_f}\r\n{psy_lala_f}',
+    '{name_lala_pl_m}, un Lalafell du Peuple des Plaines de {age}. Il est {job} et vit {dwelling}.\r\n{phys_lala_m}\r\n{psy_lala_m}',
+    '{name_lala_pl_f}, une Lalafell du Peuple des Plaines de {age}. Elle est {job} et vit {dwelling}.\r\n{phys_lala_f}\r\n{psy_lala_f}'
 ];
 
 gen_data['firstName_moon_m'] = [
@@ -1230,20 +1230,20 @@ gen_data['firstName_ele_f'] = [
     'Marisette' ,
     'Sophietta',
     'Lison',
-    'B&eacute;diane',
+    'Bédiane',
     'Sylvanne',
     'Simonnette',
     'Babette',
     'Nichole',
     'Suson',
     'Tibaine',
-    'P&eacute;n&eacute;lon' ,
+    'Pénélon' ,
     'Ursulena',
     'Paulette',
     'Vivianne',
     'Louisette',
     'Ricette',
-    'El&eacute;anor',
+    'Eléanor',
     'Gricette',
     'Marionde',
     'Diane'
@@ -1460,7 +1460,7 @@ gen_data['lastName_hyuro'] = [
 gen_data['lastName_ele'] = [
     'Faucertaux' ,
     'Brillemarre',
-    'Cim&eacute;toiles',
+    'Cimétoiles',
     'Farcehoux',
     'Percetemps',
     'Branchebalant',
@@ -1474,7 +1474,7 @@ gen_data['lastName_ele'] = [
     'Bardanoux',
     'Porteprison',
     'Jaunissou',
-    'Rubois&eacute;',
+    'Ruboisé',
     'Frappeminou',
     'Frippemonde',
     'Boursemole'
@@ -1553,9 +1553,9 @@ gen_data['age'] = {
 };
 
 gen_data['job'] = {
-    '0': 'fortun&eacute; et ne travaille pas',
+    '0': 'fortuné et ne travaille pas',
     '1': 'scientifique',
-    '2': '&eacute;th&eacute;rologue',
+    '2': 'éthérologue',
     '3-6': 'entraineur dans une guilde',
     '7-10' : 'sous-officier dans une grande compagnie',
     '11-15': 'soldat mais pas dans une grande compagnie',
@@ -1566,53 +1566,53 @@ gen_data['job'] = {
     '36-40': 'botaniste',
     '41-45': 'mineur',
     '46-50': 'alchimiste',
-    '51-55': 'orf&egrave;vre',
+    '51-55': 'orfèvre',
     '56-60': 'forgeron(ne)',
     '61-65': 'armurier(e)',
-    '66-70': 'p&ecirc;cheur(se)',
+    '66-70': 'pêcheur(se)',
     '71-75': 'membre d\'un groupe de bandits',
     '76-80': 'mercenaire',
     '81-85': 'voleur(se)',
-    '86-90': 'un(e) r&eacute;fugi&eacute;(e)',
-    '91': 'tueur(se) &agrave; gage',
+    '86-90': 'un(e) réfugié(e)',
+    '91': 'tueur(se) à gage',
     '92': 'officier dans une grande compagnie',
-    '93': 'mafieux(se) haut plac&eacute;(e)',
+    '93': 'mafieux(se) haut placé(e)',
     '94': 'vendeur de drogues',
-    '95': 'prostitu&eacute;(e)',
+    '95': 'prostitué(e)',
     '96-100' : 'aventurier(e)'
 };
 
 gen_data['dwelling'] = {
-    '0': '&agrave Idyll&eacute;e',
-    '1-20': '&agrave; Gridania',
-    '21-25': 'en for&ecirc;t centrale',
-    '26-30': 'en for&ecirc;t de l\'est',
-    '31-35': 'en for&ecirc;t du nord',
-    '36-40': 'en for&ecirc;t du sud',
-    '41-60': '&agrave; Limsa Lominsa',
+    '0': '&agrave Idyllée',
+    '1-20': 'à Gridania',
+    '21-25': 'en forêt centrale',
+    '26-30': 'en forêt de l\'est',
+    '31-35': 'en forêt du nord',
+    '36-40': 'en forêt du sud',
+    '41-60': 'à Limsa Lominsa',
     '61-65': 'en Noscea centrale',
     '66-70': 'en basse Noscea',
     '71-75': 'en haute Noscea',
-    '76-80': 'en Noscea ext&eacute;rieure',
+    '76-80': 'en Noscea extérieure',
     '81-100': '&agrave Ul\'dah',
     '101-105': 'dans le Thanalan central',
     '106-110': 'dans le Thanalan septentrional',
-    '111-115': 'dans le Thanalan m&eacute;ridional',
+    '111-115': 'dans le Thanalan méridional',
     '116-120': 'dans le Thanalan occidental',
-    '121-140': '&agrave; Ishgard',
+    '121-140': 'à Ishgard',
     '141-145': 'dans le Coerthas central',
     '146-150': 'dans le Coerthas occidental',
-    '151-155': '&agrave l\&eacute;tendue de Rhalgr',
+    '151-155': '&agrave l\étendue de Rhalgr',
     '156-160': 'dans les Marges',
     '161-165': 'dans les Pics',
-    '166-175': '&agrave; Ala Mhigo',
+    '166-175': 'à Ala Mhigo',
     '176-180': 'dans les faubourgs Mhigois',
     '181-200': '&agrave Kugane',
     '201-205': 'dans la Mer de Rubis',
-    '206-210': '&agrave; Yanxia',
+    '206-210': 'à Yanxia',
     '211-215': 'dans les steppes d\'Azim',
     '216-220': '&agrave Doma',
-    '221-225': 'dans l\arri&egrave;re pays dravanien',
+    '221-225': 'dans l\arrière pays dravanien',
 };
 
 gen_data['phys_miq_m'] = [
@@ -1673,21 +1673,21 @@ gen_data['phys_lala_f'] = [
 
 gen_data['height'] = {
     '0': 'minuscule',
-    '1-10': 'tr&egrave;s petit(e)',
+    '1-10': 'très petit(e)',
     '11-20': 'petit(e)',
     '21-40': 'd\'une taille standard',
     '41-50': 'grand(e)',
-    '51-60': 'tr&egrave;s grand(e)',
+    '51-60': 'très grand(e)',
     '61': 'gigantesque'
 };
 
 gen_data['strength'] = {
-    '0': 'extr&ecirc;mement faible physiquement',
+    '0': 'extrêmement faible physiquement',
     '1-10': 'faible physiquement, c\'est un(e) mage',
-    '11-20': 'a entretenir un minimum son physique malgr&eacute; le fait qu\'il/elle soit mage',
-    '21-40': 'un minimum muscl&eacute;(e)',
-    '41-50': 'plut&ocirc;t muscl&eacute;(e)',
-    '51-60': 'tr&egrave;s muscl&eacute;(e)',
+    '11-20': 'a entretenir un minimum son physique malgré le fait qu\'il/elle soit mage',
+    '21-40': 'un minimum musclé(e)',
+    '41-50': 'plutôt musclé(e)',
+    '51-60': 'très musclé(e)',
     '61': 'Arnold Schwarzenegger dans sa jeunesse'
 };
 
@@ -1731,22 +1731,22 @@ gen_data['eyes'] = {
 };
 
 gen_data['circles'] = {
-    '0-5': 'cercl&eacute;s de bleu',
-    '6-10': 'cercl&eacute;s de vert',
-    '11-15': 'cercl&eacute;s de jaune',
-    '16-20': 'cercl&eacute;s de violet',
-    '21-25': 'cercl&eacute;s de blanc',
+    '0-5': 'cerclés de bleu',
+    '6-10': 'cerclés de vert',
+    '11-15': 'cerclés de jaune',
+    '16-20': 'cerclés de violet',
+    '21-25': 'cerclés de blanc',
     '26-30': '',
 };
 
 gen_data['hair_cut'] = {
-    '0': 'ras&eacute;s',
-    '1-10': 'coup&eacutes tr&egrave;s courts',
+    '0': 'rasés',
+    '1-10': 'coup&eacutes très courts',
     '11-20': 'relativement courts',
     '21-40': 'mi-longs',
-    '41-50': 'au niveau des &eacute;paules',
+    '41-50': 'au niveau des épaules',
     '51-60': 'longs',
-    '61': 'tr&egrave;s longs'
+    '61': 'très longs'
 };
 
 gen_data['hair_color'] = {
@@ -1763,37 +1763,37 @@ gen_data['hair_color'] = {
 };
 
 gen_data['horns'] = [
-    'partent vers l\'arri&egrave;re et sont assez fines',
-    'sont &eacute;paisses et partent vers l\'avant',
+    'partent vers l\'arrière et sont assez fines',
+    'sont épaisses et partent vers l\'avant',
     'sont petites et partent vers le haut',
-    'sont &eacute;paisses mais courtes',
-    'sont plut&ocirc;t longues et fines',
-    'sont grandes et &eacute;paisses'
+    'sont épaisses mais courtes',
+    'sont plutôt longues et fines',
+    'sont grandes et épaisses'
 ];
 
 gen_data['glance'] = {
-    '0': 'p&eacute;tillant',
-    '1-10': 'ac&eacute;r&eacute;',
+    '0': 'pétillant',
+    '1-10': 'acéré',
     '11-30': 'morne',
-    '31-50': 'affut&eacute;',
+    '31-50': 'affuté',
     '51-60': 'torve',
     '61-65': 'froid',
     '66-70': 'bienveillant',
-    '71-75': 'enjou&eacute;',
+    '71-75': 'enjoué',
     '76-80': 'libidineux',
     '81-85': 'vicelard',
 };
 
 gen_data['smile'] = {
     '0': 'a un sourire sadique',
-    '1-10': 'affiche toujours une moue blas&eacute;e',
-    '11-30': 'souvent le sourire aux l&egrave;vres',
-    '31-50': 'un sourire triste aux l&egrave;vres',
-    '51-60': 'un visage ferm&eacute;',
-    '61-65': 'un petit sourire aux l&egrave;vres en permanence',
+    '1-10': 'affiche toujours une moue blasée',
+    '11-30': 'souvent le sourire aux lèvres',
+    '31-50': 'un sourire triste aux lèvres',
+    '51-60': 'un visage fermé',
+    '61-65': 'un petit sourire aux lèvres en permanence',
     '66-70': 'un sourire lubrique',
     '71-75': 'a l\'air timide',
-    '76-80': 'a d\'&eacute;tranges tatouages',
+    '76-80': 'a d\'étranges tatouages',
     '81-85': 'a des tatouages tribaux',
     '86-90': 'a quelques cicatrices',
     '91-95': 'a de nombreuses cicatrices'
@@ -1801,12 +1801,12 @@ gen_data['smile'] = {
 
 gen_data['tired'] = {
     '0-20': 'l\'air en forme',
-    '21-25': 'l\'air &eacute;puis&eacute;(e)',
+    '21-25': 'l\'air épuisé(e)',
     '26-30': 'toujours l\'air en forme'
 };
 
 gen_data['hunger'] = {
-    '0-20': 'mange &agrave; sa faim',
+    '0-20': 'mange à sa faim',
     '21-25': 'a l\'air maigre',
     '26-30': 'a un peu de ventre',
     '31-35': 'mange sans doute beaucoup trop'
@@ -1815,185 +1815,185 @@ gen_data['hunger'] = {
 gen_data['miqote_tail'] = {
     '0': 'est comme celle d\'un lion',
     '1': 'est touffue',
-    '2': 'est plut&ocirc;t fine',
-    '3': 'est courte mais &eacute;paisse'
+    '2': 'est plutôt fine',
+    '3': 'est courte mais épaisse'
 };
 
 gen_data['aora_tail'] = {
-    '0': 'est &eacute;paisse et courte',
-    '1': 'est &eacute;paisse et longue',
+    '0': 'est épaisse et courte',
+    '1': 'est épaisse et longue',
     '2': 'est fine et longue',
     '3': 'est fine et courte',
 };
 
 gen_data['nose'] = [
     'est en patate',
-    'est plut&ocirc;t fin pour sa race',
-    'est tr&egrave;s &eacute;pais avec d\'&eacute;normes narines',
+    'est plutôt fin pour sa race',
+    'est très épais avec d\'énormes narines',
     'est sembable a celui d\'un Hyurois, c\'est d\ailleurs surprenant'
 ];
 
 gen_data['ears'] = [
     'sont petites et pointues',
-    'sont petites et d&eacute;coll&eacute;es',
+    'sont petites et décollées',
     'sont longues et poitues',
-    'sont longues et d&eacute;coll&eacute;es, de vraies paraboles',
+    'sont longues et décollées, de vraies paraboles',
     'sont fines et longues',
     'sont peu pointues pour sa race'
 ];
 
 gen_data['psy_moon_m'] = {
-    '0': 'Il est plut&ocirc;t solitaire, comme la plupart des Miqo\'tes lunaires. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '0': 'Il est plutôt solitaire, comme la plupart des Miqo\'tes lunaires. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
     '1': 'Il est assez sociable et reste rarement seul. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
-    '2': 'Il est du genre &agrave; picoler avec des copains assez souvent. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
-    '3': 'Il est plut&ocirc;t timide mais appr&eacute;cie la compagnie. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.'
+    '2': 'Il est du genre à picoler avec des copains assez souvent. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '3': 'Il est plutôt timide mais apprécie la compagnie. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.'
 };
 
 gen_data['psy_sol_m'] = {
-    '0': 'Il a de tr&egrave;s fort lien avec sa tribu. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '0': 'Il a de très fort lien avec sa tribu. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
     '1': 'Il est assez sociable et reste rarement seul. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
-    '2': 'Il est du genre &agrave; picoler avec des copains assez souvent. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
-    '3': 'Il est plut&ocirc;t timide mais appr&eacute;cie la compagnie. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.'
+    '2': 'Il est du genre à picoler avec des copains assez souvent. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '3': 'Il est plutôt timide mais apprécie la compagnie. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.'
 };
 
 gen_data['psy_aora_m'] = {
     '0': 'Il est solitaire et s\'isole souvent. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
     '1': 'Il est assez sociable et reste rarement seul. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
-    '2': 'Il est du genre &agrave; picoler avec des copains assez souvent. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
-    '3': 'Il est plut&ocirc;t timide mais appr&eacute;cie la compagnie. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.'
+    '2': 'Il est du genre à picoler avec des copains assez souvent. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '3': 'Il est plutôt timide mais apprécie la compagnie. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.'
 };
 
 gen_data['psy_roe_m'] = {
-    '0': 'Il est intimidant, du coup en g&eacute;n&eacute;ral seul. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '0': 'Il est intimidant, du coup en général seul. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
     '1': 'Il est assez sociable et reste rarement seul. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
-    '2': 'Il est du genre &agrave; picoler avec des copains assez souvent. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
-    '3': 'Il est plut&ocirc;t timide mais appr&eacute;cie la compagnie. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.'
+    '2': 'Il est du genre à picoler avec des copains assez souvent. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '3': 'Il est plutôt timide mais apprécie la compagnie. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.'
 };
 
 gen_data['psy_hyurg_m'] = {
-    '0': 'Il est intimidant, du coup en g&eacute;n&eacute;ral seul. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '0': 'Il est intimidant, du coup en général seul. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
     '1': 'Il est assez sociable et reste rarement seul. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
-    '2': 'Il est du genre &agrave; picoler avec des copains assez souvent. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
-    '3': 'Il est plut&ocirc;t timide mais appr&eacute;cie la compagnie. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.'
+    '2': 'Il est du genre à picoler avec des copains assez souvent. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '3': 'Il est plutôt timide mais apprécie la compagnie. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.'
 };
 
 gen_data['psy_hyuro_m'] = {
     '0': 'Il a toujours l\'air perdu dans ses pens&eacutes;es. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
     '1': 'Il est assez sociable et reste rarement seul. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
-    '2': 'Il est du genre &agrave; picoler avec des copains assez souvent. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
-    '3': 'Il est plut&ocirc;t timide mais appr&eacute;cie la compagnie. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.'
+    '2': 'Il est du genre à picoler avec des copains assez souvent. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '3': 'Il est plutôt timide mais apprécie la compagnie. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.'
 };
 
 gen_data['psy_ele_m'] = {
-    '0': 'Il n\'appr&eacute;cie vraiment que les autres Elezens. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '0': 'Il n\'apprécie vraiment que les autres Elezens. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
     '1': 'Il est assez sociable et reste rarement seul. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
-    '2': 'Il est du genre &agrave; picoler avec des copains assez souvent. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
-    '3': 'Il est plut&ocirc;t timide mais appr&eacute;cie la compagnie. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.'
+    '2': 'Il est du genre à picoler avec des copains assez souvent. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '3': 'Il est plutôt timide mais apprécie la compagnie. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.'
 };
 
 gen_data['psy_lala_m'] = {
-    '0': 'Il ach&egrave;te les gens pour avoir des amis. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '0': 'Il achète les gens pour avoir des amis. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
     '1': 'Il est assez sociable et reste rarement seul. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
-    '2': 'Il est du genre &agrave; picoler avec des copains assez souvent. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
-    '3': 'Il est plut&ocirc;t timide mais appr&eacute;cie la compagnie. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.'
+    '2': 'Il est du genre à picoler avec des copains assez souvent. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '3': 'Il est plutôt timide mais apprécie la compagnie. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.'
 };
 
 gen_data['global_psy_m_1'] = {
-    '0': 'En r&eacute;alit&eacute; c\'est un v&eacute;ritable pervers',
-    '1': 'Assez r&eacute;serv&eacute; de prime abord, il est en fait compl&egrave;tement d&eacute;shinib&eacute; quand il est en confiance',
-    '2': 'Du genre calme, il est globalement r&eacute;serv&eacute;',
-    '3': 'Clairement coinc&eacute; du cul, il est tr&egrave;s difficile de lui faire d&eacute;crocher ne serait-ce qu\'un sourire'
+    '0': 'En réalité c\'est un véritable pervers',
+    '1': 'Assez réservé de prime abord, il est en fait complètement déshinibé quand il est en confiance',
+    '2': 'Du genre calme, il est globalement réservé',
+    '3': 'Clairement coincé du cul, il est très difficile de lui faire décrocher ne serait-ce qu\'un sourire'
 };
 
 gen_data['global_psy_m_2'] = {
-    '0': 'Absolument pas fiable, il trahira sans h&eacute;sit&eacute; pour de l\'argent',
-    '1': 'Bien trop pleutre pour &ecirc;tre fiable au combat, il n\'en reste pas moins honn&ecirc;te',
-    '2': 'Plut&ocirc;t loyal, il ne laisse tomber ses camarades que s\'ils le d&eacute;&ccedil;oivent',
-    '3': 'Si c\'est votre ami, il pourra mourir pour vous sauver, et ce m&ecirc;me si vous l\'avez trahis'		
+    '0': 'Absolument pas fiable, il trahira sans hésité pour de l\'argent',
+    '1': 'Bien trop pleutre pour être fiable au combat, il n\'en reste pas moins honnête',
+    '2': 'Plutôt loyal, il ne laisse tomber ses camarades que s\'ils le déçoivent',
+    '3': 'Si c\'est votre ami, il pourra mourir pour vous sauver, et ce même si vous l\'avez trahis'		
 };
 
 gen_data['global_psy_m_3'] = {
-    '0': 'Il ne parle pas beaucoup de son pass&eacute;, sans doute car il est douloureux',
-    '1': 'Son histoire est banale, il n\'a jamais eu de r&eacute;el probl&egrave;me dans la vie',
-    '2': 'Il a eu une vie heureuse jusque l&agrave;, le veinard',
-    '3': 'Il pr&eacute;tend beaucoup de choses quant &agrave; son pass&eacute;, mais personne ne peut confirmer que c\'est vrai'		
+    '0': 'Il ne parle pas beaucoup de son passé, sans doute car il est douloureux',
+    '1': 'Son histoire est banale, il n\'a jamais eu de réel problème dans la vie',
+    '2': 'Il a eu une vie heureuse jusque là, le veinard',
+    '3': 'Il prétend beaucoup de choses quant à son passé, mais personne ne peut confirmer que c\'est vrai'		
 };
 
 gen_data['psy_moon_f'] = {
-    '0': 'Elle est plut&ocirc;t solitaire, comme la plupart des Miqo\'tes lunaires. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '0': 'Elle est plutôt solitaire, comme la plupart des Miqo\'tes lunaires. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
     '1': 'Elle est assez sociable et reste rarement seule. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
-    '2': 'Elle est du genre &agrave; picoler avec des copains assez souvent. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
-    '3': 'Elle est plut&ocirc;t timide mais appr&eacute;cie la compagnie. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.'
+    '2': 'Elle est du genre à picoler avec des copains assez souvent. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '3': 'Elle est plutôt timide mais apprécie la compagnie. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.'
 };
 
 gen_data['psy_sol_f'] = {
-    '0': 'Elle a de tr&egrave;s fort lien avec sa tribu. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '0': 'Elle a de très fort lien avec sa tribu. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
     '1': 'Elle est assez sociable et reste rarement seule. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
-    '2': 'Elle est du genre &agrave; picoler avec des copains assez souvent. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
-    '3': 'Elle est plut&ocirc;t timide mais appr&eacute;cie la compagnie. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.'
+    '2': 'Elle est du genre à picoler avec des copains assez souvent. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '3': 'Elle est plutôt timide mais apprécie la compagnie. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.'
 };
 
 gen_data['psy_aora_f'] = {
     '0': 'Elle est solitaire et s\'isole souvent. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
     '1': 'Elle est assez sociable et reste rarement seule. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
-    '2': 'Elle est du genre &agrave; picoler avec des copains assez souvent. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
-    '3': 'Elle est plut&ocirc;t timide mais appr&eacute;cie la compagnie. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.'
+    '2': 'Elle est du genre à picoler avec des copains assez souvent. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '3': 'Elle est plutôt timide mais apprécie la compagnie. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.'
 };
 
 gen_data['psy_roe_f'] = {
-    '0': 'Elle est effrayante, du coup en g&eacute;n&eacute;ral seule. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '0': 'Elle est effrayante, du coup en général seule. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
     '1': 'Elle est assez sociable et reste rarement seule. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
-    '2': 'Elle est du genre &agrave; picoler avec des copains assez souvent. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
-    '3': 'Elle est plut&ocirc;t timide mais appr&eacute;cie la compagnie. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.'
+    '2': 'Elle est du genre à picoler avec des copains assez souvent. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '3': 'Elle est plutôt timide mais apprécie la compagnie. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.'
 };
 
 gen_data['psy_hyurg_f'] = {
-    '0': 'Elle est effrayante, du coup en g&eacute;n&eacute;ral seule. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '0': 'Elle est effrayante, du coup en général seule. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
     '1': 'Elle est assez sociable et reste rarement seule. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
-    '2': 'Elle est du genre &agrave; picoler avec des copains assez souvent. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
-    '3': 'Elle est plut&ocirc;t timide mais appr&eacute;cie la compagnie. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.'
+    '2': 'Elle est du genre à picoler avec des copains assez souvent. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '3': 'Elle est plutôt timide mais apprécie la compagnie. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.'
 };
 
 gen_data['psy_hyuro_f'] = {
-    '0': 'Elle a toujours l\'air perdue dans ses pens&eacute;es. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '0': 'Elle a toujours l\'air perdue dans ses pensées. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
     '1': 'Elle est assez sociable et reste rarement seule. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
-    '2': 'Elle est du genre &agrave; picoler avec des copains assez souvent. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
-    '3': 'Elle est plut&ocirc;t timide mais appr&eacute;cie la compagnie. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.'
+    '2': 'Elle est du genre à picoler avec des copains assez souvent. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '3': 'Elle est plutôt timide mais apprécie la compagnie. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.'
 };
 
 gen_data['psy_ele_f'] = {
-    '0': 'Elle n\'appr&eacute;cie vraiment que les autres Elezens. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '0': 'Elle n\'apprécie vraiment que les autres Elezens. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
     '1': 'Elle est assez sociable et reste rarement seule. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
-    '2': 'Elle est du genre &agrave; picoler avec des copains assez souvent. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
-    '3': 'Elle est plut&ocirc;t timide mais appr&eacute;cie la compagnie. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.'
+    '2': 'Elle est du genre à picoler avec des copains assez souvent. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '3': 'Elle est plutôt timide mais apprécie la compagnie. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.'
 };
 
 gen_data['psy_lala_f'] = {
-    '0': 'Elle ach&egrave;te les gens pour avoir des amis. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '0': 'Elle achète les gens pour avoir des amis. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
     '1': 'Elle est assez sociable et reste rarement seule. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
-    '2': 'Elle est du genre &agrave; picoler avec des copains assez souvent. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
-    '3': 'Elle est plut&ocirc;t timide mais appr&eacute;cie la compagnie. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.'
+    '2': 'Elle est du genre à picoler avec des copains assez souvent. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '3': 'Elle est plutôt timide mais apprécie la compagnie. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.'
 };
 
 gen_data['global_psy_f_1'] = {
-    '0': 'En r&eacute;alit&eacute; c\'est une v&eacute;ritable sadique, mais elle le cache',
-    '1': 'Assez r&eacute;serv&eacute;e de prime abord, elle est en fait tr&egrave;s dr&ocirc;le quand elle est en confiance',
-    '2': 'Du genre calme, elle est globalement r&eacute;serv&eacute;e',
-    '3': 'Clairement coinc&eacute;e du cul, il est tr&egrave;s difficile de lui faire d&eacute;crocher ne serait-ce qu\'un sourire'
+    '0': 'En réalité c\'est une véritable sadique, mais elle le cache',
+    '1': 'Assez réservée de prime abord, elle est en fait très drôle quand elle est en confiance',
+    '2': 'Du genre calme, elle est globalement réservée',
+    '3': 'Clairement coincée du cul, il est très difficile de lui faire décrocher ne serait-ce qu\'un sourire'
 };
 
 gen_data['global_psy_f_2'] = {
-    '0': 'Absolument pas fiable, elle trahira sans h&eacute;sit&eacute; pour de l\'argent',
-    '1': 'Bien trop peureuse pour &ecirc;tre fiable au combat,elle n\'en reste pas moins honn&ecirc;te',
-    '2': 'Plut&ocirc;t loyal, elle ne laisse tomber ses camarades que s\'ils la d&eacute;&ccedil;oivent',
-    '3': 'Si c\'est votre amie, elle pourra mourir pour vous sauver, et ce m&ecirc;me si vous l\'avez trahis'		
+    '0': 'Absolument pas fiable, elle trahira sans hésité pour de l\'argent',
+    '1': 'Bien trop peureuse pour être fiable au combat,elle n\'en reste pas moins honnête',
+    '2': 'Plutôt loyal, elle ne laisse tomber ses camarades que s\'ils la déçoivent',
+    '3': 'Si c\'est votre amie, elle pourra mourir pour vous sauver, et ce même si vous l\'avez trahis'		
 };
 
 gen_data['global_psy_f_3'] = {
-    '0': 'Elle ne parle pas beaucoup de son pass&eacute;, sans doute car il est douloureux',
-    '1': 'Son histoire est banale, elle n\'a jamais eu de r&eacute;el probl&egrave;me dans la vie',
-    '2': 'Elle a eu une vie heureuse jusque l&agrave;, cette chanceuse',
-    '3': 'Elle pr&eacute;tend beaucoup de choses quant &agrave; son pass&eacute;, mais personne ne peut confirmer que c\'est vrai'		
+    '0': 'Elle ne parle pas beaucoup de son passé, sans doute car il est douloureux',
+    '1': 'Son histoire est banale, elle n\'a jamais eu de réel problème dans la vie',
+    '2': 'Elle a eu une vie heureuse jusque là, cette chanceuse',
+    '3': 'Elle prétend beaucoup de choses quant à son passé, mais personne ne peut confirmer que c\'est vrai'		
 };
 
 // /PNJs ----------------------------------------
@@ -2337,6 +2337,126 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                      bot.sendMessage({
                         to: channelID,
                         message: generate_text('MiqoLM').toString()
+                    });
+                break;
+                case 'xaela_f':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('XaelaF').toString()
+                    });
+                break;
+                case 'xaela_m':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('XaelaM').toString()
+                    });
+                break;
+                case 'raen_f':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('RaenF').toString()
+                    });
+                break;
+                case 'raen_m':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('RaenM').toString()
+                    });
+                break;
+                case 'elez_c_f':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('ElezCF').toString()
+                    });
+                break;
+                case 'elez_c_m':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('ElezCM').toString()
+                    });
+                break;
+                case 'elez_s_f':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('ElezSF').toString()
+                    });
+                break;
+                case 'elez_s_m':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('ElezSM').toString()
+                    });
+                break;
+                case 'hyurg_f':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('HyurgF').toString()
+                    });
+                break;
+                case 'hyurg_m':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('HyurgM').toString()
+                    });
+                break;
+                case 'hyuro_f':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('HyuroF').toString()
+                    });
+                break;
+                case 'hyuro_m':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('HyuroM').toString()
+                    });
+                break;
+                case 'roe_cf_f':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('RoeCFF').toString()
+                    });
+                break;
+                case 'roe_cf_m':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('RoeCFM').toString()
+                    });
+                break;
+                case 'roe_cm_f':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('RoeCMF').toString()
+                    });
+                break;
+                case 'roe_cm_m':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('RoeCMM').toString()
+                    });
+                break;
+                case 'lala_d_f':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('LalaDF').toString()
+                    });
+                break;
+                case 'lala_d_m':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('LalaDM').toString()
+                    });
+                break;
+                case 'lala_p_f':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('LalaPF').toString()
+                    });
+                break;
+                case 'lala_p_m':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('LalaPM').toString()
                     });
                 break;
 			}
