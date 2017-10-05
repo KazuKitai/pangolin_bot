@@ -1249,13 +1249,13 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             }
         }
 		
-		if (message.includes.toLowerCase()('pangolin-bot') 
-			|| message.includes.toLowerCase()('pangolin bot')
+		if (message.toLowerCase().includes('pangolin-bot') 
+			|| message.toLowerCase().includes('pangolin bot')
 			|| message.includes('@Pangolin-bot#4088')
 			|| message.includes('Pangolin-bot#4088')
 			|| message.includes('#4088')
-			|| message.includes.toLowerCase()('pangobot')
-			|| message.includes.toLowerCase()('pango bot')) {
+			|| message.toLowerCase().includes('pangobot')
+			|| message.toLowerCase().includes('pango bot')) {
 			if (user === 'Le Zu' 
 				|| user === 'Le Pangolin de la Vérité') {
 				bot.sendMessage({
