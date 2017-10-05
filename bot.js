@@ -1741,7 +1741,7 @@ gen_data['circles'] = {
 
 gen_data['hair_cut'] = {
     '0': 'rasés',
-    '1-10': 'coup&eacutes très courts',
+    '1-10': 'coupés très courts',
     '11-20': 'relativement courts',
     '21-40': 'mi-longs',
     '41-50': 'au niveau des épaules',
@@ -1878,7 +1878,7 @@ gen_data['psy_hyurg_m'] = {
 };
 
 gen_data['psy_hyuro_m'] = {
-    '0': 'Il a toujours l\'air perdu dans ses pens&eacutes;es. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '0': 'Il a toujours l\'air perdu dans ses pensés;es. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
     '1': 'Il est assez sociable et reste rarement seul. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
     '2': 'Il est du genre à picoler avec des copains assez souvent. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
     '3': 'Il est plutôt timide mais apprécie la compagnie. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.'
@@ -2100,7 +2100,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				case 'commands':
 					bot.sendMessage({
 						to: channelID,
-						message: 'Liste non exhaustive des commandes : \r\n\- tableflip : c\'est évident, non ? \r\n\- unflip: l\'inverse de la commande précédente ... \r\n\Pour les générateurs : \r\n\- blessure : §[partie du corps]_[gravité de la blessure] \r\n\	Par exemple §head_light ou §left_leg_serious. \r\n\Parties du corps : head, left_arm, right_arm, body_bones, body_guts, left_leg, right_leg. \r\n\Gravité de la blessure : light, medium, serious. \r\n- pnj : §pnj pour un pnj totalement aléatoire. Sinon, §[race]_[sexe]. \r\nRaces : miqo_s, miqo_l, raen, xaela, elez_c, elez_s, hyuro, hyurg, lala_d, lala_p, roe_cf, roe_cm. \r\n'
+						message: 'Liste non exhaustive des commandes : \r\n\- tableflip : c\'est évident, non ? \r\n\- unflip: l\'inverse de la commande précédente ... \r\n\Pour les générateurs : \r\n\- blessure : §[partie du corps]_[gravité de la blessure] \r\n\Par exemple §head_light ou §left_leg_serious. \r\n\Parties du corps : head, left_arm, right_arm, body_bones, body_guts, left_leg, right_leg.\r\n\Gravité de la blessure : light, medium, serious. \r\n- pnj : §pnj pour un pnj totalement aléatoire. Sinon, §[race]_[sexe]. \r\nRaces : miqo_s, miqo_l, raen, xaela, elez_c, elez_s, hyuro, hyurg, lala_d, lala_p, roe_cf, roe_cm. \r\n'
 					});
 				break;
 				// §help
