@@ -32,7 +32,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         //nothing !
     } else {
         if (user === 'RPBot') {
-            if ( Math.floor(Math.random() * 2) == 0 ) {
+            if ( Math.floor(Math.random() * 2) === 0 ) {
                 bot.sendMessage({
                     to: channelID,
                     message: 'Il me vole mon travail !'
