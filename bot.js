@@ -5,7 +5,6 @@ var Discord = require('discord.io');
 var logger = require('winston');
 var auth = require('./auth.json');
 const PORT = process.env.PORT || 3000;
-var timeStamp = Date.now();
 app.listen(PORT, () => {
     console.log(`Our app is running on port ${ PORT }`);
 });
@@ -918,7 +917,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
     if (user === 'Pangolin-bot') {
         //nothing !
     } else {		
-	console.log(timeStamp);
         // It will listen for messages that will start with `§`
         if (message.substring(0, 1) == '§') {
             var args = message.substring(1).split(' ');
@@ -945,12 +943,44 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					if (user === 'Platypus Cordula') {
 						bot.sendMessage({
 							to: channelID,
-							message: 'Demande au machin rouesque qui vit avec toi.'
+							message: 'Faut faire §commands, chérie.'
 						});
-					} else {
+					} else if (user === 'Le Zu' || user === 'Le Pangolin de la Vérité') {
+						bot.sendMessage({
+							to: channelID,
+							message: 'Débile de maitre ...'
+						});
+					}else {
 						bot.sendMessage({
 							to: channelID,
 							message: 'T\'as cru que j\'allais t\'aider ? Lol.'
+						});
+					}
+				break;
+				// §burn
+				case 'burn':
+					if (user === 'Platypus Cordula') {
+						bot.sendMessage({
+							to: channelID,
+							message: '*Fout le feu à tout le monde.*'
+						});
+					} else if (user === 'Le Zu' || user === 'Le Pangolin de la Vérité') {
+						bot.sendMessage({
+							to: channelID,
+							message: 'Demande à Rengu, j\'ai la flemme.'
+						});
+					}else {
+						bot.sendMessage({
+							to: channelID,
+							message: '*Fout le fe...* -- T\'y as cru ? Genre je vais faire plaisir à un simple humain ? Tsk.'
+						});
+					}
+				break;
+				// §halp
+				case 'halp':
+					bot.sendMessage({
+							to: channelID,
+							message: 'Il faut utiliser §commands ...'
 						});
 					}
 				break;
@@ -1170,7 +1200,14 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 }
         }
 
-        if (message.toLowerCase().includes('gnap') || message.includes('<:gnap:363685809729044480>')) {
+        if (message.toLowerCase().includes('gnap') 
+			|| message.includes('<:gnap:363685809729044480>')
+			|| message.toLowerCase().includes('gnoup')
+			|| message.toLowerCase().includes('gnip')
+			|| message.toLowerCase().includes('gnop')
+			|| message.toLowerCase().includes('gnep')
+			|| message.toLowerCase().includes('gnup')
+			|| message.toLowerCase().includes('gnyp')) {
             if ( Math.floor(Math.random() * (1000 + 1)) > 950) {
                 bot.sendMessage({
                     to: channelID,
@@ -1212,6 +1249,26 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 });
             }
         }
+		
+		if (message.includes('Pangolin-bot')) {
+			if (user === 'Le Zu' 
+				|| user === 'Le Pangolin de la Vérité') {
+				bot.sendMessage({
+					to: channelID,
+					message: 'Je suis votre serviteur, maitre.'
+				});
+			} else if (user === 'Platypus Cordula') {
+				bot.sendMessage({
+					to: channelID,
+					message: 'Je vous aime maitresse.'
+				});	
+			} else {
+				bot.sendMessage({
+					to: channelID,
+					message: 'Tsk.'
+				});
+			}
+		}
 		
 		if (message) {
             if ( Math.floor(Math.random() * (1000000 + 1)) === 1) {
