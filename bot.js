@@ -2871,7 +2871,14 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             || message.includes('@365113377929822208')
             || message.toLowerCase().includes('pangobot')
             || message.toLowerCase().includes('pango bot')) {
-            if (user === 'Le Zu' 
+            if message.toLowerCase().includes('calin')
+            || message.toLowerCase().includes('câlin')
+            || message.toLowerCase().includes('koalin')) {
+                bot.sendMessage({
+                    to: channelID,
+                    message: '♥'
+                });
+            } else if (user === 'Le Zu' 
                 || user === 'Le Pangolin de la Vérité') {
                 bot.sendMessage({
                     to: channelID,
@@ -2890,6 +2897,17 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             }
         }
 
+        if (message.toLowerCase().includes('calin')
+            || message.toLowerCase().includes('câlin')
+            || message.toLowerCase().includes('koalin')) {
+            if ( Math.floor(Math.random() * (1000 + 1)) > 750) {
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'Moi aussi je veux un câlin !'
+                });
+            }
+        }
+        
         if (message) {
             if ( Math.floor(Math.random() * (1000000 + 1)) === 1) {
                 bot.sendMessage({
