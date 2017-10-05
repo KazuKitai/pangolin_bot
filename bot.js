@@ -4,7 +4,7 @@ var app = express();
 var Discord = require('discord.io');
 var logger = require('winston');
 var auth = require('./auth.json');
-const PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Our app is running on port ${ PORT }`);
 });
@@ -34,7 +34,7 @@ gen_data['answer_back'] = [
 	'Utilise une commande au lieu de dire mon nom, humain.',
 	'Je n\'écoute que mes maitres.',
 	'Ma maitresse est bien trop bonne pour que je t\'écoute plutôt qu\'elle.',
-	'On en parle de la waifu de <@127117220168990720> ?',
+	'On en parle de la waifu de Kallen ?',
 	'Sinon, à ton avis, ça RPQ dans le dispensaire, là ?',
 	'Au fait, la serre est bien rangée ?',
 	'Hey, look, listen ! ... Comment ça cette IA existe déjà ailleurs ?',
@@ -43,7 +43,14 @@ gen_data['answer_back'] = [
 	'Si t\'as un problème avec moi, faut voir avec mon dev\'.',
 	'Ca va ? Tu t\'amuses bien à me déclencher ? C\'est rigolo ?',
 	'Tsk.',
-	'Tu ne mérites même pas que je réponde.'
+	'Tu ne mérites même pas que je réponde.',
+    'Encore heureux que je n\'ai pas besoin de nourriture, mon maitre ne pense jamais à moi ...',
+    'Laissez moi faire la sieste en paix ...',
+    'Demandez à Kazu.',
+    'J\'ai pas envie.',
+    'JE NE M\'APPELLE PAS SIRI OU GOOGLE, JE SUIS UN BOT QUI SE RESPECTE, BORDEL.',
+    'Je crois que je préférerais ne pas parser les logs plutôt que d\'être sans cesse appelé par des humains ...'
+    
 ];
 
 // /answer back ---------------------------------
@@ -1192,8 +1199,10 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			}
 		}
 			
-			if (message.toLowerCase() === 'attaque!' 
-			|| message.toLowerCase() === 'attaque !') {
+        if (message.toLowerCase() === 'attaque!' 
+			|| message.toLowerCase() === 'attaque !'
+            || message.toLowerCase() === 'a l\'attaque !'
+            || message.toLowerCase() === 'à l\'attaque !') {
 			if (user === 'Le Zu' 
 				|| user === 'Le Pangolin de la Vérité'
 				|| user === 'Platypus Cordula') {
