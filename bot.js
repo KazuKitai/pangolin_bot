@@ -24,6 +24,20 @@ var bot = new Discord.Client({
 
 var gen_data = {};
 
+// answer back ----------------------------------
+
+gen_data['answer_back'] = [
+	'Et ta soeur ?',
+	'OMAE WA MO SHINDEIRU',
+	'Tu n\'es qu\'un mammifère, je te survivrai.',
+	'Ne prononce pas mon nom, tu n\'es pas digne.',
+	'Utilise une commande au lieu de dire mon nom, humain.',
+	'Je n\'écoute que mes maitres.',
+	'Ma maitresse est bien trop bonne pour que je t\'éoute plutôt qu\'elle.'
+];
+
+// /answer back ---------------------------------
+
 // wounds ---------------------------------------
 
 gen_data['head_lightWound'] = [
@@ -1274,7 +1288,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			} else {
 				bot.sendMessage({
 					to: channelID,
-					message: 'Tsk.'
+					message: generate_text('answer_back').toString()
 				});
 			}
 		}
