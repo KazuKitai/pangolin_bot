@@ -857,6 +857,1147 @@ gen_data['bottomDmgSerious'] = [
 
 // /wounds --------------------------------------
 
+// PNJs -----------------------------------------
+
+gen_data['MiqoSF'] = [
+    '{firstName_sol_f} {lastName_sol_f}, une Miqo\'te solaire de {age}. Elle est {job} et vit {dwelling}.<br />{phys_miq_f}<br />{psy_sol_f}'
+];
+gen_data['MiqoSM'] = [
+    '{firstName_sol_m} {lastName_sol_m}, un Miqo\'te solaire de {age}. Il est {job} et vit {dwelling}.<br />{phys_miq_m}<br />{psy_sol_m}'
+];
+gen_data['MiqoLF'] = [
+    '{firstName_moon_f} {lastName_moon}, une Miqo\'te lunaire de {age}. Elle est {job} et vit {dwelling}.<br />{phys_miq_f}<br />{psy_moon_f}'
+];
+gen_data['MiqoLM'] = [
+    '{firstName_moon_m} {lastName_moon}, un Miqo\'te lunaire de {age}. Il est {job} et vit {dwelling}.<br />{phys_miq_m}<br />{psy_moon_m}'
+];
+gen_data['RaenF'] = [
+    '{firstName_raen_f} {lastName_raen}, une Raen de {age}. Elle est {job} et vit {dwelling}.<br />{phys_aora_f}<br />{psy_aora_f}'
+];
+gen_data['RaenM'] = [
+    '{firstName_raen_m} {lastName_raen}, un Raen de {age}. Il est {job} et vit {dwelling}.<br />{phys_aora_m}<br />{psy_aora_m}'
+];
+gen_data['XaelaF'] = [
+    '{firstName_xeala_f} {lastName_xaela}, une Xaela de {age}. Elle est {job} et vit {dwelling}.<br />{phys_aora_f}<br />{psy_aora_f}
+];
+gen_data['XaelaM'] = [
+    '{firstName_xeala_m} {lastName_xaela}, un Xaela de {age}. Il est {job} et vit {dwelling}.<br />{phys_aora_m}<br />{psy_aora_m}'
+];
+gen_data['RoeCFF'] = [
+    '{firstName_fire_f} {lastName_fire_f}, une Roegadyn du Clan du Feu de {age}. Elle est {job} et vit {dwelling}.<br />{phys_roe_f}<br />{psy_roe_f}'
+];
+gen_data['RoeCFM'] = [
+    '{firstName_fire_m} {lastName_fire_m}, un Roegadyn du Clan du Feu de {age}. Il est {job} et vit {dwelling}.<br />{phys_roe_m}<br />{psy_roe_m}'
+];
+gen_data['RoeCMF'] = [
+    '{firstName_sea_f} {lastName_sea_f}, une Roegadyn du Clan de la Mer de {age}. Elle est {job} et vit {dwelling}.<br />{phys_roe_f}<br />{psy_roe_f}'
+];
+gen_data['RoeCMM'] = [
+    '{firstName_sea_m} {lastName_sea_m}, un Roegadyn du Clan de la Mer de {age}. Il est {job} et vit {dwelling}.<br />{phys_roe_m}<br />{psy_roe_m}'
+];
+gen_data['ElezCF'] = [
+    '{firstName_ele_m} {lastName_ele}, un Elezen Cr&eacute;pusculaire de {age}. Il est {job} et vit {dwelling}.<br />{phys_ele_m}<br />{psy_ele_m}'
+];
+gen_data['ElezCM'] = [
+    '{firstName_ele_f} {lastName_ele}, une Elezenne Cr&eacute;pusculaire de {age}. Elle est {job} et vit {dwelling}.<br />{phys_ele_f}<br />{psy_ele_f}'
+];
+gen_data['ElezSF'] = [
+    '{firstName_ele_f} {lastName_ele}, une Elezenne Sylvetre de {age}. Elle est {job} et vit {dwelling}.<br />{phys_ele_f}<br />{psy_ele_f}'
+];
+gen_data['ElezSM'] = [
+    '{firstName_ele_m} {lastName_ele}, un Elezen Sylvestre de {age}. Il est {job} et vit {dwelling}.<br />{phys_ele_m}<br />{psy_ele_m}'
+];
+gen_data['HyurgF'] = [
+    '{firstName_hyurg_f} {lastName_hyurg}, une Hyurgoth de {age}. Elle est {job} et vit {dwelling}.<br />{phys_hyurg_f}<br />{psy_hyurg_f}'
+];
+gen_data['HyurgM'] = [
+    '{firstName_hyurg_m} {lastName_hyurg}, un Hyurgoth de {age}. Il est {job} et vit {dwelling}.<br />{phys_hyurg_m}<br />{psy_hyurg_m}'
+];
+gen_data['HyuroF'] = [
+    '{firstName_hyuro_f} {lastName_hyuro}, une Hyuroise de {age}. Elle est {job} et vit {dwelling}.<br />{phys_hyuro_f}<br />{psy_hyuro_f}'
+];
+gen_data['HyuroM'] = [
+    '{firstName_hyuro_m} {lastName_hyuro}, un Hyurois de {age}. Il est {job} et vit {dwelling}.<br />{phys_hyuro_m}<br />{psy_hyuro_m}'
+];
+gen_data['LalaPF'] = [
+    '{name_lala_pl_f}, une Lalafell du Peuple des Plaines de {age}. Elle est {job} et vit {dwelling}.<br />{phys_lala_f}<br />{psy_lala_f}'
+];
+gen_data['LalaPM'] = [
+    '{name_lala_pl_m}, un Lalafell du Peuple des Plaines de {age}. Il est {job} et vit {dwelling}.<br />{phys_lala_m}<br />{psy_lala_m}'
+];
+gen_data['LalaDF'] = [
+    '{name_lala_dn_f}, une Lalafell du Peuple des Dunes de {age}. Elle est {job} et vit {dwelling}.<br />{phys_lala_f}<br />{psy_lala_f}'
+];
+gen_data['LalaDM'] = [
+    '{name_lala_dn_m}, un Lalafell du Peuple des Dunes de {age}. Il est {job} et vit {dwelling}.<br />{phys_lala_m}<br />{psy_lala_m}'
+];
+
+gen_data['pnj'] = [
+    '{race}'
+];
+
+gen_data['race'] = [
+    '{firstName_moon_m} {lastName_moon}, un Miqo\'te lunaire de {age}. Il est {job} et vit {dwelling}.<br />{phys_miq_m}<br />{psy_moon_m}',
+    '{firstName_moon_f} {lastName_moon}, une Miqo\'te lunaire de {age}. Elle est {job} et vit {dwelling}.<br />{phys_miq_f}<br />{psy_moon_f}',
+    '{firstName_sol_m} {lastName_sol_m}, un Miqo\'te solaire de {age}. Il est {job} et vit {dwelling}.<br />{phys_miq_m}<br />{psy_sol_m}',
+    '{firstName_sol_f} {lastName_sol_f}, une Miqo\'te solaire de {age}. Elle est {job} et vit {dwelling}.<br />{phys_miq_f}<br />{psy_sol_f}',
+    '{firstName_raen_m} {lastName_raen}, un Raen de {age}. Il est {job} et vit {dwelling}.<br />{phys_aora_m}<br />{psy_aora_m}',
+    '{firstName_raen_f} {lastName_raen}, une Raen de {age}. Elle est {job} et vit {dwelling}.<br />{phys_aora_f}<br />{psy_aora_f}',
+    '{firstName_xeala_m} {lastName_xaela}, un Xaela de {age}. Il est {job} et vit {dwelling}.<br />{phys_aora_m}<br />{psy_aora_m}',
+    '{firstName_xeala_f} {lastName_xaela}, une Xaela de {age}. Elle est {job} et vit {dwelling}.<br />{phys_aora_f}<br />{psy_aora_f}',
+    '{firstName_fire_m} {lastName_fire_m}, un Roegadyn du Clan du Feu de {age}. Il est {job} et vit {dwelling}.<br />{phys_roe_m}<br />{psy_roe_m}',
+    '{firstName_fire_f} {lastName_fire_f}, une Roegadyn du Clan du Feu de {age}. Elle est {job} et vit {dwelling}.<br />{phys_roe_f}<br />{psy_roe_f}',
+    '{firstName_sea_m} {lastName_sea_m}, un Roegadyn du Clan de la Mer de {age}. Il est {job} et vit {dwelling}.<br />{phys_roe_m}<br />{psy_roe_m}',
+    '{firstName_sea_f} {lastName_sea_f}, une Roegadyn du Clan de la Mer de {age}. Elle est {job} et vit {dwelling}.<br />{phys_roe_f}<br />{psy_roe_f}',
+    '{firstName_hyurg_m} {lastName_hyurg}, un Hyurgoth de {age}. Il est {job} et vit {dwelling}.<br />{phys_hyurg_m}<br />{psy_hyurg_m}',
+    '{firstName_hyurg_f} {lastName_hyurg}, une Hyurgoth de {age}. Elle est {job} et vit {dwelling}.<br />{phys_hyurg_f}<br />{psy_hyurg_f}',
+    '{firstName_hyuro_m} {lastName_hyuro}, un Hyurois de {age}. Il est {job} et vit {dwelling}.<br />{phys_hyuro_m}<br />{psy_hyuro_m}',
+    '{firstName_hyuro_f} {lastName_hyuro}, une Hyuroise de {age}. Elle est {job} et vit {dwelling}.<br />{phys_hyuro_f}<br />{psy_hyuro_f}',
+    '{firstName_ele_m} {lastName_ele}, un Elezen Sylvestre de {age}. Il est {job} et vit {dwelling}.<br />{phys_ele_m}<br />{psy_ele_m}',
+    '{firstName_ele_f} {lastName_ele}, une Elezenne Sylvetre de {age}. Elle est {job} et vit {dwelling}.<br />{phys_ele_f}<br />{psy_ele_f}',
+    '{firstName_ele_m} {lastName_ele}, un Elezen Cr&eacute;pusculaire de {age}. Il est {job} et vit {dwelling}.<br />{phys_ele_m}<br />{psy_ele_m}',
+    '{firstName_ele_f} {lastName_ele}, une Elezenne Cr&eacute;pusculaire de {age}. Elle est {job} et vit {dwelling}.<br />{phys_ele_f}<br />{psy_ele_f}',
+    '{name_lala_dn_m}, un Lalafell du Peuple des Dunes de {age}. Il est {job} et vit {dwelling}.<br />{phys_lala_m}<br />{psy_lala_m}',
+    '{name_lala_dn_f}, une Lalafell du Peuple des Dunes de {age}. Elle est {job} et vit {dwelling}.<br />{phys_lala_f}<br />{psy_lala_f}',
+    '{name_lala_pl_m}, un Lalafell du Peuple des Plaines de {age}. Il est {job} et vit {dwelling}.<br />{phys_lala_m}<br />{psy_lala_m}',
+    '{name_lala_pl_f}, une Lalafell du Peuple des Plaines de {age}. Elle est {job} et vit {dwelling}.<br />{phys_lala_f}<br />{psy_lala_f}'
+];
+
+gen_data['firstName_moon_m'] = [
+    'Okhi\'{moon_m_part}',
+    'Cemi\'{moon_m_part}',
+    'Gota\'{moon_m_part}',
+    'Sizha\'{moon_m_part}',
+    'Efh\'{moon_m_part}',
+    'Kael\'{moon_m_part}',
+    'Mondap\'{moon_m_part}',
+    'Geki\'{moon_m_part}',
+    'Franoj\'{moon_m_part}',
+    'Hajet\'{moon_m_part}'
+];
+
+gen_data['firstName_sol_m'] = [
+    '{trib_part}\'rhan',
+    '{trib_part}\'rhod',
+    '{trib_part}\'hundo',
+    '{trib_part}\'farn',
+    '{trib_part}\'mahr',
+    '{trib_part}\'kor',
+    '{trib_part}\'vehn',
+    '{trib_part}\'loh',
+    '{trib_part}\'rhun',
+    '{trib_part}\'lham'
+];
+
+gen_data['firstName_raen_m'] = [
+    'Akira',
+    'Tsunobu',
+    'Kondo',
+    'Sakai',
+    'Shin',
+    'Itsoryu',
+    'Dodokin',
+    'Hanto',
+    'Zuronosuke',
+    'Janenpo'
+];
+
+gen_data['firstName_xeala_m'] = [
+    'Odtsetseg' ,
+    'Holuikhan',
+    'Jiguur',
+    'Chagur',
+    'Borte',
+    'Barghujin',
+    'Oyunbileg',
+    'Khongordzol',
+    'Khenbish',
+    'Orbei'
+];
+
+gen_data['firstName_fire_m'] = [
+    'Glittering' ,
+    'Strong',
+    'Tremendous',
+    'Swift',
+    'Genuine',
+    'Hefty',
+    'Fat',
+    'Innocent',
+    'Luxurous',
+    'Fiery'
+];
+
+gen_data['firstName_sea_m'] = [
+    'Herlbyrm' ,
+    'Sylbhyr',
+    'Hirsksthal',
+    'Wastswerd',
+    'Ybolgelak',
+    'Wakkstyr',
+    'Fianhyll',
+    'Bylgryss',
+    'Guolwint',
+    'Zoengspyr'
+];
+
+gen_data['firstName_hyurg_m'] = [
+    'Faramund' ,
+    'Frederik',
+    'Hroch',
+    'Elderoak',
+    'Balmin',
+    'Staalgund',
+    'Eric',
+    'Noromund',
+    'Ghelson',
+    'Artmund'
+];
+
+gen_data['firstName_hyuro_m'] = [
+    'Joe' ,
+    'Lods',
+    'Samwell',
+    'John',
+    'Mayer',
+    'Neel',
+    'Steddyson',
+    'Tom',
+    'Hob',
+    'Gregor'
+];
+
+gen_data['firstName_ele_m'] = [
+    'Quintillet' ,
+    'Edredoux',
+    'Grintassault',
+    'Nicholou',
+    'Mardevaille',
+    'Guisoux',
+    'Sintdoux',
+    'Vincennon',
+    'Trefordoye',
+    'Gregoriaux',
+    'Palsevain' ,
+    'Nervemou',
+    'Gontrant',
+    'Etianaux',
+    'Stephannon',
+    'Mauriceau',
+    'Pierreau',
+    'Balbenou',
+    'Thomassien',
+    'Julianneau'
+];
+
+gen_data['name_lala_pl_m'] = [
+    'Zorido Manarido',
+    'Kopel Nopel',
+    'Habrido Tarabrido',
+    'Hubule Turule',
+    'Satronio Legronio',
+    'Kilipu Lilipu',
+    'Sasawano Popowano',
+    'Tropino Caprino',
+    'Babalago Nenelago',
+    'Felopopo Topopo',
+    'Taranoda Cunoda',
+    'Cunibano Lingibano',
+    'Hetorijo Hacorijo'
+];
+
+gen_data['name_lala_dn_m'] = [
+    'Nunulupa Tatalupa',
+    'Kokorabi Lolorabi',
+    'Gabokapi Terakapi',
+    'Toriyaki Tepanyaki',
+    'Mechotoro Nachotoro',
+    'Berutilo Narutilo',
+    'Stepajipo Hepajipo',
+    'Brodibudi Fapibudi',
+    'Sanotino Bodatino',
+    'Loloputo Temoputo',
+    'Bulirito Lemorito',
+    'Kapikapo Kepikapo',
+    'Gegelato Cafelato'
+];
+
+gen_data['firstName_sol_f'] = [
+    '{trib_part}\'zumyn',
+    '{trib_part}\'amneko',
+    '{trib_part}\'bolata',
+    '{trib_part}\'nangho',
+    '{trib_part}\'elhabo',
+    '{trib_part}\'ganado',
+    '{trib_part}\'bakanta',
+    '{trib_part}\'arangho',
+    '{trib_part}\'mejigho',
+    '{trib_part}\'hatalna'
+];
+
+gen_data['firstName_moon_f'] = [
+    'Nbaab',
+    'Jadocan',
+    'Mrewla',
+    'Nsura',
+    'Elidan',
+    'Hodagoh',
+    'Potnam',
+    'Savakoh',
+    'Frewlna',
+    'Hedocan'
+];
+
+gen_data['firstName_raen_f'] = [
+    'Akiko',
+    'Sadako',
+    'Hanami',
+    'Shiki',
+    'Inaba',
+    'Juniko',
+    'Haoru',
+    'Hinja',
+    'Marishi',
+    'Jidani'
+];
+
+gen_data['firstName_xeala_f'] = [
+    'Mergen',
+    'Jochi Khasar',
+    'Jirghadai',
+    'Siban',
+    'Bilge',
+    'Ghazan',
+    'Gantulga',
+    'Sukhebaatar',
+    'Yekehildedu',
+    'Kutlugh'
+];
+
+gen_data['firstName_fire_f'] = [
+    'Gliding' ,
+    'Fluffy',
+    'Soft',
+    'Sparkling',
+    'Tricky',
+    'Melting',
+    'Thin',
+    'Mighty',
+    'Pleasant',
+    'Funny'
+];
+
+gen_data['firstName_sea_f'] = [
+    'Lorapfrew' ,
+    'Geimzwyn',
+    'Unsynzahr',
+    'Lyngspaer',
+    'Sundyrmerl',
+    'Swarskapf',
+    'Skaetfolg',
+    'Klynbhaln',
+    'Loetrabyl',
+    'Koenklyng'
+];
+
+gen_data['firstName_hyurg_f'] = [
+    'Sigberta' ,
+    'Odell',
+    'Maisnann',
+    'Idelbierd',
+    'Batiena',
+    'Ugbaherna',
+    'Orieldis',
+    'Bergard',
+    'Keldard',
+    'Swanbierda'
+];
+
+gen_data['firstName_hyuro_f'] = [
+    'Isolde' ,
+    'Hester',
+    'Lois',
+    'Morgan',
+    'Susy',
+    'Izbel',
+    'Lizbeth',
+    'Elsa',
+    'Lucy',
+    'Jenna'
+];
+
+gen_data['firstName_ele_f'] = [
+    'Marisette' ,
+    'Sophietta',
+    'Lison',
+    'B&eacute;diane',
+    'Sylvanne',
+    'Simonnette',
+    'Babette',
+    'Nichole',
+    'Suson',
+    'Tibaine',
+    'P&eacute;n&eacute;lon' ,
+    'Ursulena',
+    'Paulette',
+    'Vivianne',
+    'Louisette',
+    'Ricette',
+    'El&eacute;anor',
+    'Gricette',
+    'Marionde',
+    'Diane'
+];
+
+gen_data['name_lala_pl_f'] = [
+    'Tsupakopako Tsupako',
+    'Napolipoli Napoli',
+    'Lanono Lano',
+    'Fikilokilo Fikilo',
+    'Socinono Socino',
+    'Besasa Besa',
+    'Pururu Puru',
+    'Valala Vala',
+    'Kipopo Kipo',
+    'Nutajitaji Nutaji',
+    'Malolo Malo',
+    'Cumimi Cumi',
+    'Gugigi Gugi'
+];
+
+gen_data['name_lala_dn_f'] = [
+    'Ononid Onid',
+    'Kokobi Kobi',
+    'Sasapu Sapu',
+    'Trotropa Tropa',
+    'Bubule Bule',
+    'Cecera Cera',
+    'Niniri Niri',
+    'Brobropi Bropi',
+    'Jijipu Jipu',
+    'Wawali Wali',
+    'Mamalo Malo',
+    'Cucuni Cuni',
+    'Bibila Bila'
+];
+
+gen_data['lastName_moon'] = [
+    'Nbolo',
+    'Jinjahl',
+    'Jaab',
+    'Epocan',
+    'Tadohan',
+    'Kno',
+    'Ntadam',
+    'Badoh',
+    'Felmaab',
+    'Gonahl'
+];
+
+gen_data['lastName_sol_m'] = {
+    '0-95': 'Tia',
+    '96-100': 'Nunh'
+};
+
+gen_data['lastName_sol_f'] = [
+    'Rhan',
+    'Rhod',
+    'Hundo',
+    'Farn',
+    'Mahr',
+    'Kor',
+    'Vehn',
+    'Loh',
+    'Rhun',
+    'Lham'
+];
+
+gen_data['lastName_raen'] = [
+    'Hempachi',
+    'Nanokuro',
+    'Shironage',
+    'Utsunokoro',
+    'Gojoryu',
+    'Hubire',
+    'Ranpenjyu',
+    'Hinamoken',
+    'Sasaniko',
+    'Kenponran'
+];
+
+gen_data['lastName_xaela'] = [
+    'Adarkim',
+    'Angura',
+    'Arulaq',
+    'Avagnar',
+    'Bairon',
+    'Bayaqud',
+    'Bolir',
+    'Borlaaq',
+    'Buduga',
+    'Dalamiq',
+    'Iriq',
+    'Jhungid',
+    'Kharlu',
+    'Khatayin',
+    'Malqir',
+    'Mankhad',
+    'Mierqid',
+    'Noykin',
+    'Olkund',
+    'Dazkar',
+    'Oronir',
+    'Oroq',
+    'Qerel',
+    'Torgud',
+    'Tumet',
+    'Ugund',
+    'Uyagir',
+    'Dhoro',
+    'Orben',
+    'Ejinn',
+    'Dotharl',
+    'Hotgo',
+    'Sagahl',
+    'Kahkol',
+    'Kha',
+    'Mol',
+    'Gesi',
+    'Kagon',
+    'Goro',
+    'Gharl',
+    'Dataq',
+    'Haragin',
+    'Ura',
+    'Moks',
+    'Geneq',
+    'Horo',
+    'Himaa',
+    'Malaguld',
+    'Urumet',
+    'Qalli',
+    'Qestir'
+];
+
+gen_data['lastName_fire_m'] = [
+    'Rock' ,
+    'Fire',
+    'Moutain',
+    'Volcano',
+    'Bear',
+    'Oak',
+    'Pig',
+    'Hawk',
+    'Forest',
+    'Bone'
+];
+
+gen_data['lastName_fire_f'] = [
+    'River' ,
+    'Stream',
+    'Lilly',
+    'Rabbit',
+    'Grass',
+    'Wind',
+    'Dandelion',
+    'Plate',
+    'Hole',
+    'Mouse'
+];
+
+gen_data['lastName_sea_m'] = [
+    'Syntoerfyrhwyz' ,
+    'Doermholblaet',
+    'Skalwyrndaeg',
+    'Styrmblanswyg',
+    'Careigsweig',
+    'Doenwyrkagyft',
+    'Lohcaerslett',
+    'Ahlddorpfcwin',
+    'Floegwarg',
+    'Laentgraebhort'
+];
+
+gen_data['lastName_sea_f'] = [
+    'Tylwaen' ,
+    'Swysmhuswilt',
+    'Saelbwilt',
+    'Toegmholeidin',
+    'Swygloug',
+    'Oefyrbrem',
+    'Khantoumfohc',
+    'Koenybrostn',
+    'Haelahct',
+    'Lonapfrym'
+];
+
+gen_data['lastName_hyurg'] = [
+    'Swiftsword' ,
+    'Ironfist',
+    'Bendthunder',
+    'Blackhammer',
+    'Bonedagger',
+    'Burningsoul',
+    'Earthborn',
+    'Stoneaxe',
+    'Hastwielder',
+    'Quickslayer'
+];
+
+gen_data['lastName_hyuro'] = [
+    'Smith' ,
+    'Hunter',
+    'Wheeler',
+    'Runner',
+    'Baker',
+    'Keeper',
+    'Mourner',
+    'Fisherman',
+    'Bowsman',
+    'Gambler'
+];
+
+gen_data['lastName_ele'] = [
+    'Faucertaux' ,
+    'Brillemarre',
+    'Cim&eacute;toiles',
+    'Farcehoux',
+    'Percetemps',
+    'Branchebalant',
+    'Parlemou',
+    'Traindussaut',
+    'Crapahou',
+    'Narlimeau',
+    'Sylvenuit' ,
+    'Feuillefendue',
+    'Nervulame',
+    'Bardanoux',
+    'Porteprison',
+    'Jaunissou',
+    'Rubois&eacute;',
+    'Frappeminou',
+    'Frippemonde',
+    'Boursemole'
+];
+
+gen_data['moon_m_part'] = {
+    '0-5': 'a',
+    '6-8': 'to',
+    '9-10': 'li',
+    '11': 'sae',
+    '12': 'ra',
+    '13': 'ir',
+    '14': 'wo',
+    '15': 'ya',
+    '16': 'zi',
+    '17': 'tan'
+};
+
+gen_data['trib_part'] = [
+    'A',
+    'B',
+    'C',
+    'D',
+    'E',
+    'F',
+    'G',
+    'H',
+    'I',
+    'J',
+    'K',
+    'L',
+    'M',
+    'N',
+    'O',
+    'P',
+    'Q',
+    'R',
+    'S',
+    'T',
+    'U',
+    'V',
+    'W',
+    'X',
+    'Y',
+    'Z'
+];
+
+gen_data['age'] = {
+    '0': '15 ans',
+    '1': '16 ans',
+    '2': '17 ans',
+    '3-6': '18 ans',
+    '7-10' : '19 ans',
+    '11-15': '20 ans',
+    '16-20': '21 ans',
+    '21-25': '22 ans',
+    '26-30': '23 ans',
+    '31-35': '24 ans',
+    '36-40': '25 ans',
+    '41-45': '26 ans',
+    '46-50': '27 ans',
+    '51-55': '28 ans',
+    '56-60': '29 ans',
+    '61-65': '30 ans',
+    '66-70': '31 ans',
+    '71-75': '32 ans',
+    '76-80': '33 ans',
+    '81-85': '34 ans',
+    '86-90': '35 ans',
+    '91': '36 ans',
+    '92': '37 ans',
+    '93': '38 ans',
+    '94': '39 ans',
+    '95': '40 ans',
+    '96-100' : 'de plus de 40 ans'
+};
+
+gen_data['job'] = {
+    '0': 'fortun&eacute; et ne travaille pas',
+    '1': 'scientifique',
+    '2': '&eacute;th&eacute;rologue',
+    '3-6': 'entraineur dans une guilde',
+    '7-10' : 'sous-officier dans une grande compagnie',
+    '11-15': 'soldat mais pas dans une grande compagnie',
+    '16-20': 'tanneur(se)',
+    '21-25': 'menuisier(e)',
+    '26-30': 'cuisinier(e)',
+    '31-35': 'couturier(e)',
+    '36-40': 'botaniste',
+    '41-45': 'mineur',
+    '46-50': 'alchimiste',
+    '51-55': 'orf&egrave;vre',
+    '56-60': 'forgeron(ne)',
+    '61-65': 'armurier(e)',
+    '66-70': 'p&ecirc;cheur(se)',
+    '71-75': 'membre d\'un groupe de bandits',
+    '76-80': 'mercenaire',
+    '81-85': 'voleur(se)',
+    '86-90': 'un(e) r&eacute;fugi&eacute;(e)',
+    '91': 'tueur(se) &agrave; gage',
+    '92': 'officier dans une grande compagnie',
+    '93': 'mafieux(se) haut plac&eacute;(e)',
+    '94': 'vendeur de drogues',
+    '95': 'prostitu&eacute;(e)',
+    '96-100' : 'aventurier(e)'
+};
+
+gen_data['dwelling'] = {
+    '0': '&agrave Idyll&eacute;e',
+    '1-20': '&agrave; Gridania',
+    '21-25': 'en for&ecirc;t centrale',
+    '26-30': 'en for&ecirc;t de l\'est',
+    '31-35': 'en for&ecirc;t du nord',
+    '36-40': 'en for&ecirc;t du sud',
+    '41-60': '&agrave; Limsa Lominsa',
+    '61-65': 'en Noscea centrale',
+    '66-70': 'en basse Noscea',
+    '71-75': 'en haute Noscea',
+    '76-80': 'en Noscea ext&eacute;rieure',
+    '81-100': '&agrave Ul\'dah',
+    '101-105': 'dans le Thanalan central',
+    '106-110': 'dans le Thanalan septentrional',
+    '111-115': 'dans le Thanalan m&eacute;ridional',
+    '116-120': 'dans le Thanalan occidental',
+    '121-140': '&agrave; Ishgard',
+    '141-145': 'dans le Coerthas central',
+    '146-150': 'dans le Coerthas occidental',
+    '151-155': '&agrave l\&eacute;tendue de Rhalgr',
+    '156-160': 'dans les Marges',
+    '161-165': 'dans les Pics',
+    '166-175': '&agrave; Ala Mhigo',
+    '176-180': 'dans les faubourgs Mhigois',
+    '181-200': '&agrave Kugane',
+    '201-205': 'dans la Mer de Rubis',
+    '206-210': '&agrave; Yanxia',
+    '211-215': 'dans les steppes d\'Azim',
+    '216-220': '&agrave Doma',
+    '221-225': 'dans l\arri&egrave;re pays dravanien',
+};
+
+gen_data['phys_miq_m'] = [
+    'Il est {height} pour sa race et du genre {strength}. Ses yeux sont {eyes}, et il a les cheveux {hair_cut} et {hair_color}. Son regard est {glance} et il {smile}. Il a {tired}, et {hunger}. Sa queue {miqote_tail}.'
+];
+
+gen_data['phys_aora_m'] = [
+    'Il est {height} pour sa race et du genre {strength}. Ses yeux sont {eyes} {circles}, et il a les cheveux {hair_cut} et {hair_color}. Ses cornes {horns}. Son regard est {glance} et il {smile}. Il a {tired}, et {hunger}. Sa queue {aora_tail}.'
+];
+
+gen_data['phys_roe_m'] = [
+    'Il est {height} pour sa race et du genre {strength}. Ses yeux sont {eyes}, son nez {nose} et il a les cheveux {hair_cut} et {hair_color}. Son regard est {glance} et il {smile}. Il a {tired}, et {hunger}.'
+];
+
+gen_data['phys_hyurg_m'] = [
+    'Il est {height} pour sa race et du genre {strength}. Ses yeux sont {eyes}, son nez {nose} et il a les cheveux {hair_cut} et {hair_color}. Son regard est {glance} et il {smile}. Il a {tired}, et {hunger}.'
+];
+
+gen_data['phys_hyuro_m'] = [
+    'Il est {height} pour sa race et du genre {strength}. Ses yeux sont {eyes} et il a les cheveux {hair_cut} et {hair_color}. Son regard est {glance} et il {smile}. Il a {tired}, et {hunger}.'
+];
+
+gen_data['phys_ele_m'] = [
+    'Il est {height} pour sa race et du genre {strength}. Ses yeux sont {eyes}, ses oreilles {ears} et il a les cheveux {hair_cut} et {hair_color}. Son regard est {glance} et il {smile}. Il a {tired}, et {hunger}.'
+];
+
+gen_data['phys_lala_m'] = [
+    'Il est {height} pour sa race et du genre {strength}. Ses yeux sont {eyes}, ses oreilles {ears} et il a les cheveux {hair_cut} et {hair_color}. Son regard est {glance} et il {smile}. Il a {tired}, et {hunger}.'
+];
+
+gen_data['phys_miq_f'] = [
+    'Elle est {height} pour sa race et du genre {strength}. Ses yeux sont {eyes}, et elle a les cheveux {hair_cut} et {hair_color}. Son regard est {glance} et elle {smile}. Elle a {tired}, et {hunger}. Sa queue {miqote_tail}.'
+];
+
+gen_data['phys_aora_f'] = [
+    'Elle est {height} pour sa race et du genre {strength}. Ses yeux sont {eyes} {circles}, et elle a les cheveux {hair_cut} et {hair_color}. Ses cornes {horns}. Son regard est {glance} et elle {smile}. Elle a {tired}, et {hunger}. Sa queue {aora_tail}.'
+];
+
+gen_data['phys_roe_f'] = [
+    'Elle est {height} pour sa race et du genre {strength}. Ses yeux sont {eyes}, son nez {nose} et elle a les cheveux {hair_cut} et {hair_color}. Son regard est {glance} et elle {smile}. Elle a {tired}, et {hunger}.'
+];
+
+gen_data['phys_hyurg_f'] = [
+    'Elle est {height} pour sa race et du genre {strength}. Ses yeux sont {eyes}, son nez {nose} et elle a les cheveux {hair_cut} et {hair_color}. Son regard est {glance} et elle {smile}. Elle a {tired}, et {hunger}.'
+];
+
+gen_data['phys_hyuro_f'] = [
+    'Elle est {height} pour sa race et du genre {strength}. Ses yeux sont {eyes} et elle a les cheveux {hair_cut} et {hair_color}. Son regard est {glance} et elle {smile}. Il a {tired}, et {hunger}.'
+];
+
+gen_data['phys_ele_f'] = [
+    'Elle est {height} pour sa race et du genre {strength}. Ses yeux sont {eyes}, ses oreilles {ears} et elle a les cheveux {hair_cut} et {hair_color}. Son regard est {glance} et elle {smile}. Il a {tired}, et {hunger}.'
+];
+
+gen_data['phys_lala_f'] = [
+    'Elle est {height} pour sa race et du genre {strength}. Ses yeux sont {eyes}, ses oreilles {ears} et elle a les cheveux {hair_cut} et {hair_color}. Son regard est {glance} et elle {smile}. Il a {tired}, et {hunger}.'
+];
+
+gen_data['height'] = {
+    '0': 'minuscule',
+    '1-10': 'tr&egrave;s petit(e)',
+    '11-20': 'petit(e)',
+    '21-40': 'd\'une taille standard',
+    '41-50': 'grand(e)',
+    '51-60': 'tr&egrave;s grand(e)',
+    '61': 'gigantesque'
+};
+
+gen_data['strength'] = {
+    '0': 'extr&ecirc;mement faible physiquement',
+    '1-10': 'faible physiquement, c\'est un(e) mage',
+    '11-20': 'a entretenir un minimum son physique malgr&eacute; le fait qu\'il/elle soit mage',
+    '21-40': 'un minimum muscl&eacute;(e)',
+    '41-50': 'plut&ocirc;t muscl&eacute;(e)',
+    '51-60': 'tr&egrave;s muscl&eacute;(e)',
+    '61': 'Arnold Schwarzenegger dans sa jeunesse'
+};
+
+gen_data['eyes'] = {
+    '0': 'gris, il est aveugle',
+    '1': 'gris et bleu, il est borgne',
+    '2': 'gris et vert, il est borgne',
+    '3': 'gris et marron, il est borgne',
+    '4': 'gris et rouge, il est borgne',
+    '5': 'gris et jaune, il est borgne',
+    '6': 'gris et violet, il est borgne',
+    '7': 'gris et orange, il est borgne',
+    '8': 'vairons bleu et vert',
+    '9': 'vairons bleu et marron',
+    '10': 'vairons bleu et rouge',
+    '11': 'vairons bleu et jaune',
+    '12': 'vairons bleu et violet',
+    '13': 'vairons bleu et orange',
+    '14': 'vairons vert et marron',
+    '15': 'vairons vert et rouge',
+    '16': 'vairons vert et jaune',
+    '17': 'vairons vert et violet',
+    '18': 'vairons vert et orange',
+    '19': 'vairons marron et rouge',
+    '20': 'vairons marron et jaune',
+    '21': 'vairons marron et violet',
+    '22': 'vairons marron et orange',
+    '23': 'vairons rouge et jaune',
+    '24': 'vairons rouge et violet',
+    '25': 'vairons rouge et orange',
+    '26': 'vairons jaune et violet',
+    '27': 'vairons jaune et orange',
+    '28': 'vairons violet et orange',
+    '29-50': 'bleus',
+    '51-70': 'verts',
+    '71-90': 'marron',
+    '91-95': 'rouges',
+    '95-100': 'jaunes',
+    '101-105': 'violets',
+    '106-110': 'orange'
+};
+
+gen_data['circles'] = {
+    '0-5': 'cercl&eacute;s de bleu',
+    '6-10': 'cercl&eacute;s de vert',
+    '11-15': 'cercl&eacute;s de jaune',
+    '16-20': 'cercl&eacute;s de violet',
+    '21-25': 'cercl&eacute;s de blanc',
+    '26-30': '',
+};
+
+gen_data['hair_cut'] = {
+    '0': 'ras&eacute;s',
+    '1-10': 'coup&eacutes tr&egrave;s courts',
+    '11-20': 'relativement courts',
+    '21-40': 'mi-longs',
+    '41-50': 'au niveau des &eacute;paules',
+    '51-60': 'longs',
+    '61': 'tr&egrave;s longs'
+};
+
+gen_data['hair_color'] = {
+    '0': 'blancs',
+    '1-10': 'blonds',
+    '11-30': 'chatains',
+    '31-50': 'bruns',
+    '51-60': 'roux',
+    '61-65': 'bleus',
+    '66-70': 'gris',
+    '71-75': 'rouges',
+    '76-80': 'verts',
+    '71-75': 'violets',
+};
+
+gen_data['horns'] = [
+    'partent vers l\'arri&egrave;re et sont assez fines',
+    'sont &eacute;paisses et partent vers l\'avant',
+    'sont petites et partent vers le haut',
+    'sont &eacute;paisses mais courtes',
+    'sont plut&ocirc;t longues et fines',
+    'sont grandes et &eacute;paisses'
+];
+
+gen_data['glance'] = {
+    '0': 'p&eacute;tillant',
+    '1-10': 'ac&eacute;r&eacute;',
+    '11-30': 'morne',
+    '31-50': 'affut&eacute;',
+    '51-60': 'torve',
+    '61-65': 'froid',
+    '66-70': 'bienveillant',
+    '71-75': 'enjou&eacute;',
+    '76-80': 'libidineux',
+    '81-85': 'vicelard',
+};
+
+gen_data['smile'] = {
+    '0': 'a un sourire sadique',
+    '1-10': 'affiche toujours une moue blas&eacute;e',
+    '11-30': 'souvent le sourire aux l&egrave;vres',
+    '31-50': 'un sourire triste aux l&egrave;vres',
+    '51-60': 'un visage ferm&eacute;',
+    '61-65': 'un petit sourire aux l&egrave;vres en permanence',
+    '66-70': 'un sourire lubrique',
+    '71-75': 'a l\'air timide',
+    '76-80': 'a d\'&eacute;tranges tatouages',
+    '81-85': 'a des tatouages tribaux',
+    '86-90': 'a quelques cicatrices',
+    '91-95': 'a de nombreuses cicatrices'
+};
+
+gen_data['tired'] = {
+    '0-20': 'l\'air en forme',
+    '21-25': 'l\'air &eacute;puis&eacute;(e)',
+    '26-30': 'toujours l\'air en forme'
+};
+
+gen_data['hunger'] = {
+    '0-20': 'mange &agrave; sa faim',
+    '21-25': 'a l\'air maigre',
+    '26-30': 'a un peu de ventre',
+    '31-35': 'mange sans doute beaucoup trop'
+};
+
+gen_data['miqote_tail'] = {
+    '0': 'est comme celle d\'un lion',
+    '1': 'est touffue',
+    '2': 'est plut&ocirc;t fine',
+    '3': 'est courte mais &eacute;paisse'
+};
+
+gen_data['aora_tail'] = {
+    '0': 'est &eacute;paisse et courte',
+    '1': 'est &eacute;paisse et longue',
+    '2': 'est fine et longue',
+    '3': 'est fine et courte',
+};
+
+gen_data['nose'] = [
+    'est en patate',
+    'est plut&ocirc;t fin pour sa race',
+    'est tr&egrave;s &eacute;pais avec d\'&eacute;normes narines',
+    'est sembable a celui d\'un Hyurois, c\'est d\ailleurs surprenant'
+];
+
+gen_data['ears'] = [
+    'sont petites et pointues',
+    'sont petites et d&eacute;coll&eacute;es',
+    'sont longues et poitues',
+    'sont longues et d&eacute;coll&eacute;es, de vraies paraboles',
+    'sont fines et longues',
+    'sont peu pointues pour sa race'
+];
+
+gen_data['psy_moon_m'] = {
+    '0': 'Il est plut&ocirc;t solitaire, comme la plupart des Miqo\'tes lunaires. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '1': 'Il est assez sociable et reste rarement seul. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '2': 'Il est du genre &agrave; picoler avec des copains assez souvent. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '3': 'Il est plut&ocirc;t timide mais appr&eacute;cie la compagnie. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.'
+};
+
+gen_data['psy_sol_m'] = {
+    '0': 'Il a de tr&egrave;s fort lien avec sa tribu. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '1': 'Il est assez sociable et reste rarement seul. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '2': 'Il est du genre &agrave; picoler avec des copains assez souvent. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '3': 'Il est plut&ocirc;t timide mais appr&eacute;cie la compagnie. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.'
+};
+
+gen_data['psy_aora_m'] = {
+    '0': 'Il est solitaire et s\'isole souvent. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '1': 'Il est assez sociable et reste rarement seul. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '2': 'Il est du genre &agrave; picoler avec des copains assez souvent. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '3': 'Il est plut&ocirc;t timide mais appr&eacute;cie la compagnie. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.'
+};
+
+gen_data['psy_roe_m'] = {
+    '0': 'Il est intimidant, du coup en g&eacute;n&eacute;ral seul. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '1': 'Il est assez sociable et reste rarement seul. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '2': 'Il est du genre &agrave; picoler avec des copains assez souvent. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '3': 'Il est plut&ocirc;t timide mais appr&eacute;cie la compagnie. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.'
+};
+
+gen_data['psy_hyurg_m'] = {
+    '0': 'Il est intimidant, du coup en g&eacute;n&eacute;ral seul. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '1': 'Il est assez sociable et reste rarement seul. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '2': 'Il est du genre &agrave; picoler avec des copains assez souvent. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '3': 'Il est plut&ocirc;t timide mais appr&eacute;cie la compagnie. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.'
+};
+
+gen_data['psy_hyuro_m'] = {
+    '0': 'Il a toujours l\'air perdu dans ses pens&eacutes;es. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '1': 'Il est assez sociable et reste rarement seul. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '2': 'Il est du genre &agrave; picoler avec des copains assez souvent. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '3': 'Il est plut&ocirc;t timide mais appr&eacute;cie la compagnie. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.'
+};
+
+gen_data['psy_ele_m'] = {
+    '0': 'Il n\'appr&eacute;cie vraiment que les autres Elezens. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '1': 'Il est assez sociable et reste rarement seul. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '2': 'Il est du genre &agrave; picoler avec des copains assez souvent. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '3': 'Il est plut&ocirc;t timide mais appr&eacute;cie la compagnie. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.'
+};
+
+gen_data['psy_lala_m'] = {
+    '0': 'Il ach&egrave;te les gens pour avoir des amis. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '1': 'Il est assez sociable et reste rarement seul. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '2': 'Il est du genre &agrave; picoler avec des copains assez souvent. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.',
+    '3': 'Il est plut&ocirc;t timide mais appr&eacute;cie la compagnie. {global_psy_m_1}. {global_psy_m_2}. {global_psy_m_3}.'
+};
+
+gen_data['global_psy_m_1'] = {
+    '0': 'En r&eacute;alit&eacute; c\'est un v&eacute;ritable pervers',
+    '1': 'Assez r&eacute;serv&eacute; de prime abord, il est en fait compl&egrave;tement d&eacute;shinib&eacute; quand il est en confiance',
+    '2': 'Du genre calme, il est globalement r&eacute;serv&eacute;',
+    '3': 'Clairement coinc&eacute; du cul, il est tr&egrave;s difficile de lui faire d&eacute;crocher ne serait-ce qu\'un sourire'
+};
+
+gen_data['global_psy_m_2'] = {
+    '0': 'Absolument pas fiable, il trahira sans h&eacute;sit&eacute; pour de l\'argent',
+    '1': 'Bien trop pleutre pour &ecirc;tre fiable au combat, il n\'en reste pas moins honn&ecirc;te',
+    '2': 'Plut&ocirc;t loyal, il ne laisse tomber ses camarades que s\'ils le d&eacute;&ccedil;oivent',
+    '3': 'Si c\'est votre ami, il pourra mourir pour vous sauver, et ce m&ecirc;me si vous l\'avez trahis'		
+};
+
+gen_data['global_psy_m_3'] = {
+    '0': 'Il ne parle pas beaucoup de son pass&eacute;, sans doute car il est douloureux',
+    '1': 'Son histoire est banale, il n\'a jamais eu de r&eacute;el probl&egrave;me dans la vie',
+    '2': 'Il a eu une vie heureuse jusque l&agrave;, le veinard',
+    '3': 'Il pr&eacute;tend beaucoup de choses quant &agrave; son pass&eacute;, mais personne ne peut confirmer que c\'est vrai'		
+};
+
+gen_data['psy_moon_f'] = {
+    '0': 'Elle est plut&ocirc;t solitaire, comme la plupart des Miqo\'tes lunaires. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '1': 'Elle est assez sociable et reste rarement seule. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '2': 'Elle est du genre &agrave; picoler avec des copains assez souvent. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '3': 'Elle est plut&ocirc;t timide mais appr&eacute;cie la compagnie. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.'
+};
+
+gen_data['psy_sol_f'] = {
+    '0': 'Elle a de tr&egrave;s fort lien avec sa tribu. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '1': 'Elle est assez sociable et reste rarement seule. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '2': 'Elle est du genre &agrave; picoler avec des copains assez souvent. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '3': 'Elle est plut&ocirc;t timide mais appr&eacute;cie la compagnie. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.'
+};
+
+gen_data['psy_aora_f'] = {
+    '0': 'Elle est solitaire et s\'isole souvent. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '1': 'Elle est assez sociable et reste rarement seule. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '2': 'Elle est du genre &agrave; picoler avec des copains assez souvent. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '3': 'Elle est plut&ocirc;t timide mais appr&eacute;cie la compagnie. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.'
+};
+
+gen_data['psy_roe_f'] = {
+    '0': 'Elle est effrayante, du coup en g&eacute;n&eacute;ral seule. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '1': 'Elle est assez sociable et reste rarement seule. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '2': 'Elle est du genre &agrave; picoler avec des copains assez souvent. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '3': 'Elle est plut&ocirc;t timide mais appr&eacute;cie la compagnie. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.'
+};
+
+gen_data['psy_hyurg_f'] = {
+    '0': 'Elle est effrayante, du coup en g&eacute;n&eacute;ral seule. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '1': 'Elle est assez sociable et reste rarement seule. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '2': 'Elle est du genre &agrave; picoler avec des copains assez souvent. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '3': 'Elle est plut&ocirc;t timide mais appr&eacute;cie la compagnie. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.'
+};
+
+gen_data['psy_hyuro_f'] = {
+    '0': 'Elle a toujours l\'air perdue dans ses pens&eacute;es. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '1': 'Elle est assez sociable et reste rarement seule. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '2': 'Elle est du genre &agrave; picoler avec des copains assez souvent. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '3': 'Elle est plut&ocirc;t timide mais appr&eacute;cie la compagnie. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.'
+};
+
+gen_data['psy_ele_f'] = {
+    '0': 'Elle n\'appr&eacute;cie vraiment que les autres Elezens. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '1': 'Elle est assez sociable et reste rarement seule. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '2': 'Elle est du genre &agrave; picoler avec des copains assez souvent. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '3': 'Elle est plut&ocirc;t timide mais appr&eacute;cie la compagnie. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.'
+};
+
+gen_data['psy_lala_f'] = {
+    '0': 'Elle ach&egrave;te les gens pour avoir des amis. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '1': 'Elle est assez sociable et reste rarement seule. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '2': 'Elle est du genre &agrave; picoler avec des copains assez souvent. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.',
+    '3': 'Elle est plut&ocirc;t timide mais appr&eacute;cie la compagnie. {global_psy_f_1}. {global_psy_f_2}. {global_psy_f_3}.'
+};
+
+gen_data['global_psy_f_1'] = {
+    '0': 'En r&eacute;alit&eacute; c\'est une v&eacute;ritable sadique, mais elle le cache',
+    '1': 'Assez r&eacute;serv&eacute;e de prime abord, elle est en fait tr&egrave;s dr&ocirc;le quand elle est en confiance',
+    '2': 'Du genre calme, elle est globalement r&eacute;serv&eacute;e',
+    '3': 'Clairement coinc&eacute;e du cul, il est tr&egrave;s difficile de lui faire d&eacute;crocher ne serait-ce qu\'un sourire'
+};
+
+gen_data['global_psy_f_2'] = {
+    '0': 'Absolument pas fiable, elle trahira sans h&eacute;sit&eacute; pour de l\'argent',
+    '1': 'Bien trop peureuse pour &ecirc;tre fiable au combat,elle n\'en reste pas moins honn&ecirc;te',
+    '2': 'Plut&ocirc;t loyal, elle ne laisse tomber ses camarades que s\'ils la d&eacute;&ccedil;oivent',
+    '3': 'Si c\'est votre amie, elle pourra mourir pour vous sauver, et ce m&ecirc;me si vous l\'avez trahis'		
+};
+
+gen_data['global_psy_f_3'] = {
+    '0': 'Elle ne parle pas beaucoup de son pass&eacute;, sans doute car il est douloureux',
+    '1': 'Son histoire est banale, elle n\'a jamais eu de r&eacute;el probl&egrave;me dans la vie',
+    '2': 'Elle a eu une vie heureuse jusque l&agrave;, cette chanceuse',
+    '3': 'Elle pr&eacute;tend beaucoup de choses quant &agrave; son pass&eacute;, mais personne ne peut confirmer que c\'est vrai'		
+};
+
+// /PNJs ----------------------------------------
+
 // general functions ----------------------------
 
 function generate_text (type) {
@@ -934,7 +2075,7 @@ function expand_tokens (string) {
 	return string;
 }
 
-// /genenral functions --------------------------
+// /general functions ---------------------------
 
 // /generators ----------------------------------
 
@@ -1168,6 +2309,36 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						message: generate_text('leftLeg_seriousWound').toString()
 					});
 				break;
+                case 'pnj':
+                    bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('pnj').toString()
+                    });
+                break;
+                case 'miqo_s_f':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('MiqoSF').toString()
+                    });
+                break;
+                case 'miqo_s_m':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('MiqoSM').toString()
+                    });
+                break;
+                case 'miqo_l_f':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('MiqoLF').toString()
+                    });
+                break;
+                case 'miqo_l_m':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('MiqoLM').toString()
+                    });
+                break;
 			}
 		}
 			
