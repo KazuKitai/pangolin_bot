@@ -5,6 +5,7 @@ var Discord = require('discord.io');
 var logger = require('winston');
 var auth = require('./auth.json');
 const PORT = process.env.PORT || 3000;
+var timeStamp = Date.now();
 app.listen(PORT, () => {
     console.log(`Our app is running on port ${ PORT }`);
 });
@@ -917,6 +918,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
     if (user === 'Pangolin-bot') {
         //nothing !
     } else {		
+	console.log(timeStamp);
         // It will listen for messages that will start with `§`
         if (message.substring(0, 1) == '§') {
             var args = message.substring(1).split(' ');
