@@ -44,20 +44,40 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 });
 			}
         }
-		if (user === 'Le Zu' || user === 'Le Pangolin de la Vérité') {
-			if (message === 'Attaque !') {
+		if (user === 'Le Zu' 
+			|| user === 'Le Pangolin de la Vérité') {
+			if (message.toLowerCase() === 'attaque !' 
+				|| message.toLowerCase() === 'attaque!') {
 				bot.sendMessage({
                     to: channelID,
                     message: '*saute sur tout le monde* <:gnap:363685809729044480>'
                 });
 			}
-			if (message === 'Hey, le bot ?') {
+			if (message.toLowerCase() === 'hey, le bot ?' 
+				|| message.toLowerCase() === 'hey, le bot?') {
 				bot.sendMessage({
                     to: channelID,
                     message: 'Oui maitre ?'
                 });
 			}
 		}
+		if (user === 'Platypus Cordula') {
+			if (message.toLowerCase() === 'attaque !' 
+				|| message.toLowerCase() === 'attaque!') {
+				bot.sendMessage({
+                    to: channelID,
+                    message: '*saute sur tout le monde* <:gnap:363685809729044480>'
+                });
+			}
+			if (message.toLowerCase() === 'hey, le bot ?' 
+				|| message.toLowerCase() === 'hey, le bot?') {
+				bot.sendMessage({
+                    to: channelID,
+                    message: 'Oui maitresse ?'
+                });
+			}
+		}
+		
         // It will listen for messages that will start with `§`
         if (message.substring(0, 1) == '§') {
             var args = message.substring(1).split(' ');
@@ -67,10 +87,17 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             switch(cmd) {
 				// §help
 				case 'help':
-					bot.sendMessage({
-                        to: channelID,
-                        message: 'T\'as cru que j\'allais t\'aider ? Lol.'
-                    });
+					if (user === 'Platypus Cordula') {
+						bot.sendMessage({
+							to: channelID,
+							message: 'Demande au machin rouesque qui vit avec toi.'
+						});
+					} else {
+						bot.sendMessage({
+							to: channelID,
+							message: 'T\'as cru que j\'allais t\'aider ? Lol.'
+						});
+					}
                 break;
                 // §tableflip
                 case 'tableflip':
@@ -110,12 +137,19 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             });
         }
 
-		if (message === 'Hey, le bot ?' && user != 'Le Zu' && user != 'Le Pangolin de la Vérité') {
+		if (message.toLowerCase() === 'hey, le bot ?' 
+			|| message.toLowerCase() === 'hey, le bot?') {
+			if (user != 'Le Zu' 
+				|| user != 'Le Pangolin de la Vérité'
+				|| user != 'Platypus Cordula') {
+					// nothing
+			} else {
 				bot.sendMessage({
                     to: channelID,
                     message: 'Qu\'est-ce que tu veux, humain ?'
                 });
 			}
+		}
 		
         if ((message.toLowerCase().includes('chine'))
             || message.toLowerCase().includes('tine') 
