@@ -2100,7 +2100,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				case 'commands':
 					bot.sendMessage({
 						to: channelID,
-						message: '```Liste non exhaustive des commandes : \r\n'.concat(
+						message: '```Liste non exhaustive des commandes : \r\n '.concat(
                         '- tableflip : c\'est évident, non ? \r\n\ ').concat(
                         '- unflip: l\'inverse de la commande précédente ... \r\n\ ').concat(
                         'Pour les générateurs : \r\n\ ').concat(
@@ -2109,7 +2109,8 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                         'Parties du corps : head, left_arm, right_arm, body_bones, body_guts, left_leg, right_leg.\r\n\ ').concat(
                         'Gravité de la blessure : light, medium, serious. \r\n ').concat(
                         '- pnj : §pnj pour un pnj totalement aléatoire. Sinon, §[race]_[sexe]. \r\n ').concat(
-                        'Races : miqo_s, miqo_l, raen, xaela, elez_c, elez_s, hyuro, hyurg, lala_d, lala_p, roe_cf, roe_cm. \r\n```')
+                        'Races : miqo_s, miqo_l, raen, xaela, elez_c, elez_s, hyuro, hyurg, lala_d, lala_p, roe_cf, roe_cm. \r\n ').concat(
+                        'En cas de problème, contactez Kazu.```')
 					});
 				break;
 				// §help
