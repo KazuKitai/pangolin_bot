@@ -878,7 +878,7 @@ gen_data['RaenM'] = [
     '{firstName_raen_m} {lastName_raen}, un Raen de {age}. Il est {job} et vit {dwelling}.<br />{phys_aora_m}<br />{psy_aora_m}'
 ];
 gen_data['XaelaF'] = [
-    '{firstName_xeala_f} {lastName_xaela}, une Xaela de {age}. Elle est {job} et vit {dwelling}.<br />{phys_aora_f}<br />{psy_aora_f}
+    '{firstName_xeala_f} {lastName_xaela}, une Xaela de {age}. Elle est {job} et vit {dwelling}.<br />{phys_aora_f}<br />{psy_aora_f}'
 ];
 gen_data['XaelaM'] = [
     '{firstName_xeala_m} {lastName_xaela}, un Xaela de {age}. Il est {job} et vit {dwelling}.<br />{phys_aora_m}<br />{psy_aora_m}'
