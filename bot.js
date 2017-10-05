@@ -133,7 +133,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         }
 		
 		if (message.toLowerCase() === 'alors') {
-			message.react('™');
+			message.react('U+2122');
 		}
 		
         if (message.toLowerCase().includes('loli')) {
