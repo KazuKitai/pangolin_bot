@@ -2,6 +2,8 @@ var nr = require('newrelic');
 var express = require('express');
 var app = express();
 var Discord = require('discord.io');
+const DiscordJS = require("discord.js");
+const client = new Discord.Client();
 var logger = require('winston');
 var auth = require('./auth.json');
 const PORT = process.env.PORT || 3000;
@@ -19,7 +21,16 @@ var bot = new Discord.Client({
    token: auth.token,
    autorun: true
 });
+client.login('MzY1MTEzMzc3OTI5ODIyMjA4.DLZl5w.NvzFoug6BMo6SUirqpkQjveymUY');
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
 
+client.on('message', msg => {
+    if (msg.content.toLowerCase() === 'alors') {
+		msg.react('™');
+	}
+});
 
 bot.on('ready', function (evt) {
     logger.info('Connected');
@@ -133,7 +144,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         }
 		
 		if (message.toLowerCase() === 'alors') {
-			message.react('U+2122');
+			message.react('™');
 		}
 		
         if (message.toLowerCase().includes('loli')) {
