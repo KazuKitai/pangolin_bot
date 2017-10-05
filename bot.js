@@ -1998,6 +1998,259 @@ gen_data['global_psy_f_3'] = {
 
 // /PNJs ----------------------------------------
 
+// loot -----------------------------------------
+
+// mag weap -------------------------------------
+
+gen_data['mag_weap'] = [
+    'Un(e) {type_mag_weap} {madeOf_mag_weap}, {weight_mag_weap}.'
+];
+
+gen_data['type_mag_weap'] = [
+    'sceptre', 'bâton', 'ramille', 'canne', 'grimoire', 'codex', 'picatrix', 'astrolabe', 'planisphère'
+];
+
+gen_data['madeOf_mag_weap'] = {
+    '1': 'en bois',
+    '2-3': 'en fer',
+    '4-5': 'en acier',
+    '6': 'en mithril',
+    '7': 'en sombracier',
+    '8': 'en argent',
+    '9': 'en cupronickel',
+    '10': 'en durargent',
+    '11': 'en obsydienne',
+    '12': 'en os de dragon',
+    '13': 'en mithril noble',
+    '14': 'en durium',
+    '15': 'en bronze',
+    '16': 'en sombracier rafiné'
+};
+
+gen_data['weight_mag_weap'] = [
+    'léger(e) et maniable {materias_mag_weap}',
+    'sans particularité',
+    'plus lourd(e) que la normale {materias_mag_weap}'
+];
+
+gen_data['materias_mag_weap'] = [
+    'et serti(e) de matérias renforçant {bonus_mag_weap}',
+    ' ',
+    'mais serti(e) de matérias réduisant {bonus_mag_weap}'
+];
+
+gen_data['bonus_mag_weap'] = {
+    '1': 'la résistance éthérée au feu', 
+    '2': 'la résistance éthérée à la glace',
+    '3': 'la résistance éthérée à l\'eau', 
+    '4': 'la résistance éthérée à la terre', 
+    '5': 'la résistance éthérée au vent', 
+    '6': 'la résistance éthérée à la foudre',
+    '7': 'la résistance éthérée',
+    '8': 'la puissance éthérée de feu', 
+    '9': 'la puissance éthérée de glace',
+    '10': 'la puissance éthérée de l\'eau', 
+    '11': 'la puissance éthérée de la terre', 
+    '12': 'la puissance éthérée du vent', 
+    '13': 'la puissance éthérée de la foudre',
+    '0': 'la puissance éthérée',
+    '14': 'la vitesse d\'incantation',
+    '15': 'la précision des sorts'
+};	
+
+// /mag weap ------------------------------------
+
+// phy weap -------------------------------------
+
+gen_data['phy_weap'] = [
+    'Un(e) {type_phy_weap} {madeOf_phy_weap}, {weight_phy_weap}.'
+];
+
+gen_data['type_phy_weap'] = [
+    'épée', 'rapière', 'estramançon', 'hache d\'arme', 'arc', 'lance', 'hallebarde', 'sabre', 'dague', 'fusil', 'pistolet', 'faux', 'masse d\'arme', 'bouclier', 'machette', 'couteau', 'épée batarde', 'hachette', 'pique', 'marteau de guerre'
+];
+
+gen_data['madeOf_phy_weap'] = {
+    '1': 'en bois',
+    '2-3': 'en fer',
+    '4-5': 'en acier',
+    '6': 'en mithril',
+    '7': 'en sombracier',
+    '8': 'en argent',
+    '9': 'en cupronickel',
+    '10': 'en durargent',
+    '11': 'en obsydienne',
+    '12': 'en os de dragon',
+    '13': 'en mithril noble',
+    '14': 'en durium',
+    '15': 'en bronze',
+    '16': 'en sombracier rafiné'
+};
+
+gen_data['weight_phy_weap'] = [
+    'léger(e) et maniable {materias_phy_weap}',
+    'sans particularité',
+    'plus lourd(e) que la normale {materias_phy_weap}'
+];
+
+gen_data['materias_phy_weap'] = [
+    'et serti(e) de matérias renforçant {bonus_phy_weap}',
+    ' ',
+    'mais serti(e) de matérias réduisant {bonus_phy_weap}'
+];
+
+gen_data['bonus_phy_weap'] = {
+    '1': 'la résistance éthérée au feu', 
+    '2': 'la résistance éthérée à la glace',
+    '3': 'la résistance éthérée à l\'eau', 
+    '4': 'la résistance éthérée à la terre', 
+    '5': 'la résistance éthérée au vent', 
+    '6': 'la résistance éthérée à la foudre',
+    '7': 'la résistance éthérée',
+    '8': 'la puissance éthérée de feu', 
+    '9': 'la puissance éthérée de glace',
+    '10': 'la puissance éthérée de l\'eau', 
+    '11': 'la puissance éthérée de la terre', 
+    '12': 'la puissance éthérée du vent', 
+    '13': 'la puissance éthérée de la foudre',
+    '0': 'la puissance éthérée',
+    '14': 'la vitesse d\'attaque physique',
+    '14': 'la force',
+    '15': 'la résistance physique',
+    '16': 'la précision'
+};	
+
+// /phy weap ------------------------------------
+
+// armor ----------------------------------------
+
+gen_data['armor'] = [
+    'Un(e) {type_armor}.'
+];
+
+gen_data['type_armor'] = [
+    'plastron {madeOf_armor}, {weight_armor}',
+    'haubert {madeOf_armor}, {weight_armor}',
+    'casque {madeOf_armor}, {weight_armor}',
+    'heaume {madeOf_armor}, {weight_armor}',
+    'paire de gantelets {madeOf_armor}, {weight_armor}',
+    'paire de jambières {madeOf_armor}, {weight_armor}',
+    'paire de bottes {madeOf_armor}, {weight_armor}',
+    'manteau {madeOf_mag}, {weight_mag}',
+    'coule {madeOf_mag}, {weight_mag}',
+    'robe {madeOf_mag}, {weight_mag}',
+    'une paire de gants {madeOf_mag}, {weight_mag}',
+    'une paire de mitaines {madeOf_mag}, {weight_mag}',
+    'pantalon {madeOf_mag}, {weight_mag}',
+    'jupe {madeOf_mag}, {weight_mag}',
+    'paire de chaussures {madeOf_mag}, {weight_mag}',
+    'paire de bottes en cuir renforcé, {weight_mag}',
+    'diadème {madeOf_armor}, {weight_mag}',
+    'masque {madeOf_armor}, {weight_mag}',
+];
+
+gen_data['madeOf_armor'] = {
+    '1': 'en cuir',
+    '2-3': 'en fer',
+    '4-5': 'en acier',
+    '6': 'en mithril',
+    '7': 'en sombracier',
+    '8': 'en argent',
+    '9': 'en cupronickel',
+    '10': 'en durargent',
+    '11': 'en obsydienne',
+    '12': 'en os de dragon',
+    '13': 'en mithril noble',
+    '14': 'en durium',
+    '15': 'en bronze',
+    '16': 'en sombracier rafiné',
+};
+
+gen_data['madeOf_mag'] = {
+    '1': 'en laine',
+    '2-3': 'en coton',
+    '4-5': 'en lin',
+    '6': 'en soie',
+    '7': 'en rubicoton',
+    '8': 'en chanvre',
+    '9': 'en cuir souple',
+    '10': 'en poils de spriggans',
+    '11': 'en plumes',
+    '12': 'en peaux de bête',
+    '13': 'en fibres allagoises',
+    '14': 'en soies belhadiennes',
+    '15': 'en coton gelmorréen',
+    '16': 'en lin nymien',
+};
+
+gen_data['weight_armor'] = [
+    'léger(e)(s) et flexible(s) {materias_armor}',
+    'sans particularité',
+    'plus lourd(e)(s) que la normale {materias_armor}'
+];
+
+gen_data['weight_mag'] = [
+    'très bien ouvragé(e)(s) {materias_mag}',
+    'sans particularité',
+    'assez grossier(e)(s) {materias_mag}'
+];
+
+gen_data['materias_armor'] = [
+    'et serti(e)(s) de matérias renforçant {bonus_phy}',
+    ' ',
+    'mais serti(e)(s) de matérias réduisant {bonus_phy}'
+];
+
+gen_data['materias_mag'] = [
+    'et serti(e)(s) de matérias renforçant {bonus_mag}',
+    ' ',
+    'mais serti(e)(s) de matérias réduisant {bonus_mag}'
+];
+
+gen_data['bonus_phy'] = {
+    '1': 'la résistance éthérée au feu', 
+    '2': 'la résistance éthérée à la glace',
+    '3': 'la résistance éthérée à l\'eau', 
+    '4': 'la résistance éthérée à la terre', 
+    '5': 'la résistance éthérée au vent', 
+    '6': 'la résistance éthérée à la foudre',
+    '7': 'la résistance éthérée',
+    '8': 'la puissance éthérée de feu', 
+    '9': 'la puissance éthérée de glace',
+    '10': 'la puissance éthérée de l\'eau', 
+    '11': 'la puissance éthérée de la terre', 
+    '12': 'la puissance éthérée du vent', 
+    '13': 'la puissance éthérée de la foudre',
+    '0': 'la puissance éthérée',
+    '14': 'la vitesse d\'attaque physique',
+    '14': 'la force',
+    '15': 'la résistance physique',
+    '16': 'la précision',
+};
+
+gen_data['bonus_mag'] = {
+    '1': 'la résistance éthérée au feu', 
+    '2': 'la résistance éthérée à la glace',
+    '3': 'la résistance éthérée à l\'eau', 
+    '4': 'la résistance éthérée à la terre', 
+    '5': 'la résistance éthérée au vent', 
+    '6': 'la résistance éthérée à la foudre',
+    '7': 'la résistance éthérée',
+    '8': 'la puissance éthérée de feu', 
+    '9': 'la puissance éthérée de glace',
+    '10': 'la puissance éthérée de l\'eau', 
+    '11': 'la puissance éthérée de la terre', 
+    '12': 'la puissance éthérée du vent', 
+    '13': 'la puissance éthérée de la foudre',
+    '0': 'la puissance éthérée',
+    '14': 'la vitesse d\'incantation',
+    '15': 'la précision des sorts'
+};
+
+// /armor ---------------------------------------
+
+// /loot ----------------------------------------
+
 // general functions ----------------------------
 
 function generate_text (type) {
@@ -2110,6 +2363,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                         'Gravité de la blessure : light, medium, serious. \r\n ').concat(
                         '- pnj : §pnj pour un pnj totalement aléatoire. Sinon, §[race]_[sexe]. \r\n ').concat(
                         'Races : miqo_s, miqo_l, raen, xaela, elez_c, elez_s, hyuro, hyurg, lala_d, lala_p, roe_cf, roe_cm. \r\n ').concat(
+                        '- loot : §mag_weap, §phy_weap, §armor. \r\n ').concat(
                         'En cas de problème, contactez Kazu.```')
 					});
 				break;
@@ -2184,6 +2438,24 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					bot.sendMessage({
 						to: channelID,
 						message: '<:NANIII:364403601533173783>'
+					});
+				break;
+                case 'mag_weap':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('mag_weap').toString()
+					});
+				break;
+                case 'phy_weap':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('phy_weap').toString()
+					});
+				break;
+                case 'armor':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('armor').toString()
 					});
 				break;
 				case 'head_light':
