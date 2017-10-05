@@ -1254,6 +1254,10 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			|| message.includes('@Pangolin-bot#4088')
 			|| message.includes('Pangolin-bot#4088')
 			|| message.includes('#4088')
+			|| message.includes('<@!Pangolin-bot#4088>')
+			|| message.includes('<@365113377929822208>')
+			|| message.includes('365113377929822208')
+			|| message.includes('@365113377929822208')
 			|| message.toLowerCase().includes('pangobot')
 			|| message.toLowerCase().includes('pango bot')) {
 			if (user === 'Le Zu' 
