@@ -916,21 +916,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
     // Prevent bot to answer itself
     if (user === 'Pangolin-bot') {
         //nothing !
-    } else {
-        if (user === 'RPBot') {
-            if ( Math.floor(Math.random() * 2) === 0 ) {
-                bot.sendMessage({
-                    to: channelID,
-                    message: 'Il me vole mon travail !'
-                });
-            } else {
-		bot.sendMessage({
-		    to: channelID,
-		    message: 'Bordel que j\'aimerai savoir faire ça ... Mais mon dev est nul!'
-		});
-	    }
-        }
-		
+    } else {		
         // It will listen for messages that will start with `§`
         if (message.substring(0, 1) == '§') {
             var args = message.substring(1).split(' ');
@@ -938,101 +924,234 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         
             args = args.splice(1);
             switch(cmd) {
-		// §help
-		case 'help':
-			if (user === 'Platypus Cordula') {
+				// §commands
+				case 'commands':
+					bot.sendMessage({
+						to: channelID,
+						message: 'Liste non exhaustive des commandes : \r\n\
+						- tableflip : c\'est évident, non ? \r\n\
+						- unflip: l\'inverse de la commande précédente ... \r\n\
+						Pour les générateurs : \r\n\
+						- blessure : §[partie du corps]_[gravité de la blessure] \r\n\
+						Par exemple §head_light ou §left_leg_serious. \r\n\
+						Parties du corps : head, left_arm, right_arm, body_bones, body_guts, left_leg, right_leg. \r\n\
+						Gravité de la blessure : light, medium, serious.'
+					});
+				// §help
+				case 'help':
+					if (user === 'Platypus Cordula') {
+						bot.sendMessage({
+							to: channelID,
+							message: 'Demande au machin rouesque qui vit avec toi.'
+						});
+					} else {
+						bot.sendMessage({
+							to: channelID,
+							message: 'T\'as cru que j\'allais t\'aider ? Lol.'
+						});
+					}
+				break;
+				// §tableflip
+				case 'tableflip':
+					bot.sendMessage({
+						to: channelID,
+						message: '(ノಠ益ಠ)ノ彡┻━┻'
+					});
+				break;
+				// §unflip
+				case 'unflip':
+					bot.sendMessage({
+						to: channelID,
+						message: '┬──┬ ノ( ゜-゜ノ)'
+					});
+				break;
+				// §stupid
+				case 'stupid':
+					bot.sendMessage({
+						to: channelID,
+						message: 'I am the almighty pangolin-bot. You are all stupid.'
+					});
+				break;
+				// §omae
+				case 'omae':
+					bot.sendMessage({
+						to: channelID,
+						message: '<:NANIII:364403601533173783>'
+					});
+				break;
+				case 'head_light':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('head_lightWound').toString()
+					});
+				break;
+				case 'head_medium':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('head_mediumWound').toString()
+					});
+				break;
+				case 'head_serious':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('head_seriousWound').toString()
+					});
+				break;
+				case 'left_arm_light':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('leftArm_lightWound').toString()
+					});
+				break;
+				case 'left_arm_medium':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('leftArm_mediumWound').toString()
+					});
+				break;
+				case 'left_arm_serious':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('leftArm_seriousWound').toString()
+					});
+				break;
+				case 'right_arm_light':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('rightArm_lightWound').toString()
+					});
+				break;
+				case 'right_arm_medium':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('rightArm_mediumWound').toString()
+					});
+				break;
+				case 'right_arm_serious':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('rightArm_seriousWound').toString()
+					});
+				break;
+				case 'body_bones_light':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('bodyBones_lightWound').toString()
+					});
+				break;
+				case 'body_bones_medium':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('bodyBones_mediumWound').toString()
+					});
+				break;
+				case 'body_bones_serious':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('bodyBones_seriousWound').toString()
+					});
+				break;
+				case 'body_guts_light':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('bodyGuts_lightWound').toString()
+					});
+				break;
+				case 'body_guts_medium':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('bodyGuts_mediumWound').toString()
+					});
+				break;
+				case 'body_guts_serious':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('bodyGuts_seriousWound').toString()
+					});
+				break;
+				case 'right_leg_light':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('rightLeg_lightWound').toString()
+					});
+				break;
+				case 'right_leg_medium':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('rightLeg_mediumWound').toString()
+					});
+				break;
+				case 'right_leg_serious':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('rightLeg_seriousWound').toString()
+					});
+				break;
+				case 'left_leg_light':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('leftLeg_lightWound').toString()
+					});
+				break;
+				case 'left_leg_medium':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('leftLeg_mediumWound').toString()
+					});
+				break;
+				case 'left_leg_serious':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('leftLeg_seriousWound').toString()
+					});
+				break;
+			}
+		}
+			
+		if (message.toLowerCase().includes('omae wa mo shindeiru')) {
+			bot.sendMessage({
+				to: channelID,
+				message: '<:NANIII:364403601533173783>'
+			});
+		}
+
+		if (message.toLowerCase() === 'hey, le bot ?' 
+			|| message.toLowerCase() === 'hey, le bot?') {
+			if (user === 'Le Zu' 
+				|| user === 'Le Pangolin de la Vérité') {
 				bot.sendMessage({
 					to: channelID,
-					message: 'Demande au machin rouesque qui vit avec toi.'
+					message: 'Oui maitre ?'
+				});
+			} else if (user === 'Platypus Cordula') {
+				bot.sendMessage({
+					to: channelID,
+					message: 'Oui maitresse ?'
+				});	
+			} else {
+				bot.sendMessage({
+					to: channelID,
+					message: 'Qu\'est-ce que tu veux, humain ?'
+				});
+			}
+		}
+			
+			if (message.toLowerCase() === 'attaque!' 
+			|| message.toLowerCase() === 'attaque !') {
+			if (user === 'Le Zu' 
+				|| user === 'Le Pangolin de la Vérité'
+				|| user === 'Platypus Cordula') {
+				bot.sendMessage({
+					to: channelID,
+					message: '*saute sur tout le monde* <:gnap:363685809729044480>'
 				});
 			} else {
 				bot.sendMessage({
 					to: channelID,
-					message: 'T\'as cru que j\'allais t\'aider ? Lol.'
+					message: 'T\'as cru que la vie c\'était un kiwi ?'
 				});
 			}
-                break;
-                // §tableflip
-                case 'tableflip':
-                    bot.sendMessage({
-                        to: channelID,
-                        message: '(ノಠ益ಠ)ノ彡┻━┻'
-                    });
-                break;
-                // §unflip
-                case 'unflip':
-                    bot.sendMessage({
-                        to: channelID,
-                        message: '┬──┬ ノ( ゜-゜ノ)'
-                    });
-                break;
-                // §stupid
-                case 'stupid':
-                    bot.sendMessage({
-                        to: channelID,
-                        message: 'I am the almighty pangolin-bot. You are all stupid.'
-                    });
-                break;
-                // §omae
-                case 'omae':
-                    bot.sendMessage({
-                        to: channelID,
-                        message: '<:NANIII:364403601533173783>'
-                    });
-                break;
-				case 'head_light':
-					bot.sendMessage({
-                        to: channelID,
-                        message: generate_text('head_lightWound').toString()
-                    });
-				break;
-            }
-        }
-		
-        if (message.toLowerCase().includes('omae wa mo shindeiru')) {
-            bot.sendMessage({
-                to: channelID,
-                message: '<:NANIII:364403601533173783>'
-            });
-        }
-
-	if (message.toLowerCase() === 'hey, le bot ?' 
-		|| message.toLowerCase() === 'hey, le bot?') {
-		if (user === 'Le Zu' 
-			|| user === 'Le Pangolin de la Vérité') {
-			bot.sendMessage({
-			    to: channelID,
-			    message: 'Oui maitre ?'
-			});
-		} else if (user === 'Platypus Cordula') {
-			bot.sendMessage({
-			    to: channelID,
-			    message: 'Oui maitresse ?'
-			});	
-		} else {
-			bot.sendMessage({
-			    to: channelID,
-			    message: 'Qu\'est-ce que tu veux, humain ?'
-			});
 		}
-	}
-	    
-        if (message.toLowerCase() === 'attaque!' 
-		|| message.toLowerCase() === 'attaque !') {
-		if (user === 'Le Zu' 
-			|| user === 'Le Pangolin de la Vérité'
-			|| user === 'Platypus Cordula') {
-			bot.sendMessage({
-			    to: channelID,
-			    message: '*saute sur tout le monde* <:gnap:363685809729044480>'
-			});
-		} else {
-			bot.sendMessage({
-			    to: channelID,
-			    message: 'T\'as cru que la vie c\'était un kiwi ?'
-			});
-		}
-	}
 		
         if ((message.toLowerCase().includes('chine'))
             || message.toLowerCase().includes('tine') 
