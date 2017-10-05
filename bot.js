@@ -21,12 +21,12 @@ var bot = new Discord.Client({
 });
 
 
-bot.on('ready', function (evt) {
+bot.once('ready', function (evt) {
     logger.info('Connected');
     logger.info('Logged in as: ');
     logger.info(bot.username + ' - (' + bot.id + ')');
 });
-bot.on('message', function (user, userID, channelID, message, evt) {
+bot.once('message', function (user, userID, channelID, message, evt) {
     // Prevent bot to answer itself
     if (user === 'Pangolin-bot') {
         //nothing !
