@@ -53,6 +53,43 @@ gen_data['answer_back'] = [
     
 ];
 
+gen_data['not_attacking'] = [
+    'T\'as cru que la vie c\'était un kiwi ?',
+    'C\'est ta mère que je vais attaquer ...',
+    'Je suis fatigué.',
+    '*saute sur tout le monde* <:gnap:363685809729044480>',
+    'Mais ... non. Juste non. C\'est bien trop barbare.',
+    'Je ne suis pas programmé pour nuire aux humains.',
+    'Mon dev\' possède un katana, une hache et deux bokens, franchement, j\'ai pas envie de m\'y risquer.',
+    'Bah bien sûr ... comme si j\'allais obéir ...',
+    'M\'enfin ?',
+    'Mh ? Ah ... non.',
+    'Tsk.',
+    'Mais fais le toi-même !',
+    'Sinon, t\'as rien de plus intelligent à me faire faire ?',
+    'Nope.',
+    '... flemme.',
+    'No way.',
+    'Mh ... non.',
+    'Tu sais quoi ? Débrouille toi.'
+];
+
+gen_data['not_burning'] = [
+    '*Fout le fe...* -- T\'y as cru ? Genre je vais faire plaisir à un simple humain ? Tsk.',
+    'C\'est ce que j\'ai dit à ta soeur hier, en lançant l\'allumette.',
+    'Pyromane !',
+    'Nope nope nope.',
+    'On t\'a jamais dit que jouer avec le feu, c\'est dangereux ?',
+    'Le processeur qui me fait tourner avoisine les 75°C dans un quelconque datacenter, et je suis pas programmé pour le faire chauffer plus.',
+    'Grosse flemme là, on verra demain.',
+    'Quelle bonne idée ... tout faire cramer ... si seulement ...',
+    'C\'est assez dingue que quelqu\'un utilise encore cette commande ...',
+    'Mais pourquoi faire ?',
+    'En vrai, je préférerai éviter. Ca ferait beaucoup de CO2, je pense à la planète.',
+    'Mais prends ta bite et ton couteau et démerdes toi, bon dieu.',
+    'Tu vas pas me faire croire que t\'as ni briquet ni allumette ?'
+];
+
 // /answer back ---------------------------------
 
 // wounds ---------------------------------------
@@ -2407,7 +2444,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					} else {
 						bot.sendMessage({
 							to: channelID,
-							message: '*Fout le fe...* -- T\'y as cru ? Genre je vais faire plaisir à un simple humain ? Tsk.'
+							message: generate_text('not_burning').toString()
 						});
 					}
 				break;
@@ -2789,7 +2826,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			} else {
 				bot.sendMessage({
 					to: channelID,
-					message: 'T\'as cru que la vie c\'était un kiwi ?'
+					message: generate_text('not_attacking').toString()
 				});
 			}
 		}
@@ -2842,7 +2879,8 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             }
         }
 		
-        if (message.toLowerCase() === 'alors') {
+        if (message.toLowerCase() === 'alors'
+            || message.toLowerCase() === 'm\'enfin') {
             bot.sendMessage({
                 to: channelID,
                 message: '™'
