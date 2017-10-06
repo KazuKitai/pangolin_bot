@@ -2360,8 +2360,8 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					bot.sendMessage({
 						to: channelID,
 						message: '```Liste non exhaustive des commandes : \r\n '.concat(
-                        '- tableflip : c\'est évident, non ? \r\n\ ').concat(
-                        '- unflip: l\'inverse de la commande précédente ... \r\n\ ').concat(
+                        '- §tableflip : c\'est évident, non ? \r\n\ ').concat(
+                        '- §unflip: l\'inverse de la commande précédente ... \r\n\ ').concat(
                         'Pour les générateurs : \r\n\ ').concat(
                         '- blessure : §[partie du corps]_[gravité de la blessure] \r\n\ ').concat(
                         'Par exemple §head_light ou §left_leg_serious. \r\n\ ').concat(
@@ -2375,7 +2375,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				break;
 				// §help
 				case 'help':
-					if (user === 'Platypus Cordula') {
+					if (user === 'Platypus') {
 						bot.sendMessage({
 							to: channelID,
 							message: 'Faut faire §commands, chérie.'
@@ -2764,7 +2764,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					to: channelID,
 					message: 'Oui maitre ?'
 				});
-			} else if (user === 'Platypus Cordula') {
+			} else if (user === 'Platypus') {
 				bot.sendMessage({
 					to: channelID,
 					message: 'Oui maitresse ?'
@@ -2783,7 +2783,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             || message.toLowerCase() === 'à l\'attaque !') {
 			if (user === 'Le Zu' 
 				|| user === 'Le Pangolin de la Vérité'
-				|| user === 'Platypus Cordula') {
+				|| user === 'Platypus') {
 				bot.sendMessage({
 					to: channelID,
 					message: '*saute sur tout le monde* <:gnap:363685809729044480>'
@@ -2884,7 +2884,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     to: channelID,
                     message: 'Je suis votre serviteur, maitre.'
                 });
-            } else if (user === 'Platypus Cordula') {
+            } else if (user === 'Platypus') {
                 bot.sendMessage({
                     to: channelID,
                     message: 'Je vous aime maitresse.'
