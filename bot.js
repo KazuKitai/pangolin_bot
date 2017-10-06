@@ -2375,7 +2375,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				break;
 				// §help
 				case 'help':
-					if (user === 'Platypus') {
+					if (userID === '243026815453495296') {
 						bot.sendMessage({
 							to: channelID,
 							message: 'Faut faire §commands, chérie.'
@@ -2394,7 +2394,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				break;
 				// §burn
 				case 'burn':
-					if (user === 'Platypus Cordula') {
+					if (userID === '243026815453495296') {
 						bot.sendMessage({
 							to: channelID,
 							message: '*Fout le feu à tout le monde.*'
@@ -2763,7 +2763,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					to: channelID,
 					message: 'Oui maitre ?'
 				});
-			} else if (user === 'Platypus') {
+			} else if (userID === '243026815453495296') {
 				bot.sendMessage({
 					to: channelID,
 					message: 'Oui maitresse ?'
@@ -2781,7 +2781,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             || message.toLowerCase() === 'a l\'attaque !'
             || message.toLowerCase() === 'à l\'attaque !') {
 			if (userID === '150967436982747136'
-				|| user === 'Platypus') {
+				|| userID === '243026815453495296') {
 				bot.sendMessage({
 					to: channelID,
 					message: '*saute sur tout le monde* <:gnap:363685809729044480>'
@@ -2876,13 +2876,12 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     to: channelID,
                     message: '♥'
                 });
-            } else if (user === 'Le Zu' 
-                || user === 'Le Pangolin de la Vérité') {
+            } else if (userID === '150967436982747136') {
                 bot.sendMessage({
                     to: channelID,
                     message: 'Je suis votre serviteur, maitre.'
                 });
-            } else if (user === 'Platypus') {
+            } else if (userID === '243026815453495296') {
                 bot.sendMessage({
                     to: channelID,
                     message: 'Je vous aime maitresse.'
