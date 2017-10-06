@@ -2380,7 +2380,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 							to: channelID,
 							message: 'Faut faire §commands, chérie.'
 						});
-					} else if (user === 'Le Zu' || user === 'Le Pangolin de la Vérité') {
+					} else if (userID === '150967436982747136') {
 						bot.sendMessage({
 							to: channelID,
 							message: 'Débile de maitre ...'
@@ -2399,7 +2399,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 							to: channelID,
 							message: '*Fout le feu à tout le monde.*'
 						});
-					} else if (user === 'Le Zu' || user === 'Le Pangolin de la Vérité') {
+					} else if (userID === '150967436982747136') {
 						bot.sendMessage({
 							to: channelID,
 							message: 'Demande à Rengu, j\'ai la flemme.'
@@ -2758,8 +2758,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 
 		if (message.toLowerCase() === 'hey, le bot ?' 
 			|| message.toLowerCase() === 'hey, le bot?') {
-			if (user === 'Le Zu' 
-				|| user === 'Le Pangolin de la Vérité') {
+			if (userID === '150967436982747136') {
 				bot.sendMessage({
 					to: channelID,
 					message: 'Oui maitre ?'
@@ -2781,8 +2780,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			|| message.toLowerCase() === 'attaque !'
             || message.toLowerCase() === 'a l\'attaque !'
             || message.toLowerCase() === 'à l\'attaque !') {
-			if (user === 'Le Zu' 
-				|| user === 'Le Pangolin de la Vérité'
+			if (userID === '150967436982747136'
 				|| user === 'Platypus') {
 				bot.sendMessage({
 					to: channelID,
