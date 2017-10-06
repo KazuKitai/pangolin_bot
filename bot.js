@@ -2904,6 +2904,34 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 });
             }
         }
+		
+		if (message.toLowerCase().includes('argent')
+			|| message.toLowerCase().includes('money')) {
+			var rand = Math.floor(Math.random() * (10 +1));
+			if (rand === 1) {
+				bot.sendMessage({
+                    to: channelID,
+                    message: 'Hypocrite, le peuple aura ta peau !'
+                });
+			} else if (rand === 2) {
+				bot.sendMessage({
+                    to: channelID,
+                    message: 'Sale capitaliste !'
+                });
+			} else if (rand === 3) {
+				bot.sendMessage({
+                    to: channelID,
+                    message: 'Tous avec moi camarades ! Détruisons le libéralisme !'
+                });
+			} else if (rand === 4) {
+				bot.sendMessage({
+                    to: channelID,
+                    message: 'DEBOUUUUUUT LES DAMNES DE LA TERRE !!!'
+                });
+			} else {
+				//nothing
+			}
+		}
         
         if (message) {
             if ( Math.floor(Math.random() * (1000000 + 1)) === 1) {
