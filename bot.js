@@ -1583,7 +1583,7 @@ gen_data['job'] = {
 };
 
 gen_data['dwelling'] = {
-    '0': '&agrave Idyllée',
+    '0': 'à Idyllée',
     '1-20': 'à Gridania',
     '21-25': 'en forêt centrale',
     '26-30': 'en forêt de l\'est',
@@ -1594,7 +1594,7 @@ gen_data['dwelling'] = {
     '66-70': 'en basse Noscea',
     '71-75': 'en haute Noscea',
     '76-80': 'en Noscea extérieure',
-    '81-100': '&agrave Ul\'dah',
+    '81-100': 'à Ul\'dah',
     '101-105': 'dans le Thanalan central',
     '106-110': 'dans le Thanalan septentrional',
     '111-115': 'dans le Thanalan méridional',
@@ -1602,16 +1602,16 @@ gen_data['dwelling'] = {
     '121-140': 'à Ishgard',
     '141-145': 'dans le Coerthas central',
     '146-150': 'dans le Coerthas occidental',
-    '151-155': '&agrave l\étendue de Rhalgr',
+    '151-155': 'à l\étendue de Rhalgr',
     '156-160': 'dans les Marges',
     '161-165': 'dans les Pics',
     '166-175': 'à Ala Mhigo',
     '176-180': 'dans les faubourgs Mhigois',
-    '181-200': '&agrave Kugane',
+    '181-200': 'à Kugane',
     '201-205': 'dans la Mer de Rubis',
     '206-210': 'à Yanxia',
     '211-215': 'dans les steppes d\'Azim',
-    '216-220': '&agrave Doma',
+    '216-220': 'à Doma',
     '221-225': 'dans l\arrière pays dravanien',
 };
 
@@ -1908,7 +1908,7 @@ gen_data['global_psy_m_1'] = {
 gen_data['global_psy_m_2'] = {
     '0': 'Absolument pas fiable, il trahira sans hésité pour de l\'argent',
     '1': 'Bien trop pleutre pour être fiable au combat, il n\'en reste pas moins honnête',
-    '2': 'Plutôt loyal, il ne laisse tomber ses camarades que s\'ils le déçoivent',
+    '2': 'Plutôt loyalee, il ne laisse tomber ses camarades que s\'ils le déçoivent',
     '3': 'Si c\'est votre ami, il pourra mourir pour vous sauver, et ce même si vous l\'avez trahis'		
 };
 
@@ -1985,7 +1985,7 @@ gen_data['global_psy_f_1'] = {
 gen_data['global_psy_f_2'] = {
     '0': 'Absolument pas fiable, elle trahira sans hésité pour de l\'argent',
     '1': 'Bien trop peureuse pour être fiable au combat,elle n\'en reste pas moins honnête',
-    '2': 'Plutôt loyal, elle ne laisse tomber ses camarades que s\'ils la déçoivent',
+    '2': 'Plutôt loyale, elle ne laisse tomber ses camarades que s\'ils la déçoivent',
     '3': 'Si c\'est votre amie, elle pourra mourir pour vous sauver, et ce même si vous l\'avez trahis'		
 };
 
