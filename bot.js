@@ -809,7 +809,7 @@ gen_data['answer_back'] = [
     'Demandez à Kazu.',
     'J\'ai pas envie.',
     'JE NE M\'APPELLE PAS SIRI OU GOOGLE, JE SUIS UN BOT QUI SE RESPECTE, BORDEL.',
-    'Je crois que je préférerais ne pas parser les logs plutôt que d\'être sans cesse appelé par des humains ...'
+    'Je crois que je préférerais ne pas parser les logs pour ne pas être sans cesse appelé par des humains ...'
     
 ];
 
