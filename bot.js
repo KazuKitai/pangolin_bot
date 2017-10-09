@@ -559,7 +559,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						name).concat(
 						' : ').concat(
 						' \r\n').concat(
-						obj.name).concat(
+						obj.name.force).concat(
 						'```')
 					});
 				}
