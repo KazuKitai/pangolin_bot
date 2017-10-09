@@ -440,7 +440,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				var result = Math.floor(Math.random() * (max + 1));
 				bot.sendMessage({
 					to: channelID,
-					message: '<@!'.concat(userID).concat('> rolled : ').concat(result).concat('.');
+					message: '<@!'.concat(userID).concat('> rolled : ').concat(result).concat('.')
 				});
 			} else {
 				var indexOfD = message.indexOf('D');
@@ -459,7 +459,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				}
 				bot.sendMessage({
 					to: channelID,
-					message: '<@!'.concat(userID).concat('> rolled : ').concat(total).concat(', (').concat(results).concat(').');
+					message: '<@!'.concat(userID).concat('> rolled : ').concat(total).concat(', (').concat(results).concat(').')
 				});
 			}
 		}
