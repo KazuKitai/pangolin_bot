@@ -46,6 +46,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						message: '```Liste non exhaustive des commandes : \r\n '.concat(
                         '- §tableflip : c\'est évident, non ? \r\n\ ').concat(
                         '- §unflip: l\'inverse de la commande précédente ... \r\n\ ').concat(
+						'- §Dx et §yDx : lance un D de valeur max x, ou lance y dés de valeur max x').concat(
                         'Pour les générateurs : \r\n\ ').concat(
                         '- blessure : §[partie du corps]_[gravité de la blessure] \r\n\ ').concat(
                         'Par exemple §head_light ou §left_leg_serious. \r\n\ ').concat(
