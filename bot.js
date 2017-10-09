@@ -438,10 +438,10 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		if (message.substring(0, 1) == '§' && message.includes('D')) {
 			if (message.substring(1, 2) == 'D') {
 				// un seul roll
-				var result = dice.execute('d' + message.substring(2, message.length);
+				var result = dice.execute('d' + message.substring(2, message.length));
 			} else {
 				var indexOfD = message.indexOf('D');
-				var result = dice.execute(message.substring(1, indexOfD) + 'd' + message.substring(indexOfD + 1, message.length);
+				var result = dice.execute(message.substring(1, indexOfD) + 'd' + message.substring(indexOfD + 1, message.length));
 			}
 			bot.sendMessage({
 				to: channelID,
