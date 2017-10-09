@@ -46,8 +46,8 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						message: '```Liste non exhaustive des commandes : \r\n '.concat(
                         '- §tableflip : c\'est évident, non ? \r\n\ ').concat(
                         '- §unflip: l\'inverse de la commande précédente ... \r\n\ ').concat(
-			'- §Dx et §yDx : lance un D de valeur max x, ou lance y dés de valeur max x \r\n\ ').concat(
-                        'Pour les générateurs : \r\n\ ').concat(
+						'- §Dx et §yDx : lance un D de valeur max x, ou lance y dés de valeur max x \r\n\ ').concat(
+                        'Pour les générateurs : ').concat(
                         '- blessure : §[partie du corps]_[gravité de la blessure] \r\n\ ').concat(
                         'Par exemple §head_light ou §left_leg_serious. \r\n\ ').concat(
                         'Parties du corps : head, left_arm, right_arm, body_bones, body_guts, left_leg, right_leg.\r\n\ ').concat(
@@ -443,6 +443,18 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					to: channelID,
 					message: '<@!'.concat(userID).concat('> rolled : **').concat(result).concat('**.')
 				});
+				if (result < 5 * max / 100) {
+					bot.sendMessage({
+						to: channelID,
+						message: '<@!'.concat(userID).concat('> Qualitatif, à ce que je vois ...')
+					});
+				}
+				if (result > 95 * max / 100) {
+					bot.sendMessage({
+						to: channelID,
+						message: '<@!'.concat(userID).concat('> Noice !')
+					});
+				}
 			} else {
 				var indexOfD = message.indexOf('D');
 				var number = message.substring(1, indexOfD);
@@ -459,6 +471,18 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					to: channelID,
 					message: '<@!'.concat(userID).concat('> rolled : **').concat(total).concat('**, (').concat(results).concat(').')
 				});
+				if (total < 5 * max*number / 100) {
+					bot.sendMessage({
+						to: channelID,
+						message: '<@!'.concat(userID).concat('> Qualitatif, à ce que je vois ...')
+					});
+				}
+				if (total > 95 * max*number / 100) {
+					bot.sendMessage({
+						to: channelID,
+						message: '<@!'.concat(userID).concat('> Noice !')
+					});
+				}
 			}
 		}
 			
