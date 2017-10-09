@@ -455,6 +455,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						results = resultI.toString();
 					} else {
 						results.concat(', ').concat(resultI);
+						console.log(results);
 					}
 				}
 				bot.sendMessage({
