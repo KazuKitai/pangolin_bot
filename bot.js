@@ -473,7 +473,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				volonte: 5, precision: 5, technique: 5, agilite: 5,
 				perception: 5, charisme: 5, empathie: 5});
 			var json = JSON.stringify(obj);
-			fr.writeFile( fileName, json, 'utf8', function callback(err) {
+			fs.writeFile( fileName, json, 'utf8', function callback(err) {
 				if (err){
 					console.log(err);
 					bot.sendMessage({
