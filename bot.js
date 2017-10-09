@@ -5,6 +5,8 @@ var Discord = require('discord.io');
 var logger = require('winston');
 var auth = require('./auth.json');
 var PORT = process.env.PORT || 3000;
+var fs = require('fs');
+var jsonfile = require('jsonfile');
 app.listen(PORT, () => {
     console.log(`Our app is running on port ${ PORT }`);
 });
@@ -462,6 +464,76 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				});
 
 			}
+		}
+		
+		if (message.substring(0, 1) == '§' && message.includes('add')) {
+			var name = message.substring(4, message.indexOf('\\'));
+			var fileName = name.concat('.json');
+			var obj = { name:[] };
+			obj.name.push({force: 5, resistance: 5, intelligence: 5,
+				volonte: 5, precision: 5, technique: 5, agilite: 5,
+				perception: 5, charisme: 5, empathie: 5});
+			var json = JSON.stringify(obj);
+			fr.writeFile( fileName, json, 'utf8', function callback(err) {
+				if (err){
+					console.log(err);
+					bot.sendMessage({
+						to: channelID,
+						message: '<@!'.concat(userID).concat('> Echec de la sauvegarde du personnage.')
+					});
+				else {
+					bot.sendMessage({
+						to: channelID,
+						message: '<@!'.concat(userID).concat('> Personnage sauvegardé !')
+					});
+				}
+			});
+		}
+		
+		if (message.substring(0, 1) == '§' && message.includes('character')) {
+			var name = message.substring(10, message.indexOf('\\'));
+			var fileName = name.concat('.json');
+			fs.readFile(fileName, 'utf8', function readFileCallback(err, data){
+				if (err){
+					console.log(err);
+					bot.sendMessage({
+						to: channelID,
+						message: '<@!'.concat(userID).concat('> Personnage introuvable.')
+					});
+				} else {
+					obj = JSON.parse(data);
+					bot.sendMessage({
+						to: channelID,
+						message: '```'.concat(
+						'<@!').concat(
+						userID).concat(
+						'> : ').concat(
+						name).concat(
+						' : \r\n ').concat(
+						'Force: ').concat(
+						obj.name.force).concat(
+						' -- Résistance: ').concat(
+						obj.name.resistance).concat(
+						' \r\nIntelligence: ').concat(
+						obj.name.intelligence).concat(
+						' -- Volonté: ').concat(
+						obj.name.volonte).concat(
+						' \r\nPrécision: ').concat(
+						obj.name.precision).concat(
+						' -- Technique: ').concat(
+						obj.name.technique).concat(
+						' \r\nAgilité: ').concat(
+						obj.name.agilite).concat(
+						' -- Perception: ').concat(
+						obj.name.perception).concat(
+						' \r\nCharisme: ').concat(
+						obj.name.charisme).concat(
+						' -- Empathie: ').concat(
+						obj.name.empathie).concat(
+						'```')
+					});
+				}
+			});
 		}
 			
 		if (message.toLowerCase().includes('omae wa mo shindeiru')) {
