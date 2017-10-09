@@ -450,6 +450,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				var total = 0;
 				for (var i = 0; i < number; i++) {
 					var resultI = Math.floor(Math.random() * (max + 1));
+					console.log(resultI);
 					total += resultI;
 					if (i === 0) {
 						results = resultI.toString();
