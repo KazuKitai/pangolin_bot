@@ -446,18 +446,13 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				var indexOfD = message.indexOf('D');
 				var number = message.substring(1, indexOfD);
 				var max = message.substring(indexOfD + 1, message.length - 1);
-				var results = "";
+				var results = [];
 				var total = 0;
 				for (var i = 0; i < number; i++) {
 					var resultI = Math.floor(Math.random() * (max + 1));
 					console.log(resultI);
 					total += resultI;
-					if (i === 0) {
-						results = resultI.toString();
-					} else {
-						results.concat(', ').concat(resultI);
-						console.log(results);
-					}
+					results.push(resultI);
 				}
 				bot.sendMessage({
 					to: channelID,
