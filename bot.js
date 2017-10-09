@@ -5,7 +5,6 @@ var Discord = require('discord.io');
 var logger = require('winston');
 var auth = require('./auth.json');
 var PORT = process.env.PORT || 3000;
-var Dice = require('dice');
 app.listen(PORT, () => {
     console.log(`Our app is running on port ${ PORT }`);
 });
@@ -437,15 +436,32 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		if (message.substring(0, 1) == '§' && message.includes('D')) {
 			if (message.substring(1, 2) == 'D') {
 				// un seul roll
-				var result = Dice.execute('d' + message.substring(2, message.length));
+				var max = message.substring(2, message.length);
+				var result = Math.floor(Math.random() * (max + 1));
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> rolled : ').concat(result).concat('.');
+				});
 			} else {
 				var indexOfD = message.indexOf('D');
-				var result = Dice.execute(message.substring(1, indexOfD) + 'd' + message.substring(indexOfD + 1, message.length));
+				var number = message.substring(1, indexOfD);
+				var max = message.substring(indexOfD + 1, message.length);
+				var results = "";
+				var total = 0;
+				for (var i = 0; i < number; i++) {
+					var resultI = Math.floor(Math.random() * (max + 1));
+					total += resultI;
+					if (i === 0) {
+						results = resultI;
+					} else {
+						results.concat(', ').concat(resultI);
+					}
+				}
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> rolled : ').concat(total).concat(', (').concat(results).concat(').');
+				});
 			}
-			bot.sendMessage({
-				to: channelID,
-				message: '<@!' + userID + '> rolled : ' + result.outcomes.rolls + ', total : ' + result.outcomes.total + '.'
-			});
 		}
 			
 		if (message.toLowerCase().includes('omae wa mo shindeiru')) {
