@@ -5,6 +5,7 @@
   "main": "bot.js",
   "author": "Le Pangolin de la Verite",
   "dependencies": {
+    "dice": "0.0.2",
     "discord.io": "^2.5.3",
     "express": "^4.16.1",
     "newrelic": "^2.2.2",

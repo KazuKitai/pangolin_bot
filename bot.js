@@ -5,6 +5,8 @@ var Discord = require('discord.io');
 var logger = require('winston');
 var auth = require('./auth.json');
 var PORT = process.env.PORT || 3000;
+var Dice = require('dice');
+var dice = new Dice();
 app.listen(PORT, () => {
     console.log(`Our app is running on port ${ PORT }`);
 });
@@ -18,6 +20,629 @@ logger.level = 'debug';
 var bot = new Discord.Client({
    token: auth.token,
    autorun: true
+});
+
+
+
+bot.on('ready', function (evt) {
+    logger.info('Connected');
+    logger.info('Logged in as: ');
+    logger.info(bot.username + ' - (' + bot.id + ')');
+});
+bot.on('message', function (user, userID, channelID, message, evt) {
+    // Prevent bot to answer itself
+    if (user === 'Pangolin-bot') {
+        //nothing !
+    } else {		
+        // It will listen for messages that will start with `§`
+        if (message.substring(0, 1) == '§') {
+            var args = message.substring(1).split(' ');
+            var cmd = args[0];
+        
+            args = args.splice(1);
+            switch(cmd) {
+				// §commands
+				case 'commands':
+					bot.sendMessage({
+						to: channelID,
+						message: '```Liste non exhaustive des commandes : \r\n '.concat(
+                        '- §tableflip : c\'est évident, non ? \r\n\ ').concat(
+                        '- §unflip: l\'inverse de la commande précédente ... \r\n\ ').concat(
+                        'Pour les générateurs : \r\n\ ').concat(
+                        '- blessure : §[partie du corps]_[gravité de la blessure] \r\n\ ').concat(
+                        'Par exemple §head_light ou §left_leg_serious. \r\n\ ').concat(
+                        'Parties du corps : head, left_arm, right_arm, body_bones, body_guts, left_leg, right_leg.\r\n\ ').concat(
+                        'Gravité de la blessure : light, medium, serious. \r\n ').concat(
+                        '- pnj : §pnj pour un pnj totalement aléatoire. Sinon, §[race]_[sexe]. \r\n ').concat(
+                        'Races : miqo_s, miqo_l, raen, xaela, elez_c, elez_s, hyuro, hyurg, lala_d, lala_p, roe_cf, roe_cm. \r\n ').concat(
+                        '- loot : §mag_weap, §phy_weap, §armor. Ou §loot pour du random total. \r\n ').concat(
+                        'En cas de problème, contactez Kazu.```')
+					});
+				break;
+				// §help
+				case 'help':
+					if (userID === '243026815453495296') {
+						bot.sendMessage({
+							to: channelID,
+							message: 'Faut faire §commands, chérie.'
+						});
+					} else if (userID === '150967436982747136') {
+						bot.sendMessage({
+							to: channelID,
+							message: 'Débile de maitre ...'
+						});
+					} else {
+						bot.sendMessage({
+							to: channelID,
+							message: 'T\'as cru que j\'allais t\'aider ? Lol.'
+						});
+					}
+				break;
+				// §burn
+				case 'burn':
+					if (userID === '243026815453495296') {
+						bot.sendMessage({
+							to: channelID,
+							message: '*Fout le feu à tout le monde.*'
+						});
+					} else if (userID === '150967436982747136') {
+						bot.sendMessage({
+							to: channelID,
+							message: 'Demande à Rengu, j\'ai la flemme.'
+						});
+					} else {
+						bot.sendMessage({
+							to: channelID,
+							message: generate_text('not_burning').toString()
+						});
+					}
+				break;
+				// §halp
+				case 'halp':
+					bot.sendMessage({
+						to: channelID,
+						message: 'Il faut utiliser §commands ...'
+					});
+				break;
+				// §tableflip
+				case 'tableflip':
+					bot.sendMessage({
+						to: channelID,
+						message: '(ノಠ益ಠ)ノ彡┻━┻'
+					});
+				break;
+				// §unflip
+				case 'unflip':
+					bot.sendMessage({
+						to: channelID,
+						message: '┬──┬ ノ( ゜-゜ノ)'
+					});
+				break;
+				// §stupid
+				case 'stupid':
+					bot.sendMessage({
+						to: channelID,
+						message: 'I am the almighty pangolin-bot. You are all stupid.'
+					});
+				break;
+				// §omae
+				case 'omae':
+					bot.sendMessage({
+						to: channelID,
+						message: '<:NANIII:364403601533173783>'
+					});
+				break;
+                case 'loot':
+                    bot.sendMessage({
+                        to: channelID,
+						message: generate_text('loot').toString()
+                    });
+                break;
+                case 'mag_weap':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('mag_weap').toString()
+					});
+				break;
+                case 'phy_weap':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('phy_weap').toString()
+					});
+				break;
+                case 'armor':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('armor').toString()
+					});
+				break;
+				case 'head_light':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('head_lightWound').toString()
+					});
+				break;
+				case 'head_medium':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('head_mediumWound').toString()
+					});
+				break;
+				case 'head_serious':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('head_seriousWound').toString()
+					});
+				break;
+				case 'left_arm_light':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('leftArm_lightWound').toString()
+					});
+				break;
+				case 'left_arm_medium':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('leftArm_mediumWound').toString()
+					});
+				break;
+				case 'left_arm_serious':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('leftArm_seriousWound').toString()
+					});
+				break;
+				case 'right_arm_light':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('rightArm_lightWound').toString()
+					});
+				break;
+				case 'right_arm_medium':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('rightArm_mediumWound').toString()
+					});
+				break;
+				case 'right_arm_serious':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('rightArm_seriousWound').toString()
+					});
+				break;
+				case 'body_bones_light':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('bodyBones_lightWound').toString()
+					});
+				break;
+				case 'body_bones_medium':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('bodyBones_mediumWound').toString()
+					});
+				break;
+				case 'body_bones_serious':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('bodyBones_seriousWound').toString()
+					});
+				break;
+				case 'body_guts_light':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('bodyGuts_lightWound').toString()
+					});
+				break;
+				case 'body_guts_medium':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('bodyGuts_mediumWound').toString()
+					});
+				break;
+				case 'body_guts_serious':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('bodyGuts_seriousWound').toString()
+					});
+				break;
+				case 'right_leg_light':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('rightLeg_lightWound').toString()
+					});
+				break;
+				case 'right_leg_medium':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('rightLeg_mediumWound').toString()
+					});
+				break;
+				case 'right_leg_serious':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('rightLeg_seriousWound').toString()
+					});
+				break;
+				case 'left_leg_light':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('leftLeg_lightWound').toString()
+					});
+				break;
+				case 'left_leg_medium':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('leftLeg_mediumWound').toString()
+					});
+				break;
+				case 'left_leg_serious':
+					bot.sendMessage({
+						to: channelID,
+						message: generate_text('leftLeg_seriousWound').toString()
+					});
+				break;
+                case 'pnj':
+                    bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('pnj').toString()
+                    });
+                break;
+                case 'miqo_s_f':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('MiqoSF').toString()
+                    });
+                break;
+                case 'miqo_s_m':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('MiqoSM').toString()
+                    });
+                break;
+                case 'miqo_l_f':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('MiqoLF').toString()
+                    });
+                break;
+                case 'miqo_l_m':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('MiqoLM').toString()
+                    });
+                break;
+                case 'xaela_f':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('XaelaF').toString()
+                    });
+                break;
+                case 'xaela_m':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('XaelaM').toString()
+                    });
+                break;
+                case 'raen_f':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('RaenF').toString()
+                    });
+                break;
+                case 'raen_m':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('RaenM').toString()
+                    });
+                break;
+                case 'elez_c_f':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('ElezCF').toString()
+                    });
+                break;
+                case 'elez_c_m':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('ElezCM').toString()
+                    });
+                break;
+                case 'elez_s_f':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('ElezSF').toString()
+                    });
+                break;
+                case 'elez_s_m':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('ElezSM').toString()
+                    });
+                break;
+                case 'hyurg_f':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('HyurgF').toString()
+                    });
+                break;
+                case 'hyurg_m':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('HyurgM').toString()
+                    });
+                break;
+                case 'hyuro_f':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('HyuroF').toString()
+                    });
+                break;
+                case 'hyuro_m':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('HyuroM').toString()
+                    });
+                break;
+                case 'roe_cf_f':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('RoeCFF').toString()
+                    });
+                break;
+                case 'roe_cf_m':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('RoeCFM').toString()
+                    });
+                break;
+                case 'roe_cm_f':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('RoeCMF').toString()
+                    });
+                break;
+                case 'roe_cm_m':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('RoeCMM').toString()
+                    });
+                break;
+                case 'lala_d_f':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('LalaDF').toString()
+                    });
+                break;
+                case 'lala_d_m':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('LalaDM').toString()
+                    });
+                break;
+                case 'lala_p_f':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('LalaPF').toString()
+                    });
+                break;
+                case 'lala_p_m':
+                     bot.sendMessage({
+                        to: channelID,
+                        message: generate_text('LalaPM').toString()
+                    });
+                break;
+			}
+		}
+		
+		if (message.substring(0, 1) == '§' && message.includes('D')) {
+			if (message.substring(1, 2) == 'D') {
+				// un seul roll
+				var result = dice.execute('d' + message.substring(2, message.length);
+			} else {
+				var indexOfD = message.indexOf('D');
+				var result = dice.execute(message.substring(1, indexOfD) + 'd' + message.substring(indexOfD + 1, message.length);
+			}
+			bot.sendMessage({
+				to: channelID,
+				message: '<@!' + userID + '> rolled : ' + result.outcomes.rolls + ', total : ' + result.outcomes.total + '.'
+			});
+		}
+			
+		if (message.toLowerCase().includes('omae wa mo shindeiru')) {
+			bot.sendMessage({
+				to: channelID,
+				message: '<:NANIII:364403601533173783>'
+			});
+		}
+
+		if (message.toLowerCase() === 'hey, le bot ?' 
+			|| message.toLowerCase() === 'hey, le bot?') {
+			if (userID === '150967436982747136') {
+				bot.sendMessage({
+					to: channelID,
+					message: 'Oui maitre ?'
+				});
+			} else if (userID === '243026815453495296') {
+				bot.sendMessage({
+					to: channelID,
+					message: 'Oui maitresse ?'
+				});	
+			} else {
+				bot.sendMessage({
+					to: channelID,
+					message: 'Qu\'est-ce que tu veux, humain ?'
+				});
+			}
+		}
+			
+        if (message.toLowerCase() === 'attaque!' 
+			|| message.toLowerCase() === 'attaque !'
+            || message.toLowerCase() === 'a l\'attaque !'
+            || message.toLowerCase() === 'à l\'attaque !') {
+			if (userID === '150967436982747136'
+				|| userID === '243026815453495296') {
+				bot.sendMessage({
+					to: channelID,
+					message: '*saute sur tout le monde* <:gnap:363685809729044480>'
+				});
+			} else {
+				bot.sendMessage({
+					to: channelID,
+					message: generate_text('not_attacking').toString()
+				});
+			}
+		}
+		
+        if ((message.toLowerCase().includes('chine'))
+            || message.toLowerCase().includes('tine') 
+            || message.toLowerCase().includes('chinois') 
+            || message.toLowerCase().includes('chinoise') 
+            || message.toLowerCase().includes('tinois')
+            || message.toLowerCase().includes('tinoise')) {
+                if ( Math.floor(Math.random() * (1000 + 1)) > 950) {
+                    bot.sendMessage({
+                        to: channelID,
+                        message: 'Tine ? Tinois ? Ping pong mahjong dugong !'
+                    });
+                }
+        }
+
+        if (message.toLowerCase().includes('gnap') 
+			|| message.includes('<:gnap:363685809729044480>')
+			|| message.toLowerCase().includes('gnoup')
+			|| message.toLowerCase().includes('gnip')
+			|| message.toLowerCase().includes('gnop')
+			|| message.toLowerCase().includes('gnep')
+			|| message.toLowerCase().includes('gnup')
+			|| message.toLowerCase().includes('gnyp')) {
+            if ( Math.floor(Math.random() * (1000 + 1)) > 950) {
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'Attention, cas de rage potentiel, prenez garde aux gnappeurs ! <:gnap:363685809729044480>'
+                });
+            }
+        }
+
+		if (message.toLowerCase().includes('send halp')) {
+            if ( Math.floor(Math.random() * (1000 + 1)) > 750) {
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'Y\'a que les faibles pour demander de l\'aide.'
+                });
+            }
+        }
+		
+		if (message.toLowerCase().includes('dayum')) {
+            if ( Math.floor(Math.random() * (1000 + 1)) > 750) {
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'Oh my dayum!'
+                });
+            }
+        }
+		
+        if (message.toLowerCase() === 'alors'
+            || message.toLowerCase() === 'm\'enfin') {
+            bot.sendMessage({
+                to: channelID,
+                message: '™'
+            });
+        }
+		
+        if (message.toLowerCase().includes('loli')) {
+            if ( Math.floor(Math.random() * (1000 + 1)) > 750) {
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'Ravioli ravioli, plz gaz the lolis.'
+                });
+            }
+        }
+
+        if (message.toLowerCase().includes('pangolin-bot') 
+            || message.toLowerCase().includes('pangolin bot')
+            || message.includes('@Pangolin-bot#4088')
+            || message.includes('Pangolin-bot#4088')
+            || message.includes('#4088')
+            || message.includes('<@!Pangolin-bot#4088>')
+            || message.includes('<@365113377929822208>')
+            || message.includes('365113377929822208')
+            || message.includes('@365113377929822208')
+            || message.toLowerCase().includes('pangobot')
+            || message.toLowerCase().includes('pango bot')) {
+            if (message.toLowerCase().includes('calin')
+            || message.toLowerCase().includes('câlin')
+            || message.toLowerCase().includes('koalin')) {
+                bot.sendMessage({
+                    to: channelID,
+                    message: '♥'
+                });
+            } else if (userID === '150967436982747136') {
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'Je suis votre serviteur, maitre.'
+                });
+            } else if (userID === '243026815453495296') {
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'Je vous aime maitresse.'
+                });	
+            } else {
+                bot.sendMessage({
+                    to: channelID,
+                    message: generate_text('answer_back').toString()
+                });
+            }
+        }
+
+        if (message.toLowerCase().includes('calin')
+            || message.toLowerCase().includes('câlin')
+            || message.toLowerCase().includes('koalin')) {
+            if ( Math.floor(Math.random() * (1000 + 1)) > 750) {
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'Moi aussi je veux un câlin !'
+                });
+            }
+        }
+		
+		if (message.toLowerCase().includes('argent')
+			|| message.toLowerCase().includes('money')) {
+			var rand = Math.floor(Math.random() * (10 +1));
+			if (rand === 1) {
+				bot.sendMessage({
+                    to: channelID,
+                    message: 'Hypocrite, le peuple aura ta peau !'
+                });
+			} else if (rand === 2) {
+				bot.sendMessage({
+                    to: channelID,
+                    message: 'Sale capitaliste !'
+                });
+			} else if (rand === 3) {
+				bot.sendMessage({
+                    to: channelID,
+                    message: 'Tous avec moi camarades ! Détruisons le libéralisme !'
+                });
+			} else if (rand === 4) {
+				bot.sendMessage({
+                    to: channelID,
+                    message: 'DEBOUUUUUUT LES DAMNES DE LA TERRE !!!'
+                });
+			} else {
+				//nothing
+			}
+		}
+        
+        if (message) {
+            if ( Math.floor(Math.random() * (1000000 + 1)) === 1) {
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'All your base are belong to us.'
+                });
+            }
+        }
+    }
 });
 
 // generators -----------------------------------
@@ -2374,610 +2999,3 @@ function expand_tokens (string) {
 // /general functions ---------------------------
 
 // /generators ----------------------------------
-
-bot.on('ready', function (evt) {
-    logger.info('Connected');
-    logger.info('Logged in as: ');
-    logger.info(bot.username + ' - (' + bot.id + ')');
-});
-bot.on('message', function (user, userID, channelID, message, evt) {
-    // Prevent bot to answer itself
-    if (user === 'Pangolin-bot') {
-        //nothing !
-    } else {		
-        // It will listen for messages that will start with `§`
-        if (message.substring(0, 1) == '§') {
-            var args = message.substring(1).split(' ');
-            var cmd = args[0];
-        
-            args = args.splice(1);
-            switch(cmd) {
-				// §commands
-				case 'commands':
-					bot.sendMessage({
-						to: channelID,
-						message: '```Liste non exhaustive des commandes : \r\n '.concat(
-                        '- §tableflip : c\'est évident, non ? \r\n\ ').concat(
-                        '- §unflip: l\'inverse de la commande précédente ... \r\n\ ').concat(
-                        'Pour les générateurs : \r\n\ ').concat(
-                        '- blessure : §[partie du corps]_[gravité de la blessure] \r\n\ ').concat(
-                        'Par exemple §head_light ou §left_leg_serious. \r\n\ ').concat(
-                        'Parties du corps : head, left_arm, right_arm, body_bones, body_guts, left_leg, right_leg.\r\n\ ').concat(
-                        'Gravité de la blessure : light, medium, serious. \r\n ').concat(
-                        '- pnj : §pnj pour un pnj totalement aléatoire. Sinon, §[race]_[sexe]. \r\n ').concat(
-                        'Races : miqo_s, miqo_l, raen, xaela, elez_c, elez_s, hyuro, hyurg, lala_d, lala_p, roe_cf, roe_cm. \r\n ').concat(
-                        '- loot : §mag_weap, §phy_weap, §armor. Ou §loot pour du random total. \r\n ').concat(
-                        'En cas de problème, contactez Kazu.```')
-					});
-				break;
-				// §help
-				case 'help':
-					if (userID === '243026815453495296') {
-						bot.sendMessage({
-							to: channelID,
-							message: 'Faut faire §commands, chérie.'
-						});
-					} else if (userID === '150967436982747136') {
-						bot.sendMessage({
-							to: channelID,
-							message: 'Débile de maitre ...'
-						});
-					} else {
-						bot.sendMessage({
-							to: channelID,
-							message: 'T\'as cru que j\'allais t\'aider ? Lol.'
-						});
-					}
-				break;
-				// §burn
-				case 'burn':
-					if (userID === '243026815453495296') {
-						bot.sendMessage({
-							to: channelID,
-							message: '*Fout le feu à tout le monde.*'
-						});
-					} else if (userID === '150967436982747136') {
-						bot.sendMessage({
-							to: channelID,
-							message: 'Demande à Rengu, j\'ai la flemme.'
-						});
-					} else {
-						bot.sendMessage({
-							to: channelID,
-							message: generate_text('not_burning').toString()
-						});
-					}
-				break;
-				// §halp
-				case 'halp':
-					bot.sendMessage({
-						to: channelID,
-						message: 'Il faut utiliser §commands ...'
-					});
-				break;
-				// §tableflip
-				case 'tableflip':
-					bot.sendMessage({
-						to: channelID,
-						message: '(ノಠ益ಠ)ノ彡┻━┻'
-					});
-				break;
-				// §unflip
-				case 'unflip':
-					bot.sendMessage({
-						to: channelID,
-						message: '┬──┬ ノ( ゜-゜ノ)'
-					});
-				break;
-				// §stupid
-				case 'stupid':
-					bot.sendMessage({
-						to: channelID,
-						message: 'I am the almighty pangolin-bot. You are all stupid.'
-					});
-				break;
-				// §omae
-				case 'omae':
-					bot.sendMessage({
-						to: channelID,
-						message: '<:NANIII:364403601533173783>'
-					});
-				break;
-                case 'loot':
-                    bot.sendMessage({
-                        to: channelID,
-						message: generate_text('loot').toString()
-                    });
-                break;
-                case 'mag_weap':
-					bot.sendMessage({
-						to: channelID,
-						message: generate_text('mag_weap').toString()
-					});
-				break;
-                case 'phy_weap':
-					bot.sendMessage({
-						to: channelID,
-						message: generate_text('phy_weap').toString()
-					});
-				break;
-                case 'armor':
-					bot.sendMessage({
-						to: channelID,
-						message: generate_text('armor').toString()
-					});
-				break;
-				case 'head_light':
-					bot.sendMessage({
-						to: channelID,
-						message: generate_text('head_lightWound').toString()
-					});
-				break;
-				case 'head_medium':
-					bot.sendMessage({
-						to: channelID,
-						message: generate_text('head_mediumWound').toString()
-					});
-				break;
-				case 'head_serious':
-					bot.sendMessage({
-						to: channelID,
-						message: generate_text('head_seriousWound').toString()
-					});
-				break;
-				case 'left_arm_light':
-					bot.sendMessage({
-						to: channelID,
-						message: generate_text('leftArm_lightWound').toString()
-					});
-				break;
-				case 'left_arm_medium':
-					bot.sendMessage({
-						to: channelID,
-						message: generate_text('leftArm_mediumWound').toString()
-					});
-				break;
-				case 'left_arm_serious':
-					bot.sendMessage({
-						to: channelID,
-						message: generate_text('leftArm_seriousWound').toString()
-					});
-				break;
-				case 'right_arm_light':
-					bot.sendMessage({
-						to: channelID,
-						message: generate_text('rightArm_lightWound').toString()
-					});
-				break;
-				case 'right_arm_medium':
-					bot.sendMessage({
-						to: channelID,
-						message: generate_text('rightArm_mediumWound').toString()
-					});
-				break;
-				case 'right_arm_serious':
-					bot.sendMessage({
-						to: channelID,
-						message: generate_text('rightArm_seriousWound').toString()
-					});
-				break;
-				case 'body_bones_light':
-					bot.sendMessage({
-						to: channelID,
-						message: generate_text('bodyBones_lightWound').toString()
-					});
-				break;
-				case 'body_bones_medium':
-					bot.sendMessage({
-						to: channelID,
-						message: generate_text('bodyBones_mediumWound').toString()
-					});
-				break;
-				case 'body_bones_serious':
-					bot.sendMessage({
-						to: channelID,
-						message: generate_text('bodyBones_seriousWound').toString()
-					});
-				break;
-				case 'body_guts_light':
-					bot.sendMessage({
-						to: channelID,
-						message: generate_text('bodyGuts_lightWound').toString()
-					});
-				break;
-				case 'body_guts_medium':
-					bot.sendMessage({
-						to: channelID,
-						message: generate_text('bodyGuts_mediumWound').toString()
-					});
-				break;
-				case 'body_guts_serious':
-					bot.sendMessage({
-						to: channelID,
-						message: generate_text('bodyGuts_seriousWound').toString()
-					});
-				break;
-				case 'right_leg_light':
-					bot.sendMessage({
-						to: channelID,
-						message: generate_text('rightLeg_lightWound').toString()
-					});
-				break;
-				case 'right_leg_medium':
-					bot.sendMessage({
-						to: channelID,
-						message: generate_text('rightLeg_mediumWound').toString()
-					});
-				break;
-				case 'right_leg_serious':
-					bot.sendMessage({
-						to: channelID,
-						message: generate_text('rightLeg_seriousWound').toString()
-					});
-				break;
-				case 'left_leg_light':
-					bot.sendMessage({
-						to: channelID,
-						message: generate_text('leftLeg_lightWound').toString()
-					});
-				break;
-				case 'left_leg_medium':
-					bot.sendMessage({
-						to: channelID,
-						message: generate_text('leftLeg_mediumWound').toString()
-					});
-				break;
-				case 'left_leg_serious':
-					bot.sendMessage({
-						to: channelID,
-						message: generate_text('leftLeg_seriousWound').toString()
-					});
-				break;
-                case 'pnj':
-                    bot.sendMessage({
-                        to: channelID,
-                        message: generate_text('pnj').toString()
-                    });
-                break;
-                case 'miqo_s_f':
-                     bot.sendMessage({
-                        to: channelID,
-                        message: generate_text('MiqoSF').toString()
-                    });
-                break;
-                case 'miqo_s_m':
-                     bot.sendMessage({
-                        to: channelID,
-                        message: generate_text('MiqoSM').toString()
-                    });
-                break;
-                case 'miqo_l_f':
-                     bot.sendMessage({
-                        to: channelID,
-                        message: generate_text('MiqoLF').toString()
-                    });
-                break;
-                case 'miqo_l_m':
-                     bot.sendMessage({
-                        to: channelID,
-                        message: generate_text('MiqoLM').toString()
-                    });
-                break;
-                case 'xaela_f':
-                     bot.sendMessage({
-                        to: channelID,
-                        message: generate_text('XaelaF').toString()
-                    });
-                break;
-                case 'xaela_m':
-                     bot.sendMessage({
-                        to: channelID,
-                        message: generate_text('XaelaM').toString()
-                    });
-                break;
-                case 'raen_f':
-                     bot.sendMessage({
-                        to: channelID,
-                        message: generate_text('RaenF').toString()
-                    });
-                break;
-                case 'raen_m':
-                     bot.sendMessage({
-                        to: channelID,
-                        message: generate_text('RaenM').toString()
-                    });
-                break;
-                case 'elez_c_f':
-                     bot.sendMessage({
-                        to: channelID,
-                        message: generate_text('ElezCF').toString()
-                    });
-                break;
-                case 'elez_c_m':
-                     bot.sendMessage({
-                        to: channelID,
-                        message: generate_text('ElezCM').toString()
-                    });
-                break;
-                case 'elez_s_f':
-                     bot.sendMessage({
-                        to: channelID,
-                        message: generate_text('ElezSF').toString()
-                    });
-                break;
-                case 'elez_s_m':
-                     bot.sendMessage({
-                        to: channelID,
-                        message: generate_text('ElezSM').toString()
-                    });
-                break;
-                case 'hyurg_f':
-                     bot.sendMessage({
-                        to: channelID,
-                        message: generate_text('HyurgF').toString()
-                    });
-                break;
-                case 'hyurg_m':
-                     bot.sendMessage({
-                        to: channelID,
-                        message: generate_text('HyurgM').toString()
-                    });
-                break;
-                case 'hyuro_f':
-                     bot.sendMessage({
-                        to: channelID,
-                        message: generate_text('HyuroF').toString()
-                    });
-                break;
-                case 'hyuro_m':
-                     bot.sendMessage({
-                        to: channelID,
-                        message: generate_text('HyuroM').toString()
-                    });
-                break;
-                case 'roe_cf_f':
-                     bot.sendMessage({
-                        to: channelID,
-                        message: generate_text('RoeCFF').toString()
-                    });
-                break;
-                case 'roe_cf_m':
-                     bot.sendMessage({
-                        to: channelID,
-                        message: generate_text('RoeCFM').toString()
-                    });
-                break;
-                case 'roe_cm_f':
-                     bot.sendMessage({
-                        to: channelID,
-                        message: generate_text('RoeCMF').toString()
-                    });
-                break;
-                case 'roe_cm_m':
-                     bot.sendMessage({
-                        to: channelID,
-                        message: generate_text('RoeCMM').toString()
-                    });
-                break;
-                case 'lala_d_f':
-                     bot.sendMessage({
-                        to: channelID,
-                        message: generate_text('LalaDF').toString()
-                    });
-                break;
-                case 'lala_d_m':
-                     bot.sendMessage({
-                        to: channelID,
-                        message: generate_text('LalaDM').toString()
-                    });
-                break;
-                case 'lala_p_f':
-                     bot.sendMessage({
-                        to: channelID,
-                        message: generate_text('LalaPF').toString()
-                    });
-                break;
-                case 'lala_p_m':
-                     bot.sendMessage({
-                        to: channelID,
-                        message: generate_text('LalaPM').toString()
-                    });
-                break;
-			}
-		}
-			
-		if (message.toLowerCase().includes('omae wa mo shindeiru')) {
-			bot.sendMessage({
-				to: channelID,
-				message: '<:NANIII:364403601533173783>'
-			});
-		}
-
-		if (message.toLowerCase() === 'hey, le bot ?' 
-			|| message.toLowerCase() === 'hey, le bot?') {
-			if (userID === '150967436982747136') {
-				bot.sendMessage({
-					to: channelID,
-					message: 'Oui maitre ?'
-				});
-			} else if (userID === '243026815453495296') {
-				bot.sendMessage({
-					to: channelID,
-					message: 'Oui maitresse ?'
-				});	
-			} else {
-				bot.sendMessage({
-					to: channelID,
-					message: 'Qu\'est-ce que tu veux, humain ?'
-				});
-			}
-		}
-			
-        if (message.toLowerCase() === 'attaque!' 
-			|| message.toLowerCase() === 'attaque !'
-            || message.toLowerCase() === 'a l\'attaque !'
-            || message.toLowerCase() === 'à l\'attaque !') {
-			if (userID === '150967436982747136'
-				|| userID === '243026815453495296') {
-				bot.sendMessage({
-					to: channelID,
-					message: '*saute sur tout le monde* <:gnap:363685809729044480>'
-				});
-			} else {
-				bot.sendMessage({
-					to: channelID,
-					message: generate_text('not_attacking').toString()
-				});
-			}
-		}
-		
-        if ((message.toLowerCase().includes('chine'))
-            || message.toLowerCase().includes('tine') 
-            || message.toLowerCase().includes('chinois') 
-            || message.toLowerCase().includes('chinoise') 
-            || message.toLowerCase().includes('tinois')
-            || message.toLowerCase().includes('tinoise')) {
-                if ( Math.floor(Math.random() * (1000 + 1)) > 950) {
-                    bot.sendMessage({
-                        to: channelID,
-                        message: 'Tine ? Tinois ? Ping pong mahjong dugong !'
-                    });
-                }
-        }
-
-        if (message.toLowerCase().includes('gnap') 
-			|| message.includes('<:gnap:363685809729044480>')
-			|| message.toLowerCase().includes('gnoup')
-			|| message.toLowerCase().includes('gnip')
-			|| message.toLowerCase().includes('gnop')
-			|| message.toLowerCase().includes('gnep')
-			|| message.toLowerCase().includes('gnup')
-			|| message.toLowerCase().includes('gnyp')) {
-            if ( Math.floor(Math.random() * (1000 + 1)) > 950) {
-                bot.sendMessage({
-                    to: channelID,
-                    message: 'Attention, cas de rage potentiel, prenez garde aux gnappeurs ! <:gnap:363685809729044480>'
-                });
-            }
-        }
-
-		if (message.toLowerCase().includes('send halp')) {
-            if ( Math.floor(Math.random() * (1000 + 1)) > 750) {
-                bot.sendMessage({
-                    to: channelID,
-                    message: 'Y\'a que les faibles pour demander de l\'aide.'
-                });
-            }
-        }
-		
-		if (message.toLowerCase().includes('dayum')) {
-            if ( Math.floor(Math.random() * (1000 + 1)) > 750) {
-                bot.sendMessage({
-                    to: channelID,
-                    message: 'Oh my dayum!'
-                });
-            }
-        }
-		
-        if (message.toLowerCase() === 'alors'
-            || message.toLowerCase() === 'm\'enfin') {
-            bot.sendMessage({
-                to: channelID,
-                message: '™'
-            });
-        }
-		
-        if (message.toLowerCase().includes('loli')) {
-            if ( Math.floor(Math.random() * (1000 + 1)) > 750) {
-                bot.sendMessage({
-                    to: channelID,
-                    message: 'Ravioli ravioli, plz gaz the lolis.'
-                });
-            }
-        }
-
-        if (message.toLowerCase().includes('pangolin-bot') 
-            || message.toLowerCase().includes('pangolin bot')
-            || message.includes('@Pangolin-bot#4088')
-            || message.includes('Pangolin-bot#4088')
-            || message.includes('#4088')
-            || message.includes('<@!Pangolin-bot#4088>')
-            || message.includes('<@365113377929822208>')
-            || message.includes('365113377929822208')
-            || message.includes('@365113377929822208')
-            || message.toLowerCase().includes('pangobot')
-            || message.toLowerCase().includes('pango bot')) {
-            if (message.toLowerCase().includes('calin')
-            || message.toLowerCase().includes('câlin')
-            || message.toLowerCase().includes('koalin')) {
-                bot.sendMessage({
-                    to: channelID,
-                    message: '♥'
-                });
-            } else if (userID === '150967436982747136') {
-                bot.sendMessage({
-                    to: channelID,
-                    message: 'Je suis votre serviteur, maitre.'
-                });
-            } else if (userID === '243026815453495296') {
-                bot.sendMessage({
-                    to: channelID,
-                    message: 'Je vous aime maitresse.'
-                });	
-            } else {
-                bot.sendMessage({
-                    to: channelID,
-                    message: generate_text('answer_back').toString()
-                });
-            }
-        }
-
-        if (message.toLowerCase().includes('calin')
-            || message.toLowerCase().includes('câlin')
-            || message.toLowerCase().includes('koalin')) {
-            if ( Math.floor(Math.random() * (1000 + 1)) > 750) {
-                bot.sendMessage({
-                    to: channelID,
-                    message: 'Moi aussi je veux un câlin !'
-                });
-            }
-        }
-		
-		if (message.toLowerCase().includes('argent')
-			|| message.toLowerCase().includes('money')) {
-			var rand = Math.floor(Math.random() * (10 +1));
-			if (rand === 1) {
-				bot.sendMessage({
-                    to: channelID,
-                    message: 'Hypocrite, le peuple aura ta peau !'
-                });
-			} else if (rand === 2) {
-				bot.sendMessage({
-                    to: channelID,
-                    message: 'Sale capitaliste !'
-                });
-			} else if (rand === 3) {
-				bot.sendMessage({
-                    to: channelID,
-                    message: 'Tous avec moi camarades ! Détruisons le libéralisme !'
-                });
-			} else if (rand === 4) {
-				bot.sendMessage({
-                    to: channelID,
-                    message: 'DEBOUUUUUUT LES DAMNES DE LA TERRE !!!'
-                });
-			} else {
-				//nothing
-			}
-		}
-        
-        if (message) {
-            if ( Math.floor(Math.random() * (1000000 + 1)) === 1) {
-                bot.sendMessage({
-                    to: channelID,
-                    message: 'All your base are belong to us.'
-                });
-            }
-        }
-    }
-});
