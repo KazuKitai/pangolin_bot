@@ -473,13 +473,13 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			console.log(cmd);
 			console.log(args);
 			
-			var name = message.substring(4, message.indexOf('\\'));
+			var name = args[0];
 			var fileName = 'characters.json';
 			console.log(name);
 			var obj = { name:[] };
-			obj.name.push({force: 5, resistance: 5, intelligence: 5,
-				volonte: 5, precision: 5, technique: 5, agilite: 5,
-				perception: 5, charisme: 5, empathie: 5});
+			obj.name.push({force: args[2], resistance: args[5], intelligence: [7],
+			volonte: [10], precision: [12], technique: [15], agilite: [17],
+				perception: [20], charisme: [22], empathie: [25]});
 			var json = JSON.stringify(obj);
 			fs.writeFile( fileName, json, 'utf8', function callback(err) {
 				if (err){
@@ -545,10 +545,10 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					obj = JSON.parse(data);
 					bot.sendMessage({
 						to: channelID,
-						message: '```'.concat(
-						'<@!').concat(
+						message: '<@!'.concat(
 						userID).concat(
 						'> : ').concat(
+						' \r\n ```').concat(
 						name).concat(
 						' : \r\n ').concat(
 						'Force: ').concat(
