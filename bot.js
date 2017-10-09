@@ -477,9 +477,8 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			var fileName = 'characters.json';
 			console.log(name);
 			var obj = { name:[] };
-			obj.name.push({'force': args[2], 'resistance': args[5], 'intelligence': [7],
-			'volonte': [10], 'precision': [12], 'technique': [15], 'agilite': [17],
-				'perception': [20], 'charisme': [22], 'empathie': [25]});
+			obj.name.push({force: args[2], resistance: args[5], intelligence: [7],
+			volonte: [10], precision: [12], technique: [15], agilite: [17], perception: [20], charisme: [22], empathie: [25]});
 			var json = JSON.stringify(obj);
 			fs.writeFile( fileName, json, 'utf8', function callback(err) {
 				if (err){
