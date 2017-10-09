@@ -466,6 +466,13 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		}
 		
 		if (message.substring(0, 1) == '§' && message.includes('add')) {
+			var args = message.substring(4).split(' ');
+            var cmd = args[0];
+            args = args.splice(1);
+			
+			console.log(cmd);
+			console.log(args);
+			
 			var name = message.substring(4, message.indexOf('\\'));
 			var fileName = 'characters.json';
 			console.log(name);
@@ -491,6 +498,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		}
 		
 		if (message.substring(0, 1) == '§' && message.includes('delete')) {
+			
 			var name = message.substring(7, message.indexOf('\\'));
 			console.log(name);
 			fs.readFile(fileName, 'utf8', function readFileCallback(err, data){
