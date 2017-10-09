@@ -544,9 +544,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					});
 				} else {
 					obj = JSON.parse(data);
-					datas = JSON.stringify(obj);
 					console.log(obj);
-					console.log(datas);
 					bot.sendMessage({
 						to: channelID,
 						message: '<@!'.concat(
@@ -556,7 +554,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						name).concat(
 						' : ').concat(
 						' \r\n').concat(
-						datas.name).concat(
+						obj.name).concat(
 						'```')
 					});
 				}
