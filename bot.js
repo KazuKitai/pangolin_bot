@@ -477,7 +477,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			var fileName = 'characters.json';
 			console.log(name);
 			var obj = { name:[] };
-			obj.name.push({force: args[2]};
+			obj.name.push({force: args[2]});
 			obj.name.push({resistance: args[5]});
 			obj.name.push({intelligence: args[7]});
 			obj.name.push({volonte: args[10]});
