@@ -443,18 +443,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					to: channelID,
 					message: '<@!'.concat(userID).concat('> rolled : **').concat(result).concat('**.')
 				});
-				if (result < 5 * max / 100) {
-					bot.sendMessage({
-						to: channelID,
-						message: '<@!'.concat(userID).concat('> Qualitatif, à ce que je vois ...')
-					});
-				}
-				if (result > 95 * max / 100) {
-					bot.sendMessage({
-						to: channelID,
-						message: '<@!'.concat(userID).concat('> Noice !')
-					});
-				}
+				
 			} else {
 				var indexOfD = message.indexOf('D');
 				var number = message.substring(1, indexOfD);
@@ -471,18 +460,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					to: channelID,
 					message: '<@!'.concat(userID).concat('> rolled : **').concat(total).concat('**, (').concat(results).concat(').')
 				});
-				if (total < 5 * max*number / 100) {
-					bot.sendMessage({
-						to: channelID,
-						message: '<@!'.concat(userID).concat('> Qualitatif, à ce que je vois ...')
-					});
-				}
-				if (total > 95 * max*number / 100) {
-					bot.sendMessage({
-						to: channelID,
-						message: '<@!'.concat(userID).concat('> Noice !')
-					});
-				}
+
 			}
 		}
 			
