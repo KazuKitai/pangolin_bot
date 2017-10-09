@@ -436,7 +436,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		if (message.substring(0, 1) == '§' && message.includes('D')) {
 			if (message.substring(1, 2) == 'D') {
 				// un seul roll
-				var max = message.substring(2, message.length);
+				var max = message.substring(2, message.length - 1);
 				var result = Math.floor(Math.random() * (max + 1));
 				bot.sendMessage({
 					to: channelID,
@@ -445,7 +445,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			} else {
 				var indexOfD = message.indexOf('D');
 				var number = message.substring(1, indexOfD);
-				var max = message.substring(indexOfD + 1, message.length);
+				var max = message.substring(indexOfD + 1, message.length - 1);
 				var results = "";
 				var total = 0;
 				for (var i = 0; i < number; i++) {
@@ -454,7 +454,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					if (i === 0) {
 						results = resultI;
 					} else {
-						results.concat(', ').concat(resultI);
+						results.toString().concat(', ').concat(resultI);
 					}
 				}
 				bot.sendMessage({
