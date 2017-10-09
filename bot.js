@@ -440,7 +440,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				var result = Math.floor(Math.random() * (max + 1));
 				bot.sendMessage({
 					to: channelID,
-					message: '<@!'.concat(userID).concat('> rolled : ').concat(result).concat('.')
+					message: '<@!'.concat(userID).concat('> rolled : **').concat(result).concat('**.')
 				});
 			} else {
 				var indexOfD = message.indexOf('D');
@@ -452,14 +452,14 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					var resultI = Math.floor(Math.random() * (max + 1));
 					total += resultI;
 					if (i === 0) {
-						results = resultI;
+						results = resultI.toString();
 					} else {
-						results.toString().concat(', ').concat(resultI);
+						results.concat(', ').concat(resultI);
 					}
 				}
 				bot.sendMessage({
 					to: channelID,
-					message: '<@!'.concat(userID).concat('> rolled : ').concat(total).concat(', (').concat(results).concat(').')
+					message: '<@!'.concat(userID).concat('> rolled : **').concat(total).concat('**, (').concat(results).concat(').')
 				});
 			}
 		}
