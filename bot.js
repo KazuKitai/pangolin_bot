@@ -467,7 +467,8 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		
 		if (message.substring(0, 1) == '§' && message.includes('add')) {
 			var name = message.substring(4, message.indexOf('\\'));
-			var fileName = name.concat('.json');
+			var fileName = 'characters.json';
+			console.log(name);
 			var obj = { name:[] };
 			obj.name.push({force: 5, resistance: 5, intelligence: 5,
 				volonte: 5, precision: 5, technique: 5, agilite: 5,
@@ -489,9 +490,42 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			});
 		}
 		
+		if (message.substring(0, 1) == '§' && message.includes('delete')) {
+			var name = message.substring(7, message.indexOf('\\'));
+			console.log(name);
+			fs.readFile(fileName, 'utf8', function readFileCallback(err, data){
+				if (err){
+					console.log(err);
+					bot.sendMessage({
+						to: channelID,
+						message: '<@!'.concat(userID).concat('> Personnage introuvable.')
+					});
+				} else {
+					obj = JSON.parse(data);
+					obj.delete(name);
+					json = JSON.stringify(obj);
+					fs.writeFile(fileName, json, 'utf8', function callback(err) {
+						if (err){
+						console.log(err);
+						bot.sendMessage({
+							to: channelID,
+							message: '<@!'.concat(userID).concat('> Echec de la suppression du personnage.')
+						});
+						} else {
+							bot.sendMessage({
+								to: channelID,
+								message: '<@!'.concat(userID).concat('> Personnage supprimé !')
+							});
+						}
+					});
+				}
+			});
+		}
+		
 		if (message.substring(0, 1) == '§' && message.includes('character')) {
 			var name = message.substring(10, message.indexOf('\\'));
-			var fileName = name.concat('.json');
+			var fileName = 'characters.json';
+			console.log(name);
 			fs.readFile(fileName, 'utf8', function readFileCallback(err, data){
 				if (err){
 					console.log(err);
