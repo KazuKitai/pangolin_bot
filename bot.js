@@ -472,7 +472,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			
 			var name = args[0].toString();
 			var fileName = 'characters.json';
-			console.log(name);
 			var obj = {};
 			obj[name] = {"force": args[2], "resistance": args[5], "intelligence": args[7], "volonte": args[10], "precision": args[12], "technique": args[15], "agilite": args[17], "perception": args[20], "charisme": args[22], "empathie": args[25]};
 			
@@ -485,8 +484,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						message: '<@!'.concat(userID).concat('> Echec de la sauvegarde du personnage.')
 					});
 				} else {
-					console.log(obj);
-					console.log(json);
 					bot.sendMessage({
 						to: channelID,
 						message: '<@!'.concat(userID).concat('> Personnage sauvegardé !')
@@ -538,7 +535,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			
 			var name = args[0];
 			var fileName = 'characters.json';
-			console.log(name);
 			fs.readFile(fileName, 'utf8', function readFileCallback(err, data){
 				if (err){
 					console.log(err);
@@ -558,7 +554,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						name).concat(
 						' : ').concat(
 						' \r\n').concat(
-						obj.name.force).concat(
+						obj.name).concat(
 						'```')
 					});
 				}
