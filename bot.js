@@ -470,9 +470,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             var cmd = args[0];
             args = args.splice(1);
 			
-			console.log(cmd);
-			console.log(args);
-			
 			var name = args[0];
 			var fileName = 'characters.json';
 			console.log(name);
@@ -496,6 +493,8 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						message: '<@!'.concat(userID).concat('> Echec de la sauvegarde du personnage.')
 					});
 				} else {
+					console.log(obj);
+					console.log(json);
 					bot.sendMessage({
 						to: channelID,
 						message: '<@!'.concat(userID).concat('> Personnage sauvegardé !')
@@ -557,6 +556,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					});
 				} else {
 					obj = JSON.parse(data);
+					console.log(obj);
 					bot.sendMessage({
 						to: channelID,
 						message: '<@!'.concat(
