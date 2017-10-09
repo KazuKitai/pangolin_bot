@@ -481,7 +481,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						to: channelID,
 						message: '<@!'.concat(userID).concat('> Echec de la sauvegarde du personnage.')
 					});
-				else {
+				} else {
 					bot.sendMessage({
 						to: channelID,
 						message: '<@!'.concat(userID).concat('> Personnage sauvegardé !')
