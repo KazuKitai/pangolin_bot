@@ -473,7 +473,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			var name = args[0].toString();
 			var fileName = 'characters.json';
 			var obj = {};
-			obj[name] = {"force": args[2], "resistance": args[5], "intelligence": args[7], "volonte": args[10], "precision": args[12], "technique": args[15], "agilite": args[17], "perception": args[20], "charisme": args[22], "empathie": args[25]};
+			obj[name] = [{"force": args[2], "resistance": args[5], "intelligence": args[7], "volonte": args[10], "precision": args[12], "technique": args[15], "agilite": args[17], "perception": args[20], "charisme": args[22], "empathie": args[25]}];
 			
 			var json = JSON.stringify(obj);
 			fs.writeFile( fileName, json, 'utf8', function callback(err) {
