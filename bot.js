@@ -55,7 +55,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						'§add Nom Force: x -- Résistance: x Intelligence: x -- Volonté: x Précision: x -- Technique: x Agilité: x -- Perception: x Charisme: x -- Empathie: x \r\n ').concat(
 						'Par exemple : \r\n ').concat(
 						'§add Kazu Force: 2 -- Résistance: 2 Intelligence: 9 -- Volonté: 8 Précision: 6 -- Technique: 4 Agilité: 4 -- Perception: 6 Charisme: 3 -- Empathie: 10 \r\n ```').concat(
-                        '```Pour les générateurs : ').concat(
+                        '```Pour les générateurs : \r\n ').concat(
                         '- blessure : §[partie du corps]_[gravité de la blessure] \r\n\ ').concat(
                         'Par exemple §head_light ou §left_leg_serious. \r\n\ ').concat(
                         'Parties du corps : head, left_arm, right_arm, body_bones, body_guts, left_leg, right_leg.\r\n\ ').concat(
