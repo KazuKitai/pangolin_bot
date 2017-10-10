@@ -6,6 +6,8 @@ var logger = require('winston');
 var auth = require('./auth.json');
 var PORT = process.env.PORT || 3000;
 var fs = require('fs');
+const MongoClient = require('mongodb').MongoClient;
+const MONGO_URL = 'mongodb://character_admin:admin1@ds013405.mlab.com:13405/heroku_1cdlvrk5'
 app.listen(PORT, () => {
     console.log(`Our app is running on port ${ PORT }`);
 });
@@ -472,23 +474,36 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			
 			var name = args[0].toString();
 			var fileName = 'characters.json';
-			var obj = {};
-			obj[name] = [{"force": args[2], "resistance": args[5], "intelligence": args[7], "volonte": args[10], "precision": args[12], "technique": args[15], "agilite": args[17], "perception": args[20], "charisme": args[22], "empathie": args[25]}];
+			var obj = {"name": args[0], "force": args[2], "resistance": args[5], "intelligence": args[7], "volonte": args[10], "precision": args[12], "technique": args[15], "agilite": args[17], "perception": args[20], "charisme": args[22], "empathie": args[25]};
 			
-			var json = JSON.stringify(obj);
-			fs.writeFile( fileName, json, 'utf8', function callback(err) {
-				if (err){
-					console.log(err);
+			MongoClient.connect(MONGO_URL, (err, db) => {  
+				if (err) {
 					bot.sendMessage({
 						to: channelID,
-						message: '<@!'.concat(userID).concat('> Echec de la sauvegarde du personnage.')
+						message: '<@!'.concat(userID).concat('> Erreur de connexion à la base de données.')
 					});
-				} else {
-					bot.sendMessage({
-						to: channelID,
-						message: '<@!'.concat(userID).concat('> Personnage sauvegardé !')
-					});
+					return console.log(err);
 				}
+
+				db.collection('characters').insertOne(
+					obj,
+					function (err, res) {
+						if (err) {
+							db.close();
+							bot.sendMessage({
+								to: channelID,
+								message: '<@!'.concat(userID).concat('> Erreur lors de la sauvegarde dans la base de données.')
+							});
+							return console.log(err);
+						}
+						// Success
+						bot.sendMessage({
+							to: channelID,
+							message: '<@!'.concat(userID).concat('> Personnage sauvegardé !')
+						});
+						db.close();
+					}
+				)
 			});
 		}
 		
@@ -498,33 +513,35 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             args = args.splice(1);
 			
 			var name = args[0];
-			console.log(name);
-			fs.readFile(fileName, 'utf8', function readFileCallback(err, data){
-				if (err){
-					console.log(err);
+
+			MongoClient.connect(MONGO_URL, (err, db) => {  
+				if (err) {
 					bot.sendMessage({
 						to: channelID,
-						message: '<@!'.concat(userID).concat('> Personnage introuvable.')
+						message: '<@!'.concat(userID).concat('> Erreur de connexion à la base de données.')
 					});
-				} else {
-					obj = JSON.parse(data);
-					obj.delete(name);
-					json = JSON.stringify(obj);
-					fs.writeFile(fileName, json, 'utf8', function callback(err) {
-						if (err){
-						console.log(err);
-						bot.sendMessage({
-							to: channelID,
-							message: '<@!'.concat(userID).concat('> Echec de la suppression du personnage.')
-						});
-						} else {
+					return console.log(err);
+				}
+
+				db.collection('characters').deleteOne({
+					"name": name
+					}, function (err, res) {
+						if (err) {
+							db.close();
 							bot.sendMessage({
 								to: channelID,
-								message: '<@!'.concat(userID).concat('> Personnage supprimé !')
+								message: '<@!'.concat(userID).concat('> Erreur lors de la suppression du personnage.')
 							});
+							return console.log(err);
 						}
-					});
-				}
+						// Success
+						bot.sendMessage({
+							to: channelID,
+							message: '<@!'.concat(userID).concat('> Personnage supprimé !')
+						});
+						db.close();
+					}
+				)
 			});
 		}
 		
@@ -534,30 +551,35 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             args = args.splice(1);
 			
 			var name = args[0];
-			var fileName = 'characters.json';
-			fs.readFile(fileName, 'utf8', function readFileCallback(err, data){
-				if (err){
-					console.log(err);
+
+			MongoClient.connect(MONGO_URL, (err, db) => {  
+				if (err) {
 					bot.sendMessage({
 						to: channelID,
-						message: '<@!'.concat(userID).concat('> Personnage introuvable.')
+						message: '<@!'.concat(userID).concat('> Erreur de connexion à la base de données.')
 					});
-				} else {
-					obj = JSON.parse(data);
-					console.log(obj.name);
-					bot.sendMessage({
-						to: channelID,
-						message: '<@!'.concat(
-						userID).concat(
-						'> : ').concat(
-						' \r\n ```').concat(
-						name).concat(
-						' : ').concat(
-						' \r\n').concat(
-						obj[0][name].force).concat(
-						'```')
-					});
+					return console.log(err);
 				}
+
+				db.collection('characters').findOne({
+					"name": name
+					}, function (err, res) {
+						if (err) {
+							db.close();
+							bot.sendMessage({
+								to: channelID,
+								message: '<@!'.concat(userID).concat('> Personnage introuvable.')
+							});
+							return console.log(err);
+						}
+						// Success
+						bot.sendMessage({
+							to: channelID,
+							message: '<@!'.concat(userID).concat('> Personnage trouvé !')
+						});
+						db.close();
+					}
+				)
 			});
 		}
 			
