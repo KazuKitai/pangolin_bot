@@ -578,7 +578,15 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 							message: '<@!'.concat(userID).concat('> :').concat(
 							'```').concat(res.name).concat(' : ').concat(
 							'\r\nForce : ').concat(res.force).concat(
-							' -- Résistance : ').concat(res.resistance).concat('```')
+							' -- Résistance : ').concat(res.resistance).concat(
+							'\r\nIntelligence : ').concat(res.intelligence).concat(
+							' -- Volonté : ').concat(res.volonte).concat(
+							'\r\nPrécision : ').concat(res.precision).concat(
+							' -- Technique : ').concat(res.technique).concat(
+							'\r\nAgilité : ').concat(res.agilite).concat(
+							' -- Perception : ').concat(res.perception).concat(
+							'\r\nCharisme : ').concat(res.charisme).concat(
+							' -- Empathie : ').concat(res.empathie).concat('```')
 						});
 						db.close();
 					}
