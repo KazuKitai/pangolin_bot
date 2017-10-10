@@ -48,9 +48,14 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						to: channelID,
 						message: '```Liste non exhaustive des commandes : \r\n '.concat(
                         '- §tableflip : c\'est évident, non ? \r\n\ ').concat(
-                        '- §unflip: l\'inverse de la commande précédente ... \r\n\ ').concat(
-						'- §Dx et §yDx : lance un D de valeur max x, ou lance y dés de valeur max x \r\n\ ').concat(
-                        'Pour les générateurs : ').concat(
+                        '- §unflip: l\'inverse de la commande précédente ... \r\n\ ```').concat(
+						'```- §Dx et §yDx : lance un D de valeur max x, ou lance y dés de valeur max x \r\n\ ```').concat(
+						'```Pour les fiches lumen : \r\n ').concat(
+						'Utiliser la syntaxe suivante (et exactement ça sinon ça va planter) : \r\n '.concat(
+						'§add Nom Force: x -- Résistance: x Intelligence: x -- Volonté: x Précision: x -- Technique: x Agilité: x -- Perception: x Charisme: x -- Empathie: x \r\n ').concat(
+						'Par exemple : \r\n ').concat(
+						'§add Kazu Force: 2 -- Résistance: 2 Intelligence: 9 -- Volonté: 8 Précision: 6 -- Technique: 4 Agilité: 4 -- Perception: 6 Charisme: 3 -- Empathie: 10 \r\n ```').concat(
+                        '```Pour les générateurs : ').concat(
                         '- blessure : §[partie du corps]_[gravité de la blessure] \r\n\ ').concat(
                         'Par exemple §head_light ou §left_leg_serious. \r\n\ ').concat(
                         'Parties du corps : head, left_arm, right_arm, body_bones, body_guts, left_leg, right_leg.\r\n\ ').concat(
