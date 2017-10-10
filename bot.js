@@ -5,6 +5,9 @@ var Discord = require('discord.io');
 var logger = require('winston');
 var auth = require('./auth.json');
 var PORT = process.env.PORT || 3000;
+var fs = require('fs');
+const MongoClient = require('mongodb').MongoClient;
+const MONGO_URL = 'mongodb://character_admin:admin1@ds013405.mlab.com:13405/heroku_1cdlvrk5'
 app.listen(PORT, () => {
     console.log(`Our app is running on port ${ PORT }`);
 });
@@ -45,9 +48,14 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						to: channelID,
 						message: '```Liste non exhaustive des commandes : \r\n '.concat(
                         '- §tableflip : c\'est évident, non ? \r\n\ ').concat(
-                        '- §unflip: l\'inverse de la commande précédente ... \r\n\ ').concat(
-						'- §Dx et §yDx : lance un D de valeur max x, ou lance y dés de valeur max x \r\n\ ').concat(
-                        'Pour les générateurs : ').concat(
+                        '- §unflip: l\'inverse de la commande précédente ... \r\n\ ```').concat(
+						'```- §Dx et §yDx : lance un D de valeur max x, ou lance y dés de valeur max x \r\n\ ```').concat(
+						'```Pour les fiches lumen : \r\n ').concat(
+						'Utiliser la syntaxe suivante (et exactement ça sinon ça va planter) : \r\n ').concat(
+						'§add Nom Force: x -- Résistance: x Intelligence: x -- Volonté: x Précision: x -- Technique: x Agilité: x -- Perception: x Charisme: x -- Empathie: x \r\n ').concat(
+						'Par exemple : \r\n ').concat(
+						'§add Kazu Force: 2 -- Résistance: 2 Intelligence: 9 -- Volonté: 8 Précision: 6 -- Technique: 4 Agilité: 4 -- Perception: 6 Charisme: 3 -- Empathie: 10 \r\n ```').concat(
+                        '```Pour les générateurs : ').concat(
                         '- blessure : §[partie du corps]_[gravité de la blessure] \r\n\ ').concat(
                         'Par exemple §head_light ou §left_leg_serious. \r\n\ ').concat(
                         'Parties du corps : head, left_arm, right_arm, body_bones, body_guts, left_leg, right_leg.\r\n\ ').concat(
@@ -463,6 +471,133 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 
 			}
 		}
+		
+		if (message.substring(0, 1) == '§' && message.includes('add')) {
+			var args = message.substring(4).split(' ');
+            var cmd = args[0];
+            args = args.splice(1);
+			
+			var name = args[0].toString();
+			var fileName = 'characters.json';
+			var obj = {"name": args[0], "force": args[2], "resistance": args[5], "intelligence": args[7], "volonte": args[10], "precision": args[12], "technique": args[15], "agilite": args[17], "perception": args[20], "charisme": args[22], "empathie": args[25]};
+			
+			MongoClient.connect(MONGO_URL, (err, db) => {  
+				if (err) {
+					bot.sendMessage({
+						to: channelID,
+						message: '<@!'.concat(userID).concat('> Erreur de connexion à la base de données.')
+					});
+					return console.log(err);
+				}
+
+				db.collection('characters').insertOne(
+					obj,
+					function (err, res) {
+						if (err) {
+							db.close();
+							bot.sendMessage({
+								to: channelID,
+								message: '<@!'.concat(userID).concat('> Erreur lors de la sauvegarde dans la base de données.')
+							});
+							return console.log(err);
+						}
+						// Success
+						bot.sendMessage({
+							to: channelID,
+							message: '<@!'.concat(userID).concat('> Personnage sauvegardé !')
+						});
+						db.close();
+					}
+				)
+			});
+		}
+		
+		if (message.substring(0, 1) == '§' && message.includes('delete')) {
+			var args = message.substring(4).split(' ');
+            var cmd = args[0];
+            args = args.splice(1);
+			
+			var name = args[0];
+
+			MongoClient.connect(MONGO_URL, (err, db) => {  
+				if (err) {
+					bot.sendMessage({
+						to: channelID,
+						message: '<@!'.concat(userID).concat('> Erreur de connexion à la base de données.')
+					});
+					return console.log(err);
+				}
+
+				db.collection('characters').deleteOne({
+					"name": name
+					}, function (err, res) {
+						if (err) {
+							db.close();
+							bot.sendMessage({
+								to: channelID,
+								message: '<@!'.concat(userID).concat('> Erreur lors de la suppression du personnage.')
+							});
+							return console.log(err);
+						}
+						// Success
+						bot.sendMessage({
+							to: channelID,
+							message: '<@!'.concat(userID).concat('> Personnage supprimé !')
+						});
+						db.close();
+					}
+				)
+			});
+		}
+		
+		if (message.substring(0, 1) == '§' && message.includes('character')) {
+			var args = message.substring(4).split(' ');
+            var cmd = args[0];
+            args = args.splice(1);
+			
+			var name = args[0];
+
+			MongoClient.connect(MONGO_URL, (err, db) => {  
+				if (err) {
+					bot.sendMessage({
+						to: channelID,
+						message: '<@!'.concat(userID).concat('> Erreur de connexion à la base de données.')
+					});
+					return console.log(err);
+				}
+
+				db.collection('characters').findOne({
+					"name": name
+					}, function (err, res) {
+						if (err) {
+							db.close();
+							bot.sendMessage({
+								to: channelID,
+								message: '<@!'.concat(userID).concat('> Personnage introuvable.')
+							});
+							return console.log(err);
+						}
+						// Success
+						bot.sendMessage({
+							to: channelID,
+							message: '<@!'.concat(userID).concat('> :').concat(
+							'```').concat(res.name).concat(' : ').concat(
+							'\r\nForce : ').concat(res.force).concat(
+							' -- Résistance : ').concat(res.resistance).concat(
+							'\r\nIntelligence : ').concat(res.intelligence).concat(
+							' -- Volonté : ').concat(res.volonte).concat(
+							'\r\nPrécision : ').concat(res.precision).concat(
+							' -- Technique : ').concat(res.technique).concat(
+							'\r\nAgilité : ').concat(res.agilite).concat(
+							' -- Perception : ').concat(res.perception).concat(
+							'\r\nCharisme : ').concat(res.charisme).concat(
+							' -- Empathie : ').concat(res.empathie).concat('```')
+						});
+						db.close();
+					}
+				)
+			});
+		}
 			
 		if (message.toLowerCase().includes('omae wa mo shindeiru')) {
 			bot.sendMessage({
@@ -689,7 +824,7 @@ gen_data['answer_back'] = [
     'Demandez à Kazu.',
     'J\'ai pas envie.',
     'JE NE M\'APPELLE PAS SIRI OU GOOGLE, JE SUIS UN BOT QUI SE RESPECTE, BORDEL.',
-    'Je crois que je préférerais ne pas parser les logs plutôt que d\'être sans cesse appelé par des humains ...'
+    'Je crois que je préférerais ne pas parser les logs pour ne pas être sans cesse appelé par des humains ...'
     
 ];
 
