@@ -575,7 +575,10 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						// Success
 						bot.sendMessage({
 							to: channelID,
-							message: '<@!'.concat(userID).concat('> Personnage trouvé !')
+							message: '<@!'.concat(userID).concat('> :').concat(
+							'```').concat(res.name).concat(' : ').concat(
+							'\r\nForce : ').concat(res.force).concat(
+							' -- Résistance : ').concat(res.resistance).concat('```')
 						});
 						db.close();
 					}
