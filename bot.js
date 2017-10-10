@@ -51,7 +51,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                         '- §unflip: l\'inverse de la commande précédente ... \r\n\ ```').concat(
 						'```- §Dx et §yDx : lance un D de valeur max x, ou lance y dés de valeur max x \r\n\ ```').concat(
 						'```Pour les fiches lumen : \r\n ').concat(
-						'Utiliser la syntaxe suivante (et exactement ça sinon ça va planter) : \r\n '.concat(
+						'Utiliser la syntaxe suivante (et exactement ça sinon ça va planter) : \r\n ').concat(
 						'§add Nom Force: x -- Résistance: x Intelligence: x -- Volonté: x Précision: x -- Technique: x Agilité: x -- Perception: x Charisme: x -- Empathie: x \r\n ').concat(
 						'Par exemple : \r\n ').concat(
 						'§add Kazu Force: 2 -- Résistance: 2 Intelligence: 9 -- Volonté: 8 Précision: 6 -- Technique: 4 Agilité: 4 -- Perception: 6 Charisme: 3 -- Empathie: 10 \r\n ```').concat(
