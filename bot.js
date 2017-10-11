@@ -3248,7 +3248,10 @@ function reverseString(str) {
 function pause (millis) {
     var date = new Date();
     var curDate = null;
-    do { curDate = new Date(); }
+    do { 
+		curDate = new Date();
+		console.log(curDate-date);
+	}
     while(curDate-date < millis);
 }
 
