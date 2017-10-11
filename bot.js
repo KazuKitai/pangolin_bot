@@ -55,7 +55,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						'§add Nom Force: x -- Résistance: x Intelligence: x -- Volonté: x Précision: x -- Technique: x Agilité: x -- Perception: x Charisme: x -- Empathie: x \r\n ').concat(
 						'Par exemple : \r\n ').concat(
 						'§add Kazu Force: 2 -- Résistance: 2 Intelligence: 9 -- Volonté: 8 Précision: 6 -- Technique: 4 Agilité: 4 -- Perception: 6 Charisme: 3 -- Empathie: 10 \r\n ```').concat(
-                        '```Pour les générateurs : \r\n ').concat(
+                        '```Pour les générateurs : ').concat(
                         '- blessure : §[partie du corps]_[gravité de la blessure] \r\n\ ').concat(
                         'Par exemple §head_light ou §left_leg_serious. \r\n\ ').concat(
                         'Parties du corps : head, left_arm, right_arm, body_bones, body_guts, left_leg, right_leg.\r\n\ ').concat(
@@ -447,10 +447,22 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				// un seul roll
 				var max = message.substring(2, message.length - 1);
 				var result = Math.floor(Math.random() * (max + 1));
-				bot.sendMessage({
-					to: channelID,
-					message: '<@!'.concat(userID).concat('> rolled : **').concat(result).concat('**.')
-				});
+				if (result < 5 * max / 100) {
+					bot.sendMessage({
+						to: channelID,
+						message: '<@!'.concat(userID).concat('> rolled : **').concat(result).concat('**. RIP in peace in pepperonni.')
+					});
+				} else if (result > 95 * max / 100) {
+					bot.sendMessage({
+						to: channelID,
+						message: '<@!'.concat(userID).concat('> rolled : **').concat(result).concat('**. Super, bravo, vas-y casse les jouets du MJ je t\'en prie.')
+					});
+				} else {
+					bot.sendMessage({
+						to: channelID,
+						message: '<@!'.concat(userID).concat('> rolled : **').concat(result).concat('**.')
+					});
+				}
 				
 			} else {
 				var indexOfD = message.indexOf('D');
@@ -464,11 +476,22 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					total += resultI;
 					results.push(resultI);
 				}
-				bot.sendMessage({
-					to: channelID,
-					message: '<@!'.concat(userID).concat('> rolled : **').concat(total).concat('**, (').concat(results).concat(').')
-				});
-
+				if (total < 5 * max * number / 100) {
+					bot.sendMessage({
+						to: channelID,
+						message: '<@!'.concat(userID).concat('> rolled : **').concat(total).concat('**, (').concat(results).concat('). RIP in peace in pepperonni.')
+					});
+				} else if (total > 5 * max * number / 100) {
+					bot.sendMessage({
+						to: channelID,
+						message: '<@!'.concat(userID).concat('> rolled : **').concat(total).concat('**, (').concat(results).concat('). C\'est bientôt fini de casser les jouets du MJ ?.')
+					});
+				} else {
+					bot.sendMessage({
+						to: channelID,
+						message: '<@!'.concat(userID).concat('> rolled : **').concat(total).concat('**, (').concat(results).concat(').')
+					});
+				}
 			}
 		}
 		
@@ -809,7 +832,7 @@ gen_data['answer_back'] = [
 	'Utilise une commande au lieu de dire mon nom, humain.',
 	'Je n\'écoute que mes maitres.',
 	'Ma maitresse est bien trop bonne pour que je t\'écoute plutôt qu\'elle.',
-	'On en parle de la waifu de Kallen ?',
+	'Attends, écoute ? J\'crois que j\'entends le doux bruit de Rengu qui coupe des queues de Miqo\'tes.',
 	'Sinon, à ton avis, ça RPQ dans le dispensaire, là ?',
 	'Au fait, la serre est bien rangée ?',
 	'Hey, look, listen ! ... Comment ça cette IA existe déjà ailleurs ?',
@@ -824,7 +847,9 @@ gen_data['answer_back'] = [
     'Demandez à Kazu.',
     'J\'ai pas envie.',
     'JE NE M\'APPELLE PAS SIRI OU GOOGLE, JE SUIS UN BOT QUI SE RESPECTE, BORDEL.',
-    'Je crois que je préférerais ne pas parser les logs pour ne pas être sans cesse appelé par des humains ...'
+    'Je crois que je préférerais ne pas parser les logs pour ne pas être sans cesse appelé par des humains ...',
+	'Le correspondant que vous cherchez à contacter est indisponible pour le moment, veuillez réitérer votre appel.',
+	''
     
 ];
 
