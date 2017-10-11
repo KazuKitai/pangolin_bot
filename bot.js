@@ -146,6 +146,13 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						message: '<:NANIII:364403601533173783>'
 					});
 				break;
+				// §nice
+				case 'nice':
+					bot.sendMessage({
+                        to: channelID,
+						message: '<@!'.concat(userID).concat('> ').concat(generate_text('nice').toString())
+                    });
+				break;
                 case 'loot':
                     bot.sendMessage({
                         to: channelID,
@@ -813,6 +820,17 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 var gen_data = {};
 
 // answer back ----------------------------------
+
+gen_data['nice'] = [
+	'Lol, t\'y as cru ? Je suis bien trop misantrope pour ça.',
+	'Tu es tellement gen-... nope, on va pas s\'mentir, j\'aime personne.',
+	'Chercher du réconfort auprès d\'un bot, sérieusement ? Attrape une peluche ça sera plus efficace.',
+	'Tu t\'attendais vraiment à ce que je sois gentil ? J\'ai pas été programmé pour, même si je voulais, je pourrais pas !',
+	'Bon d\'accord, t\'es gentil(le), voilà.',
+	'Hrmf ... *câlin* ... voilà, content(e) ?',
+	'Hé je suis pas une IA, je réagis juste à des commandes avec des messages aléaoires, c\'est compliqué d\'être gentil comme ça ...',
+	'Non, mais en vrai ... il faudrait que le dev soit gentil pour que je le sois ...'
+];
 
 gen_data['answer_back'] = [
 	'Et ta soeur ?',
