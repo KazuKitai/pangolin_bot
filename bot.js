@@ -447,10 +447,22 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				// un seul roll
 				var max = message.substring(2, message.length - 1);
 				var result = Math.floor(Math.random() * (max + 1));
-				bot.sendMessage({
-					to: channelID,
-					message: '<@!'.concat(userID).concat('> rolled : **').concat(result).concat('**.')
-				});
+				if (result < 5 * max / 100) {
+					bot.sendMessage({
+						to: channelID,
+						message: '<@!'.concat(userID).concat('> rolled : **').concat(result).concat('**. RIP in peace in pepperonni.')
+					});
+				} else if (result > 95 * max / 100) {
+					bot.sendMessage({
+						to: channelID,
+						message: '<@!'.concat(userID).concat('> rolled : **').concat(result).concat('**. Super, bravo, vas-y casse les jouets du MJ je t\'en prie.')
+					});
+				} else {
+					bot.sendMessage({
+						to: channelID,
+						message: '<@!'.concat(userID).concat('> rolled : **').concat(result).concat('**.')
+					});
+				}
 			} else {
 				var indexOfD = message.indexOf('D');
 				var number = message.substring(1, indexOfD);
@@ -463,10 +475,22 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					total += resultI;
 					results.push(resultI);
 				}
-				bot.sendMessage({
-					to: channelID,
-					message: '<@!'.concat(userID).concat('> rolled : **').concat(total).concat('**, (').concat(results).concat(').')
-				});
+				if (total < 5 * max * number / 100) {
+					bot.sendMessage({
+						to: channelID,
+						message: '<@!'.concat(userID).concat('> rolled : **').concat(total).concat('**, (').concat(results).concat('). RIP in peace in pepperonni.')
+					});
+				} else if (total > 5 * max * number / 100) {
+					bot.sendMessage({
+						to: channelID,
+						message: '<@!'.concat(userID).concat('> rolled : **').concat(total).concat('**, (').concat(results).concat('). C\'est bientôt fini de casser les jouets du MJ ?.')
+					});
+				} else {
+					bot.sendMessage({
+						to: channelID,
+						message: '<@!'.concat(userID).concat('> rolled : **').concat(total).concat('**, (').concat(results).concat(').')
+					});
+				}
 			}
 		}
 		
