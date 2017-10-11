@@ -748,8 +748,19 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     to: channelID,
                     message: '♥'
                 });
-            } else if (message.toLowerCase().includes('ta gueule')) {
-				sleep.sleep(60*5);
+            } else if (message.toLowerCase().includes('ta') && message.toLowerCase().includes('gueule')
+				|| message.toLowerCase().includes('ta') && message.toLowerCase().includes('bouche')
+				|| message.toLowerCase().includes('shut up')
+				|| message.toLowerCase().includes('tais toi')
+				|| message.toLowerCase().includes('tais-toi')
+				|| message.toLowerCase().includes('tait toi')
+				|| message.toLowerCase().includes('tait-toi')
+				|| message.toLowerCase().includes('silence')
+				|| message.toLowerCase().includes('chut')) {
+				bot.sendMessage({
+                    to: channelID,
+                    message: 'Mon dev a pas encore réussi à implémenter ça ...'
+                });
 			} else if (userID === '150967436982747136') {
                 bot.sendMessage({
                     to: channelID,
