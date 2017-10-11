@@ -7,7 +7,8 @@ var auth = require('./auth.json');
 var PORT = process.env.PORT || 3000;
 var fs = require('fs');
 const MongoClient = require('mongodb').MongoClient;
-const MONGO_URL = 'mongodb://character_admin:admin1@ds013405.mlab.com:13405/heroku_1cdlvrk5'
+const MONGO_URL = 'mongodb://character_admin:admin1@ds013405.mlab.com:13405/heroku_1cdlvrk5';
+var sleep = require('sleep');
 app.listen(PORT, () => {
     console.log(`Our app is running on port ${ PORT }`);
 });
@@ -748,7 +749,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     message: '♥'
                 });
             } else if (message.toLowerCase().includes('ta gueule')) {
-				//pause(1000*60*5);
+				sleep(60*5);
 			} else if (userID === '150967436982747136') {
                 bot.sendMessage({
                     to: channelID,
@@ -3243,16 +3244,6 @@ function expand_tokens (string) {
 
 function reverseString(str) {
     return str.split("").reverse().join("");
-}
-
-function pause (millis) {
-    var date = new Date();
-    var curDate = null;
-    do { 
-		curDate = new Date();
-		console.log(curDate-date);
-	}
-    while(curDate-date < millis);
 }
 
 // /general functions ---------------------------
