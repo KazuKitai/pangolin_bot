@@ -748,7 +748,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     message: '♥'
                 });
             } else if (message.toLowerCase().includes('ta gueule')) {
-				pause(1000*60*5);
+				//pause(1000*60*5);
 			} else if (userID === '150967436982747136') {
                 bot.sendMessage({
                     to: channelID,
