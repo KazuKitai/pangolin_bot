@@ -808,6 +808,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			|| message.toLowerCase() == ('coucou')
 			|| message.toLowerCase() == ('hello')
 			|| message.toLowerCase() == ('howdy')
+			|| message.toLowerCase() == ('bonjour')
 			|| message.toLowerCase() == ('hallo')
 			|| message.toLowerCase() == ('heya')) {
 			bot.sendMessage({
