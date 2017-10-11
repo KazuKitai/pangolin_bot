@@ -747,7 +747,9 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     to: channelID,
                     message: '♥'
                 });
-            } else if (userID === '150967436982747136') {
+            } else if (message.toLowerCase().includes('ta gueule') {
+				pause(1000*60*5);
+			} else if (userID === '150967436982747136') {
                 bot.sendMessage({
                     to: channelID,
                     message: 'Je suis votre serviteur, maitre.'
@@ -3241,6 +3243,13 @@ function expand_tokens (string) {
 
 function reverseString(str) {
     return str.split("").reverse().join("");
+}
+
+function pause (millis) {
+    var date = new Date();
+    var curDate = null;
+    do { curDate = new Date(); }
+    while(curDate-date < millis);
 }
 
 // /general functions ---------------------------
