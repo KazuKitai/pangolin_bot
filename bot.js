@@ -803,6 +803,39 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				//nothing
 			}
 		}
+		
+		if (message.toLowerCase() == ('salut')
+			|| message.toLowerCase() == ('coucou')
+			|| message.toLowerCase() == ('hello')
+			|| message.toLowerCase() == ('howdy')
+			|| message.toLowerCase() == ('hallo')
+			|| message.toLowerCase() == ('heya')) {
+			bot.sendMessage({
+				to: channelID,
+				message: '<@!'.concat(userID).concat('> ').concat(
+				generate_text('hello').toString())
+			});
+		}
+		
+		if (message.toLowerCase() == ('bye')
+			|| message.toLowerCase() == ('à plus')
+			|| message.toLowerCase() == ('au revoir')) {
+			bot.sendMessage({
+				to: channelID,
+				message: '<@!'.concat(userID).concat('> ').concat(
+				generate_text('bye').toString())
+			});
+		}
+		
+		if (message.toLowerCase() == ('comment ça va ?')
+			|| message.toLowerCase() == ('ça va ?')
+			|| message.toLowerCase() == ('comment va ?')) {
+			bot.sendMessage({
+				to: channelID,
+				message: '<@!'.concat(userID).concat('> ').concat(
+				generate_text('how').toString())
+			});
+		}
         
         if (message) {
             if ( Math.floor(Math.random() * (1000000 + 1)) === 1) {
@@ -820,6 +853,32 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 var gen_data = {};
 
 // answer back ----------------------------------
+
+gen_data['hello'] = [
+	'Hello o/',
+	'o/',
+	'Howdy',
+	'Salut',
+	'Hallo',
+	'Hey',
+	'\o',
+	'Salut'
+];
+
+gen_data['bye'] = [
+	'A plus tard',
+	'Salut',
+	'Bye',
+	'Au revoir',
+	'Bisous !',
+	'Tchao'
+];
+
+gen_data['how'] = [
+	'Bien et toi ?',
+	'Comme d\'hab, je suis un bot. Et toi ?',
+	'Mon processeur n\'a pas encore cramé, tout va bien. Et toi ?'
+];
 
 gen_data['nice'] = [
 	'Lol, t\'y as cru ? Je suis bien trop misanthrope pour ça.',
