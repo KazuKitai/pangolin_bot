@@ -477,6 +477,14 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			}
 		}
 		
+		if (message.substring(0, 1) == '§' && message.substring(1, 8) == 'reverse') {
+			var str = message.substring(8);
+			bot.sendMessage({
+				to: channelID,
+				message: '<@!'.concat(userID).concat('> ').concat(reverseString(str))
+			});
+		}
+		
 		if (message.substring(0, 1) == '§' && message.includes('add')) {
 			var args = message.substring(4).split(' ');
             var cmd = args[0];
@@ -831,7 +839,7 @@ gen_data['answer_back'] = [
     'JE NE M\'APPELLE PAS SIRI OU GOOGLE, JE SUIS UN BOT QUI SE RESPECTE, BORDEL.',
     'Je crois que je préférerais ne pas parser les logs pour ne pas être sans cesse appelé par des humains ...',
 	'Le correspondant que vous cherchez à contacter est indisponible pour le moment, veuillez réitérer votre appel.',
-	''
+	'Demande à Olorion, c\'est lui le "sage" du Havre, y parait.'
     
 ];
 
@@ -3151,6 +3159,10 @@ function expand_tokens (string) {
 		}
 	}
 	return string;
+}
+
+function reverseString(str) {
+    return str.split("").reverse().join("");
 }
 
 // /general functions ---------------------------
