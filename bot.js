@@ -855,13 +855,13 @@ var gen_data = {};
 // answer back ----------------------------------
 
 gen_data['hello'] = [
-	'Hello o/',
-	'o/',
+	'Hello o\/',
+	'o\/',
 	'Howdy',
 	'Salut',
 	'Hallo',
 	'Hey',
-	'\o',
+	'\\o',
 	'Salut'
 ];
 
