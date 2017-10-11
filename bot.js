@@ -822,7 +822,7 @@ var gen_data = {};
 // answer back ----------------------------------
 
 gen_data['nice'] = [
-	'Lol, t\'y as cru ? Je suis bien trop misantrope pour ça.',
+	'Lol, t\'y as cru ? Je suis bien trop misanthrope pour ça.',
 	'Tu es tellement gen-... nope, on va pas s\'mentir, j\'aime personne.',
 	'Chercher du réconfort auprès d\'un bot, sérieusement ? Attrape une peluche ça sera plus efficace.',
 	'Tu t\'attendais vraiment à ce que je sois gentil ? J\'ai pas été programmé pour, même si je voulais, je pourrais pas !',
