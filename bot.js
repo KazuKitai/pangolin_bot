@@ -766,7 +766,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				|| message.toLowerCase().includes('connard')
 				|| message.toLowerCase().includes('fils de pute')
 				|| message.toLowerCase().includes('débile')
-				|| message.toLowerCase().includes('con')
+				|| message.toLowerCase().includes(' con ')
 				|| message.toLowerCase().includes('vilain')
 				|| message.toLowerCase().includes('méchant')
 				|| message.toLowerCase().includes('mécréant')
@@ -778,7 +778,8 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				|| message.toLowerCase().includes('taffiolle')
 				|| message.toLowerCase().includes('tafiole')
 				|| message.toLowerCase().includes('taffiole')
-				|| message.toLowerCase().includes('tarlouze')) {
+				|| message.toLowerCase().includes('tarlouze')
+				|| message.toLowerCase().includes('saleté')) {
 				bot.sendMessage({
                     to: channelID,
                     message: '<:spam:368052876498436097>'
