@@ -761,6 +761,28 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     to: channelID,
                     message: 'Mon dev a pas encore réussi à implémenter ça ...'
                 });
+			} else if (message.toLowerCase().includes('enculé')
+				|| message.toLowerCase().includes('fdp')
+				|| message.toLowerCase().includes('connard')
+				|| message.toLowerCase().includes('fils de pute')
+				|| message.toLowerCase().includes('débile')
+				|| message.toLowerCase().includes('con')
+				|| message.toLowerCase().includes('vilain')
+				|| message.toLowerCase().includes('méchant')
+				|| message.toLowerCase().includes('mécréant')
+				|| message.toLowerCase().includes('boursemolle')
+				|| message.toLowerCase().includes('iconoclaste')
+				|| message.toLowerCase().includes('pd')
+				|| message.toLowerCase().includes('pédé')
+				|| message.toLowerCase().includes('tafiolle')
+				|| message.toLowerCase().includes('taffiolle')
+				|| message.toLowerCase().includes('tafiole')
+				|| message.toLowerCase().includes('taffiole')
+				|| message.toLowerCase().includes('tarlouze')) {
+				bot.sendMessage({
+                    to: channelID,
+                    message: '<:spam:368052876498436097>'
+                });
 			} else if (userID === '150967436982747136') {
                 bot.sendMessage({
                     to: channelID,
