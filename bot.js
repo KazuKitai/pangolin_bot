@@ -145,6 +145,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						to: channelID,
 						message: '<@!'.concat(userID).concat('> ').concat(query)
 					});
+				break;
 				// §burn
 				case 'burn':
 					if (userID === '243026815453495296') {
