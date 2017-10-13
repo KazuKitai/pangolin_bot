@@ -140,7 +140,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				break;
 				// §ask
 				case 'ask':
-					var query = 'https://www.google.fr/search?q='.concat(argsNoSplice.substring(4).replace(' ', '+'));
+					var query = querylizer(args);
 					bot.sendMessage({
 						to: channelID,
 						message: '<@!'.concat(userID).concat('> ').concat(query)
@@ -3342,6 +3342,19 @@ function expand_tokens (string) {
 
 function reverseString(str) {
     return str.split("").reverse().join("");
+}
+
+function querylizer(strArray) {
+	var query = '';
+	for (var i = 1; i < strArray.length; i++) {
+		if (i === 1) {
+			query = strArray[i];
+		} else {
+			query = query.concat('+').concat(strArray[i]);
+		}
+	}
+	
+	return query;
 }
 
 // /general functions ---------------------------
