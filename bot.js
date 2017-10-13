@@ -33,6 +33,14 @@ bot.on('ready', function (evt) {
     logger.info(bot.username + ' - (' + bot.id + ')');
 });
 bot.on('message', function (user, userID, channelID, message, evt) {
+	// creating eorzean units
+	math.createUnit('ilm', '2.5 cm');
+	math.createUnit('fulm', '30.48 cm');
+	math.createUnit('yalm', '0.91144 m');
+	math.createUnit('malm', '1609 m');
+	math.createUnit('onze', '28.35 gram');
+	math.createUnit('ponze', '453.6 gram');
+	math.createUnit('tonze', '907 kilogram');
     // Prevent bot to answer itself
     if (user === 'Pangolin-bot') {
         //nothing !
