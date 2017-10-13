@@ -3345,10 +3345,10 @@ function reverseString(str) {
 }
 
 function querylizer(strArray) {
-	var query = '';
-	for (var i = 1; i < strArray.length; i++) {
-		if (i === 1) {
-			query = strArray[i];
+	var query = 'https://www.google.fr/search?q=';
+	for (var i = 0; i < strArray.length; i++) {
+		if (i === 0) {
+			query = query.concat(strArray[i]);
 		} else {
 			query = query.concat('+').concat(strArray[i]);
 		}
