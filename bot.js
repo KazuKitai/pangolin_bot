@@ -10,6 +10,7 @@ const MongoClient = require('mongodb').MongoClient;
 const MONGO_URL = 'mongodb://character_admin:admin1@ds013405.mlab.com:13405/heroku_1cdlvrk5';
 var sleep = require('sleep');
 var math = require('mathjs');
+
 app.listen(PORT, () => {
     console.log(`Our app is running on port ${ PORT }`);
 });
@@ -137,6 +138,13 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						' derivative("[expression]", "[variable]" : par exemple §maths derivative("3x^5 + 6 * x", "x"). ```')
 					});
 				break;
+				// §ask
+				case 'ask':
+					var query = 'https://www.google.fr/search?q='.concat(argsNoSplice.substring(4).replace(' ', '+'));
+					bot.sendMessage({
+						to: channelID,
+						message: '<@!'.concat(userID).concat('> ').concat(query)
+					});
 				// §burn
 				case 'burn':
 					if (userID === '243026815453495296') {
