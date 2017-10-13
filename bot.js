@@ -96,6 +96,31 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						message: '<@!'.concat(userID).concat('> ').concat(math.eval(mathsString))
 					});
 				break;
+				// §maths-help
+				case 'maths-help':
+					bot.sendMessage({
+						to: channelID,
+						message: '```Liste des commandes mathématiques : \r\n '.concat(
+						' abs(x) : calcule la valeur absolue de x. \r\n ').concat(
+						' cbrt(x) : calcule la racine cubique de x, cbrt(x, true) pour les racines complexes. \r\n ').concat(
+						' ceil(x) : arrondit à l\'entier supérieur. \r\n ').concat(
+						' dotDivide(x, y) : divise deux matrices x et y éléments par éléments. \r\n ').concat(
+						' dotMultiply(x, y) : multiplie deux matrices x et y éléments par éléments. \r\n ').concat(
+						' dotPow(x, y) : calcule la puissance de chaque élément de la matrice x en fonction de la matrice y. \r\n ').concat(
+						' exp(x) : calcule l\'exponentielle de x. \r\n ').concat(
+						' floor(x) : arrondit à l\'entier inférieur. \r\n ').concat(
+						' gcd(a, b) : calcule le plus grand diviseur commun de a et b. \r\n ').concat(
+						' lcm(a, b) : calcule le plus petit multiple commun de a et b. \r\n ').concat(
+						' log(x) : calcule le logarithme népérien de x. \r\n ').concat(
+						' log(x, n) : calcule le logarithme en base n de x. \r\n ').concat(
+						' log10(x) : calcule le logarithme en base de 10 de x. \r\n ').concat(
+						' mod(x, y) : calcule le modulo de x et y. \r\n ').concat(
+						' nthRoot(x, n) : calcule la racine n-ième de x. \r\n ').concat(
+						' pow(x, y) : calcule x à la puissance y. \r\n ').concat(
+						' round(x, n): arrondit x, avec n le nombre de chiffre après la virgule. \r\n ').concat(
+						' sqrt(x) : calcule la racine carrée de x. \r\n ').concat(
+						' On peut aussi faire des opérations binaires avec bitAnd(x, y), bitNot(x, y), etc. ```')
+				break;
 				// §burn
 				case 'burn':
 					if (userID === '243026815453495296') {
