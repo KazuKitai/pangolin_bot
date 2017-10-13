@@ -119,7 +119,10 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						' pow(x, y) : calcule x à la puissance y. \r\n ').concat(
 						' round(x, n): arrondit x, avec n le nombre de chiffre après la virgule. \r\n ').concat(
 						' sqrt(x) : calcule la racine carrée de x. \r\n ').concat(
-						' On peut aussi faire des opérations binaires avec bitAnd(x, y), bitNot(x, y), etc. ```')
+						' On peut aussi faire des opérations binaires avec bitAnd(x, y), bitNot(x, y), etc. ```').concat(
+						'``` On peut également utiliser des commandes pour dériver, simplifier : \r\n ').concat(
+						' simplify("[expression]", "[variable]" : par exemple §maths simplify("2*x + 5*x", "x"). \r\n ').concat(
+						' derivative("[expression]", "[variable]" : par exemple §maths derivative("3x^5 + 6 * x", "x"). ```')
 					});
 				break;
 				// §burn
