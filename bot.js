@@ -9,6 +9,7 @@ var fs = require('fs');
 const MongoClient = require('mongodb').MongoClient;
 const MONGO_URL = 'mongodb://character_admin:admin1@ds013405.mlab.com:13405/heroku_1cdlvrk5';
 var sleep = require('sleep');
+var math = require('mathjs');
 app.listen(PORT, () => {
     console.log(`Our app is running on port ${ PORT }`);
 });
@@ -39,6 +40,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         // It will listen for messages that will start with `§`
         if (message.substring(0, 1) == '§') {
             var args = message.substring(1).split(' ');
+			var argsNoSplice = message.substring(1);
             var cmd = args[0];
         
             args = args.splice(1);
@@ -85,6 +87,14 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 							message: 'T\'as cru que j\'allais t\'aider ? Lol.'
 						});
 					}
+				break;
+				// §maths
+				case 'maths':
+					var mathsString = argsNoSplice.substring(6);
+					bot.sendMessage({
+						to: channelID,
+						message: '<@!'.concat(userID).concat('> ').concat(math.eval(mathsString))
+					});
 				break;
 				// §burn
 				case 'burn':

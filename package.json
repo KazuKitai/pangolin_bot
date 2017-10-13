@@ -10,6 +10,7 @@
     "file-system": "^2.2.2",
     "graceful-fs": "^4.1.11",
     "jsonfile": "^4.0.0",
+    "mathjs": "^3.16.4",
     "mongodb": "^2.2.31",
     "newrelic": "^2.2.2",
     "node-gyp": "^3.6.2",
