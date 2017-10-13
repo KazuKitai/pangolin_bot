@@ -75,6 +75,9 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                         '- pnj : §pnj pour un pnj totalement aléatoire. Sinon, §[race]_[sexe]. \r\n ').concat(
                         'Races : miqo_s, miqo_l, raen, xaela, elez_c, elez_s, hyuro, hyurg, lala_d, lala_p, roe_cf, roe_cm. \r\n ').concat(
                         '- loot : §mag_weap, §phy_weap, §armor. Ou §loot pour du random total. \r\n ```').concat(
+						'```Pour convertir des unités eorzéennes : \r\n ').concat(
+						' - §maths Xyalm to m : convertit x yalm en mètres. \r\n ').concat(
+						' - Les unités éorzéennes disponibles sont : ilm, fulm, yalm, malm, onze, ponze et tonze.```').concat(
                         '```En cas de problème, contactez Kazu.```')
 					});
 				break;
