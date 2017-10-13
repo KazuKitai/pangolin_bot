@@ -120,6 +120,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						' round(x, n): arrondit x, avec n le nombre de chiffre après la virgule. \r\n ').concat(
 						' sqrt(x) : calcule la racine carrée de x. \r\n ').concat(
 						' On peut aussi faire des opérations binaires avec bitAnd(x, y), bitNot(x, y), etc. ```')
+					});
 				break;
 				// §burn
 				case 'burn':
