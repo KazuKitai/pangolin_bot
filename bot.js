@@ -1,4 +1,3 @@
-var nr = require('newrelic');
 var express = require('express');
 var app = express();
 var Discord = require('discord.io');
