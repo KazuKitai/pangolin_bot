@@ -556,6 +556,15 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			var args = message.substring(4).split(':');
 			
 			var name = args[0].toString();
+			
+			if (name.substring(0, 1) == ' ') {
+				name = name.substring(1, name.length);
+			}
+			
+			if (name.substring(name.length - 1, name.length) == ' ') {
+				name = name.substring(0, name.length - 1);
+			}
+			
 			var obj = {"name": args[0], "fiche": message.substring(4 + args[0].length)};
 			
 			MongoClient.connect(MONGO_URL, (err, db) => {  
@@ -628,9 +637,8 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		}
 		
 		if (message.substring(0, 1) == '§' && message.substring(1 ,10) == 'character') {
-			var args = message.substring(10).split(' ');
+			var name = message.substring(11);
 			console.log(args);
-			var name = args[1];
 
 			MongoClient.connect(MONGO_URL, (err, db) => {  
 				if (err) {
