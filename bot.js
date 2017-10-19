@@ -96,7 +96,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					} else {
 						bot.sendMessage({
 							to: channelID,
-							message: 'T\'as cru que j\'allais t\'aider ? Lol.'
+							message: 'T\'as cru que j\'allais t\'aider ? Lol. (utilisez §commands)'
 						});
 					}
 				break;
@@ -516,6 +516,16 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			}
 		}
 		
+		if (message.substring(0, 1) == '§' && message.substring(1, 4) == 'lore') {
+			var args = message.substring(5);
+			if(args.includes('magie rouge')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/mage-rouge')
+				});
+			}
+		}
+		
 		if (message.substring(0, 1) == '§' && message.includes('D')) {
 			if (message.substring(1, 2) == 'D') {
 				// un seul roll
@@ -748,20 +758,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				});
 			}
 		}
-		
-        if ((message.toLowerCase().includes('chine'))
-            || message.toLowerCase().includes('tine') 
-            || message.toLowerCase().includes('chinois') 
-            || message.toLowerCase().includes('chinoise') 
-            || message.toLowerCase().includes('tinois')
-            || message.toLowerCase().includes('tinoise')) {
-                if ( Math.floor(Math.random() * (1000 + 1)) > 950) {
-                    bot.sendMessage({
-                        to: channelID,
-                        message: 'Tine ? Tinois ? Ping pong mahjong dugong !'
-                    });
-                }
-        }
 
         if (message.toLowerCase().includes('gnap') 
 			|| message.includes('<:gnap:363685809729044480>')
@@ -795,14 +791,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     message: 'Oh my dayum!'
                 });
             }
-        }
-		
-        if (message.toLowerCase() === 'alors'
-            || message.toLowerCase() === 'm\'enfin') {
-            bot.sendMessage({
-                to: channelID,
-                message: '™'
-            });
         }
 		
         if (message.toLowerCase().includes('loli')) {
@@ -1025,9 +1013,7 @@ gen_data['answer_back'] = [
 	'Utilise une commande au lieu de dire mon nom, humain.',
 	'Je n\'écoute que mes maitres.',
 	'Ma maitresse est bien trop bonne pour que je t\'écoute plutôt qu\'elle.',
-	'Attends, écoute ? J\'crois que j\'entends le doux bruit de Rengu qui coupe des queues de Miqo\'tes.',
-	'Sinon, à ton avis, ça RPQ dans le dispensaire, là ?',
-	'Au fait, la serre est bien rangée ?',
+	'Sinon, à ton avis, ça RPQ quelque part, là ?',
 	'Hey, look, listen ! ... Comment ça cette IA existe déjà ailleurs ?',
 	'Qu\'est-ce que tu veux, humain ?',
 	'OUI JE SUIS UN PUTAIN DE ROBOT, ON A COMPRIS ARRETE DE ME FAIRE SPAMMER.',
@@ -1041,8 +1027,7 @@ gen_data['answer_back'] = [
     'J\'ai pas envie.',
     'JE NE M\'APPELLE PAS SIRI OU GOOGLE, JE SUIS UN BOT QUI SE RESPECTE, BORDEL.',
     'Je crois que je préférerais ne pas parser les logs pour ne pas être sans cesse appelé par des humains ...',
-	'Le correspondant que vous cherchez à contacter est indisponible pour le moment, veuillez réitérer votre appel.',
-	'Demande à Olorion, c\'est lui le "sage" du Havre, y parait.'
+	'Le correspondant que vous cherchez à contacter est indisponible pour le moment, veuillez réitérer votre appel.'
     
 ];
 
@@ -1079,7 +1064,6 @@ gen_data['not_burning'] = [
     'C\'est assez dingue que quelqu\'un utilise encore cette commande ...',
     'Mais pourquoi faire ?',
     'En vrai, je préférerai éviter. Ca ferait beaucoup de CO2, je pense à la planète.',
-    'Mais prends ta bite et ton couteau et démerdes toi, bon dieu.',
     'Tu vas pas me faire croire que t\'as ni briquet ni allumette ?'
 ];
 
