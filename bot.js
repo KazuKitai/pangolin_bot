@@ -593,9 +593,8 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		}
 		
 		if (message.substring(0, 1) == '§' && message.substring(1, 7) == 'delete') {
-			var args = message.substring(7).split(' ');
-			
-			var name = args[0];
+			var name = message.substring(8);
+			console.log(name);
 
 			MongoClient.connect(MONGO_URL, (err, db) => {  
 				if (err) {
