@@ -630,7 +630,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		if (message.substring(0, 1) == '§' && message.substring(1 ,10) == 'character') {
 			var args = message.substring(10).split(' ');
 			console.log(args);
-			var name = args[0];
+			var name = args[1];
 
 			MongoClient.connect(MONGO_URL, (err, db) => {  
 				if (err) {
