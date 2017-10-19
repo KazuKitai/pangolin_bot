@@ -516,9 +516,13 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			}
 		}
 		
-		if (message.substring(0, 1) == '§' && message.substring(1, 4) == 'lore') {
-			var args = message.substring(5);
-			if(args.includes('magie rouge')) {
+		if (message.substring(0, 1) == '§' && message.substring(1, 5) == 'lore') {
+			var args = message.substring(6);
+			if(args.includes('magie rouge')
+				|| args.includes('mage rouge')
+				|| args.includes('rdm')
+				|| args.includes('mrg')
+				|| args.includes('red mage')) {
 				bot.sendMessage({
 					to: channelID,
 					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/mage-rouge')
