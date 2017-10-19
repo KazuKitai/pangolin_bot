@@ -554,8 +554,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		
 		if (message.substring(0, 1) == '§' && message.substring(1, 4) == 'add') {
 			var args = message.substring(4).split(':');
-            var cmd = args[0];
-            args = args.splice(1);
 			
 			var name = args[0].toString();
 			var obj = {"name": args[0], "fiche": message.substring(4 + args[0].length)};
@@ -569,6 +567,8 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					return console.log(err);
 				}
 				console.log(args);
+				console.log(name);
+				console.log(obj);
 				db.collection('characters').insertOne(
 					obj,
 					function (err, res) {
