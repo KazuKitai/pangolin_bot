@@ -558,7 +558,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             args = args.splice(1);
 			
 			var name = args[0].toString();
-			var obj = {"name": args[0], "fiche": message.substring(4 + name.length)};
+			var obj = {"name": args[0], "fiche": message.substring(4 + args[0].length)};
 			
 			MongoClient.connect(MONGO_URL, (err, db) => {  
 				if (err) {
