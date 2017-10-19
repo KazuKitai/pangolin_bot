@@ -610,7 +610,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				console.log(args);
 				console.log(name);
 				console.log(obj);
-				db.collection('characters').update(
+				db.collection('characters').findOneAndUpdate(
 					name, fiche,
 					function (err, res) {
 						if (err) {
