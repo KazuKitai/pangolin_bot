@@ -559,7 +559,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			
 			var name = args[0].toString();
 			var fileName = 'characters.json';
-			var obj = {"name": args[0], "force": args[2], "resistance": args[5], "intelligence": args[7], "volonte": args[10], "precision": args[12], "technique": args[15], "agilite": args[17], "perception": args[20], "charisme": args[22], "empathie": args[25]};
+			var obj = {"name": args[0], "fiche": message.substring(4 + name.length)};
 			
 			MongoClient.connect(MONGO_URL, (err, db) => {  
 				if (err) {
@@ -662,16 +662,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 							to: channelID,
 							message: '<@!'.concat(userID).concat('> :').concat(
 							'```').concat(res.name).concat(' : ').concat(
-							'\r\nForce : ').concat(res.force).concat(
-							' -- Résistance : ').concat(res.resistance).concat(
-							'\r\nIntelligence : ').concat(res.intelligence).concat(
-							' -- Volonté : ').concat(res.volonte).concat(
-							'\r\nPrécision : ').concat(res.precision).concat(
-							' -- Technique : ').concat(res.technique).concat(
-							'\r\nAgilité : ').concat(res.agilite).concat(
-							' -- Perception : ').concat(res.perception).concat(
-							'\r\nCharisme : ').concat(res.charisme).concat(
-							' -- Empathie : ').concat(res.empathie).concat('```')
+							'\r\n').concat(res.fiche).concat('```')
 						});
 						db.close();
 					}
