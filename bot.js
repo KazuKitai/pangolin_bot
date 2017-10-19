@@ -66,7 +66,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						'Utiliser la syntaxe suivante [nom] : [fiche] (le : est très important, c\'est ce qui sépare le nom du personnage du reste!), ne mettez que le nom ou le prénom, pas les deux, sinon ça va être le bordel ! c\'est à dire : \r\n ').concat(
 						'§add Nom: Force: x -- Résistance: x Intelligence: x -- Volonté: x Précision: x -- Technique: x Agilité: x -- Perception: x Charisme: x -- Empathie: x \r\n ').concat(
 						'Par exemple : \r\n ').concat(
-						'§add Kazu: Force: 2 -- Résistance: 2 Intelligence: 9 -- Volonté: 8 Précision: 6 -- Technique: 4 Agilité: 4 -- Perception: 6 Charisme: 3 -- Empathie: 10 \r\n ```').concat(
+						'§add Kazu: Force: 2 -- Résistance: 2 Intelligence: 9 -- Volonté: 8 Précision: 6 -- Technique: 4 Agilité: 4 -- Perception: 6 Charisme: 3 -- Empathie: 10 \r\n La commande §update fonctionne de la même façon et met à jour la fiche, il faut construire la commande avec la même syntaxe que pour §add.```').concat(
                         '```Pour les générateurs : ').concat(
                         '- blessure : §[partie du corps]_[gravité de la blessure] \r\n\ ').concat(
                         'Par exemple §head_light ou §left_leg_serious. \r\n\ ').concat(
