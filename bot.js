@@ -75,6 +75,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                         '- pnj : §pnj pour un pnj totalement aléatoire. Sinon, §[race]_[sexe]. \r\n ').concat(
                         'Races : miqo_s, miqo_l, raen, xaela, elez_c, elez_s, hyuro, hyurg, lala_d, lala_p, roe_cf, roe_cm. \r\n ').concat(
                         '- loot : §mag_weap, §phy_weap, §armor. Ou §loot pour du random total. \r\n ```').concat(
+						'``` §lore [sujet] renvoit un lien vers un site web contenant le lore du sujet, example : \r\n §lore mage rouge.```').concat(
 						'```Pour convertir des unités eorzéennes : \r\n ').concat(
 						' - §maths Xyalm to m : convertit x yalm en mètres. \r\n ').concat(
 						' - Les unités éorzéennes disponibles sont : ilm, fulm, yalm, malm, onze, ponze et tonze.```').concat(
@@ -526,6 +527,11 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				bot.sendMessage({
 					to: channelID,
 					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/mage-rouge')
+				});
+			} else  {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> aucun sujet disponible sur ce sujet pour l\'instant.')
 				});
 			}
 		}
