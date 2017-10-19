@@ -63,10 +63,10 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                         '- §unflip: l\'inverse de la commande précédente ... \r\n\ ```').concat(
 						'```- §Dx et §yDx : lance un D de valeur max x, ou lance y dés de valeur max x \r\n\ ```').concat(
 						'```Pour les fiches lumen (ou autre) : \r\n ').concat(
-						'Utiliser la syntaxe suivante [nom] : [fiche] (le : est très important, c\'est ce qui sépare le nom du personnage du reste!), c\'est à dire : \r\n ').concat(
+						'Utiliser la syntaxe suivante [nom] : [fiche] (le : est très important, c\'est ce qui sépare le nom du personnage du reste!), ne mettez que le nom ou le prénom, pas les deux, sinon ça va être le bordel ! c\'est à dire : \r\n ').concat(
 						'§add Nom: Force: x -- Résistance: x Intelligence: x -- Volonté: x Précision: x -- Technique: x Agilité: x -- Perception: x Charisme: x -- Empathie: x \r\n ').concat(
 						'Par exemple : \r\n ').concat(
-						'§add Kazu Force: 2 -- Résistance: 2 Intelligence: 9 -- Volonté: 8 Précision: 6 -- Technique: 4 Agilité: 4 -- Perception: 6 Charisme: 3 -- Empathie: 10 \r\n ```').concat(
+						'§add Kazu: Force: 2 -- Résistance: 2 Intelligence: 9 -- Volonté: 8 Précision: 6 -- Technique: 4 Agilité: 4 -- Perception: 6 Charisme: 3 -- Empathie: 10 \r\n ```').concat(
                         '```Pour les générateurs : ').concat(
                         '- blessure : §[partie du corps]_[gravité de la blessure] \r\n\ ').concat(
                         'Par exemple §head_light ou §left_leg_serious. \r\n\ ').concat(
@@ -555,15 +555,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		if (message.substring(0, 1) == '§' && message.substring(1, 4) == 'add') {
 			var args = message.substring(4).split(':');
 			
-			var name = args[0].toString();
-			
-			if (name.substring(0, 1) == ' ') {
-				name = name.substring(1, name.length);
-			}
-			
-			if (name.substring(name.length - 1, name.length) == ' ') {
-				name = name.substring(0, name.length - 1);
-			}
+			var name = args[0].toString().splice(1);
 			
 			var obj = {"name": args[0], "fiche": message.substring(4 + args[0].length)};
 			
