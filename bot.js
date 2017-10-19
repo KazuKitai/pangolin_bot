@@ -597,7 +597,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			
 			var name = {"name": args[0].toString().replace(/\s/g, '')};
 			
-			var fiche = {"fiche": message.substring(7 + args[0].length)};
+			var fiche = {"name": args[0].toString().replace(/\s/g, ''), "fiche": message.substring(7 + args[0].length)};
 			
 			MongoClient.connect(MONGO_URL, (err, db) => {  
 				if (err) {
@@ -610,7 +610,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				console.log(args);
 				console.log(name);
 				console.log(obj);
-				db.collection('characters').findOneAndUpdate(
+				db.collection('characters').findOneAndReplace(
 					name, fiche,
 					function (err, res) {
 						if (err) {
