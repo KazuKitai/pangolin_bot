@@ -553,7 +553,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		}
 		
 		if (message.substring(0, 1) == '§' && message.substring(1, 4) == 'add') {
-			var args = message.substring(4).split(':');
+			var args = message.substring(5).split(':');
 			
 			var name = args[0].toString().replace(' ', '');
 			
