@@ -595,7 +595,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		if (message.substring(0, 1) == '§' && message.substring(1, 7) == 'update') {
 			var args = message.substring(8).split(':');
 			
-			var name = args[0].toString().replace(/\s/g, '');
+			var name = {"name": args[0].toString().replace(/\s/g, '')};
 			
 			var fiche = {"name": name, "fiche": message.substring(7 + args[0].length)};
 			
