@@ -62,9 +62,9 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                         '- §tableflip : c\'est évident, non ? \r\n\ ').concat(
                         '- §unflip: l\'inverse de la commande précédente ... \r\n\ ```').concat(
 						'```- §Dx et §yDx : lance un D de valeur max x, ou lance y dés de valeur max x \r\n\ ```').concat(
-						'```Pour les fiches lumen : \r\n ').concat(
-						'Utiliser la syntaxe suivante (et exactement ça sinon ça va planter) : \r\n ').concat(
-						'§add Nom Force: x -- Résistance: x Intelligence: x -- Volonté: x Précision: x -- Technique: x Agilité: x -- Perception: x Charisme: x -- Empathie: x \r\n ').concat(
+						'```Pour les fiches lumen (ou autre) : \r\n ').concat(
+						'Utiliser la syntaxe suivante [nom] : [fiche] (le : est très important, c\'est ce qui sépare le nom du personnage du reste!), c\'est à dire : \r\n ').concat(
+						'§add Nom: Force: x -- Résistance: x Intelligence: x -- Volonté: x Précision: x -- Technique: x Agilité: x -- Perception: x Charisme: x -- Empathie: x \r\n ').concat(
 						'Par exemple : \r\n ').concat(
 						'§add Kazu Force: 2 -- Résistance: 2 Intelligence: 9 -- Volonté: 8 Précision: 6 -- Technique: 4 Agilité: 4 -- Perception: 6 Charisme: 3 -- Empathie: 10 \r\n ```').concat(
                         '```Pour les générateurs : ').concat(
@@ -568,7 +568,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					});
 					return console.log(err);
 				}
-
+				console.log(args);
 				db.collection('characters').insertOne(
 					obj,
 					function (err, res) {
