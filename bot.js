@@ -555,7 +555,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		if (message.substring(0, 1) == '§' && message.substring(1, 4) == 'add') {
 			var args = message.substring(4).split(':');
 			
-			var name = args[0].toString().splice(1);
+			var name = args[0].splice(1).toString();
 			
 			var obj = {"name": args[0], "fiche": message.substring(4 + args[0].length)};
 			
