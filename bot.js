@@ -592,6 +592,46 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			});
 		}
 		
+		if (message.substring(0, 1) == '§' && message.substring(1, 7) == 'update') {
+			var args = message.substring(8).split(':');
+			
+			var name = args[0].toString().replace(/\s/g, '');
+			
+			var obj = {"name": name, "fiche": message.substring(7 + args[0].length)};
+			
+			MongoClient.connect(MONGO_URL, (err, db) => {  
+				if (err) {
+					bot.sendMessage({
+						to: channelID,
+						message: '<@!'.concat(userID).concat('> Erreur de connexion à la base de données.')
+					});
+					return console.log(err);
+				}
+				console.log(args);
+				console.log(name);
+				console.log(obj);
+				db.collection('characters').update(
+					obj.name, obj,
+					function (err, res) {
+						if (err) {
+							db.close();
+							bot.sendMessage({
+								to: channelID,
+								message: '<@!'.concat(userID).concat('> Erreur lors de la sauvegarde dans la base de données.')
+							});
+							return console.log(err);
+						}
+						// Success
+						bot.sendMessage({
+							to: channelID,
+							message: '<@!'.concat(userID).concat('> Personnage sauvegardé !')
+						});
+						db.close();
+					}
+				)
+			});
+		}
+		
 		if (message.substring(0, 1) == '§' && message.substring(1, 7) == 'delete') {
 			var name = message.substring(8);
 			console.log(name);
