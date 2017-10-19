@@ -593,8 +593,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		
 		if (message.substring(0, 1) == '§' && message.substring(1, 7) == 'delete') {
 			var args = message.substring(7).split(' ');
-            var cmd = args[0];
-            args = args.splice(1);
 			
 			var name = args[0];
 
@@ -606,7 +604,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					});
 					return console.log(err);
 				}
-
+				console.log(name);
 				db.collection('characters').deleteOne({
 					"name": name
 					}, function (err, res) {
@@ -631,8 +629,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		
 		if (message.substring(0, 1) == '§' && message.substring(1 ,10) == 'character') {
 			var args = message.substring(10).split(' ');
-            var cmd = args[0];
-            args = args.splice(1);
 			
 			var name = args[0];
 
@@ -644,7 +640,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					});
 					return console.log(err);
 				}
-
+				console.log(name);
 				db.collection('characters').findOne({
 					"name": name
 					}, function (err, res) {
