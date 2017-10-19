@@ -518,7 +518,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		}
 		
 		if (message.substring(0, 1) == '§' && message.substring(1, 5) == 'lore') {
-			var args = message.substring(6);
+			var args = message.substring(6).toLowerCase();
 			if(args.includes('magie rouge')
 				|| args.includes('mage rouge')
 				|| args.includes('rdm')
@@ -528,7 +528,39 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					to: channelID,
 					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/mage-rouge')
 				});
-			} else  {
+			} else if(args.includes('magie noire')
+				|| args.includes('mage noir')
+				|| args.includes('blm')
+				|| args.includes('mno')
+				|| args.includes('black mage')){
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/mage-noir')
+				});
+			} else if(args.includes('magie blanche')
+				|| args.includes('mage blanc')
+				|| args.includes('whm')
+				|| args.includes('mbl')
+				|| args.includes('white mage')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/mage-blanc')
+				});
+			} else if(args.includes('arcanisme')
+				|| args.includes('arcaniste')
+				|| args.includes('arc')
+				|| args.includes('acn')
+				|| args.includes('arcanist')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/arcaniste')
+				});
+			} else if(args.includes('ascien')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/ascien')
+				});
+			}  else {
 				bot.sendMessage({
 					to: channelID,
 					message: '<@!'.concat(userID).concat('> aucun sujet disponible sur ce sujet pour l\'instant.')
