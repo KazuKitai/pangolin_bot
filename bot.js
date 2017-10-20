@@ -519,36 +519,9 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		
 		if (message.substring(0, 1) == '§' && message.substring(1, 5) == 'lore') {
 			var args = message.substring(6).toLowerCase();
-			if(args.includes('magie rouge')
-				|| args.includes('mage rouge')
-				|| args.includes('rdm')
-				|| args.includes('mrg')
-				|| args.includes('red mage')) {
-				bot.sendMessage({
-					to: channelID,
-					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/mage-rouge')
-				});
-			} else if(args.includes('magie noire')
-				|| args.includes('mage noir')
-				|| args.includes('blm')
-				|| args.includes('mno')
-				|| args.includes('black mage')){
-				bot.sendMessage({
-					to: channelID,
-					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/mage-noir')
-				});
-			} else if(args.includes('magie blanche')
-				|| args.includes('mage blanc')
-				|| args.includes('whm')
-				|| args.includes('mbl')
-				|| args.includes('white mage')) {
-				bot.sendMessage({
-					to: channelID,
-					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/mage-blanc')
-				});
-			} else if(args.includes('arcanisme')
+			if(args.includes('arcanisme')
 				|| args.includes('arcaniste')
-				|| args.includes('arc')
+				|| args.includes('arca')
 				|| args.includes('acn')
 				|| args.includes('arcanist')) {
 				bot.sendMessage({
@@ -560,7 +533,251 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					to: channelID,
 					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/ascien')
 				});
-			}  else {
+			} else if(args.includes('astromancie')
+				|| args.includes('astromancien')
+				|| args.includes('astro')
+				|| args === 'ast') {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/astromancien')
+				});
+			} else if(args.includes('élémentalisme')
+				|| args.includes('elementalisme')
+				|| args.includes('élémentaliste')
+				|| args.includes('elementaliste')
+				|| args.includes('elem')
+				|| args.includes('elm')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/elementaliste')
+				});
+			} else if(args.includes('érudit')
+				|| args.includes('erudit')
+				|| args.includes('eru')
+				|| args.includes('sch')
+				|| args.includes('scholar')
+				|| args.includes('érudisme')
+				|| args.includes('erudisme')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/erudit')
+				});
+			} else if(args.includes('géomancie')
+				|| args.includes('geomancie')
+				|| args.includes('géomancien')
+				|| args.includes('geomancien')
+				|| args.includes('geo')
+				|| args.includes('géo')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/geomancien')
+				});
+			} else if(args.includes('invocateur')
+				|| args.includes('invo')
+				|| args.includes('inv')
+				|| args.includes('summoner')
+				|| args.includes('egi')
+				|| args.includes('invocation')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/invocateur')
+				});
+			} else if(args.includes('louisoix')
+				|| args.includes('sharlayan')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/louisoix-et-sharlayan')
+				});
+			} else if(args.includes('magie blanche')
+				|| args.includes('mage blanc')
+				|| args.includes('whm')
+				|| args.includes('mbl')
+				|| args.includes('white mage')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/mage-blanc')
+				});
+			} else if(args.includes('magie noire')
+				|| args.includes('mage noir')
+				|| args.includes('blm')
+				|| args.includes('mno')
+				|| args.includes('black mage')){
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/mage-noir')
+				});
+			} else if(args.includes('magie rouge')
+				|| args.includes('mage rouge')
+				|| args.includes('rdm')
+				|| args.includes('mrg')
+				|| args.includes('red mage')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/mage-rouge')
+				});
+			} else if(args.includes('occultisme')
+				|| args.includes('occultiste')
+				|| args.includes('occ')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/occultiste')
+				});
+			} else if(args.includes('padjal')
+				|| args.includes('esprit')
+				|| args.includes('sylphe')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/padjals-et-esprits')
+				});
+			} else if(args.includes('chakra')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/les-chakras')
+				});
+			} else if(args.includes('première ère ombrale')
+				|| args.includes('premiere ere ombrale')
+				|| args.includes('1ère ère ombrale')
+				|| args.includes('1ere ere ombrale')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/1ere-ombrale')
+				});
+			} else if(args.includes('première ère astrale')
+				|| args.includes('premiere ere astrale')
+				|| args.includes('1ère ère astrale')
+				|| args.includes('1ere ere astrale')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/1ere-astrale')
+				});
+			} else if(args.includes('deuxième ère ombrale')
+				|| args.includes('deuxieme ere ombrale')
+				|| args.includes('2ème ère ombrale')
+				|| args.includes('2eme ere ombrale')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/2ere-ombrale')
+				});
+			} else if(args.includes('deuxième ère astrale')
+				|| args.includes('deuxieme ere astrale')
+				|| args.includes('2ème ère astrale')
+				|| args.includes('2eme ere astrale')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/2ere-astrale')
+				});
+			} else if(args.includes('troisième ère ombrale')
+				|| args.includes('troisieme ere ombrale')
+				|| args.includes('3ème ère ombrale')
+				|| args.includes('3eme ere ombrale')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/3ere-ombrale')
+				});
+			} else if(args.includes('troisième ère astrale')
+				|| args.includes('troisieme ere astrale')
+				|| args.includes('3ème ère astrale')
+				|| args.includes('3eme ere astrale')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/3ere-astrale')
+				});
+			} else if(args.includes('quatrième ère ombrale')
+				|| args.includes('quatrieme ere ombrale')
+				|| args.includes('4ème ère ombrale')
+				|| args.includes('4eme ere ombrale')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/4ere-ombrale')
+				});
+			} else if(args.includes('quatrième ère astrale')
+				|| args.includes('quatrieme ere astrale')
+				|| args.includes('4ème ère astrale')
+				|| args.includes('4eme ere astrale')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/4ere-astrale')
+				});
+			} else if(args.includes('cinquième ère ombrale')
+				|| args.includes('cinquieme ere ombrale')
+				|| args.includes('5ème ère ombrale')
+				|| args.includes('5eme ere ombrale')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/5ere-ombrale')
+				});
+			} else if(args.includes('cinquième ère astrale')
+				|| args.includes('cinquieme ere astrale')
+				|| args.includes('5ème ère astrale')
+				|| args.includes('5eme ere astrale')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/5ere-astrale')
+				});
+			} else if(args.includes('sixième ère ombrale')
+				|| args.includes('sixieme ere ombrale')
+				|| args.includes('6ème ère ombrale')
+				|| args.includes('6eme ere ombrale')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/6ere-ombrale')
+				});
+			} else if(args.includes('sixième ère astrale')
+				|| args.includes('sixieme ere astrale')
+				|| args.includes('6ème ère astrale')
+				|| args.includes('6eme ere astrale')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/6ere-astrale')
+				});
+			} else if(args.includes('septième ère ombrale')
+				|| args.includes('septieme ere ombrale')
+				|| args.includes('7ème ère ombrale')
+				|| args.includes('7eme ere ombrale')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/7ere-ombrale')
+				});
+			} else if(args.includes('chronologie')
+				|| args.includes('chrono')
+				|| args.includes('timeline')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/chronologie')
+				});
+			} else if(args.includes('divinité')
+				|| args.includes('divinite')
+				|| args.includes('dieu')
+				|| args.includes('primordiaux')
+				|| args.includes('primordial')
+				|| args.includes('primal')
+				|| args.includes('primo')
+				|| args.includes('eikon')
+				|| args.includes('esper')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/divinites')
+				});
+			} else if(args.includes('douze')
+				|| args.includes('althyk')
+				|| args.includes('nymeia')
+				|| args.includes('rhalgr')
+				|| args.includes('menphina')
+				|| args.includes('azeyma')
+				|| args.includes('nald\'thal')
+				|| args.includes('nald thal')
+				|| args.includes('naldthal')
+				|| args.includes('oschon')
+				|| args.includes('thaliak')
+				|| args.includes('llymlaen')
+				|| args.includes('nophica')
+				|| args.includes('byregot')
+				|| args.includes('halone')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/les-douze')
+				});
+			} else {
 				bot.sendMessage({
 					to: channelID,
 					message: '<@!'.concat(userID).concat('> aucun sujet disponible sur ce sujet pour l\'instant.')
