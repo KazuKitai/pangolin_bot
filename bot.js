@@ -747,13 +747,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				});
 			} else if(args.includes('divinité')
 				|| args.includes('divinite')
-				|| args.includes('dieu')
-				|| args.includes('primordiaux')
-				|| args.includes('primordial')
-				|| args.includes('primal')
-				|| args.includes('primo')
-				|| args.includes('eikon')
-				|| args.includes('esper')) {
+				|| args.includes('dieu')) {
 				bot.sendMessage({
 					to: channelID,
 					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/divinites')
@@ -776,6 +770,176 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				bot.sendMessage({
 					to: channelID,
 					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/les-douze')
+				});
+			} else if (args.includes('hydaelyn')
+				|| args.includes('zodiark')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/hydaelyn-et-zodiark')
+				});
+			} else if (args.includes('mère du crépuscule')
+				|| args.includes('mere du crepuscule')
+				|| args.includes('père de l\'aube')
+				|| args.includes('pere de l\'aube')
+				|| args.includes('nhaama')
+				|| args.includes('azim')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/doma-divinites')
+				});
+			} else if(args.includes('primordiaux')
+				|| args.includes('primordial')
+				|| args.includes('primal')
+				|| args.includes('primo')
+				|| args.includes('eikon')
+				|| args.includes('esper')
+				|| args.includes('ramuh')
+				|| args.includes('ifrit')
+				|| args.includes('titan')
+				|| args.includes('garuda')
+				|| args.includes('leviathan')
+				|| args.includes('léviathan')
+				|| args.includes('lévi')
+				|| args.includes('levi')
+				|| args.includes('shiva')
+				|| args.includes('roi moogle mog')
+				|| args.includes('king moogle')
+				|| args.includes('roi mog')
+				|| args.includes('bahamut')
+				|| args.includes('alexander')
+				|| args.includes('phenix')
+				|| args.includes('phénix')
+				|| args.includes('phoenix')
+				|| args.includes('bismarck')
+				|| args.includes('ravana')
+				|| args.includes('thordan')
+				|| args.includes('susano')
+				|| args.includes('lakshmi')
+				|| args.includes('shinryu')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/primordiaux-majeurs')
+				});
+			} else if(args.includes('triade')
+				|| args.includes('triade guerriere')
+				|| args.includes('sephirot')
+				|| args.includes('séphirot')
+				|| args.includes('sephi')
+				|| args.includes('séphi')
+				|| args.includes('sophia')
+				|| args.includes('zurwan')
+				|| args.includes('zurvan')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/triade-guerriere')
+				});
+			} else if(args.includes('enkidu')
+				|| args.includes('chirada')
+				|| args.includes('suparna')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/autres-divinites')
+				});
+			} else if(args.includes('hyuroi')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/les-hyurois')
+				});
+			} else if(args.includes('hyurgoth')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/les-hyurgoths')
+				});
+			} else if(args.includes('raen')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/raens')
+				});
+			} else if(args.includes('xaela')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/xaelas')
+				});
+			} else if(args.includes('solaire')
+				|| args.includes('miqo\'te solaire')
+				|| args.includes('tribu du soleil')
+				|| args.includes('tribus du soleil')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/tribu-du-soleil')
+				});
+			} else if(args.includes('lunaire')
+				|| args.includes('miqo\'te lunaire')
+				|| args.includes('tribu de la lune')
+				|| args.includes('tribus de la lune')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/tribu-de-la-lune')
+				});
+			} else if(args.includes('sylvestre')
+				|| args.includes('elezen sylvestre')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/sylvestres')
+				});
+			} else if(args.includes('crépusculaire')
+				|| args.includes('elezen crépusculaire')
+				|| args.includes('elezen crepusculaire')
+				|| args.includes('crepusculaire')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/crepusculaires')
+				});
+			} else if(args.includes('clan de la mer')
+				|| args.includes('roegadyn clan de la mer')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/clan-de-la-mer')
+				});
+			} else if(args.includes('clan du feu')
+				|| args.includes('roegadyn clan du feu')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/clan-du-feu')
+				});
+			} else if(args.includes('lalafell des plaines')
+				|| args.includes('peuple des plaines')
+				|| args.includes('lalafell peuple des plaines')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/peuple-des-plaines')
+				});
+			} else if(args.includes('lalafell des dunes')
+				|| args.includes('peuple des dunes')
+				|| args.includes('lalafell peuple des dunes')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/peuple-des-dunes')
+				});
+			} else if(args.includes('humains')
+				|| args.includes('races humaines')
+				|| args.includes('race humaine')
+				|| args.includes('humain')
+				|| args.includes('hyur')
+				|| args.includes('miqo\'te')
+				|| args.includes('elezen')
+				|| args.includes('roegadyn')
+				|| args.includes('aora')
+				|| args.includes('ao\'ra')
+				|| args.includes('ao ra')
+				|| args.includes('lalafell')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/les-humains')
+				});
+			} else if(args.includes('vie eorzeenne')
+				|| args.includes('vie éorzéenne')
+				|| args.includes('unité')
+				|| args.includes('culture')
+				|| args.includes('religion')) {
+				bot.sendMessage({
+					to: channelID,
+					message: '<@!'.concat(userID).concat('> https://mmarchet.wixsite.com/ffxiv-lore/vie-eorzenne')
 				});
 			} else {
 				bot.sendMessage({
